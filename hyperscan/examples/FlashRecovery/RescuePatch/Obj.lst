@@ -1,0 +1,11 @@
+/*	Created by S+core IDE	*/
+
+
+INPUT("Debug\hyperscan_startup.o")
+INPUT("Debug\main.o")
+
+SECTIONS
+{
+
+}
+
