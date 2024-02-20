@@ -38,6 +38,8 @@ Get this repo and navigate to HyperScan-SPG29x-SDK\tools\S+core IDE-V2.6.1.exe a
 
 Done.
 
+Oh, also install python3 because some of the examples use python scripting, as well as the recovery tools.
+
 ## Compiling the examples
 
 All of the examples *SHOULD* be documented in the code. The best way to test out the examples is to get this repo, install the IDE, and then go to File->Open Workspace and then navigate to the examples folder and open the desired example folder and select the .spw/.spg file of that example and everything should load.
