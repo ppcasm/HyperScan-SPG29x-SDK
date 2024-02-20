@@ -7,7 +7,7 @@
 ## Support
 
 HyperScan specifc:
-- HyperScan controllers/I2C
+- HyperScan controller support
 - HyperScan LEDs
 
 SPG29x specific:
