@@ -41,9 +41,9 @@ Done.
 ## Compiling the examples
 
 ## Thanks to
-- Bushing (RIP: He was responsible for the hyperscan.bin firmware file being dumped originally, and a good source of valid information)
-- LiraNuna (Reverse engineering, and coding, etc)
-- HyperScanDev (Reverse engineering, Discord moderator, etc)
+- Bushing - RIP :( He was responsible for the hyperscan.bin firmware file being dumped originally, and a good source of valid information
+- LiraNuna - Reverse engineering, and coding, etc
+- HyperScanDev - Reverse engineering, Discord moderator, etc
 - Sunplus - They actually indirectly provided a lot of information and tools through other S+Core products, and at least made a very good effort to support open-source
 - Mattel - I like Barbie
 ## License
