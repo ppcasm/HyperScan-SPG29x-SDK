@@ -11,6 +11,7 @@ HyperScan specifc:
 - HyperScan LEDs
 
 SPG29x specific:
+- I2C
 - UART
 - NOR flash interface
 - Basic TVE/Framebuffer
