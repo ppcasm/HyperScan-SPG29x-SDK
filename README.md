@@ -53,7 +53,7 @@ compile an example that is meant to run from recovery/firmware space, you will n
   . = 0xA0001000;
 ```
 
-Which tells you that this is build for running in recovery, or as a firmware file, as opposed to it saying 0xA0091000 there, which would indicate it's to be ran from CD, or loaded in the HyperScan OS as a HYPER.EXE.
+Which tells you that this is built for running in recovery mode, or as a firmware file, as opposed to it saying 0xA0091000 there, which would indicate it's to be ran from CD, or loaded in the HyperScan OS as a HYPER.EXE.
 
 ## Thanks to
 - Bushing - RIP :( He was responsible for the hyperscan.bin firmware file being dumped originally, and a good source of valid information
