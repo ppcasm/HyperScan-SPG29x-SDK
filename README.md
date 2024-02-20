@@ -37,7 +37,6 @@ Get this repo and navigate to HyperScan-SPG29x-SDK\tools\S+core IDE-V2.6.1.exe a
 
 Done.
 
-
 ## Compiling the examples
 
 All of the examples *SHOULD* be documented in the code. The best way to test out the examples is to get this repo, install the IDE, and then go to File->Open Workspace and then navigate to the examples folder and open the desired example folder and select the .spw/.spg file of that example and everything should load.
@@ -54,6 +53,9 @@ compile an example that is meant to run from recovery/firmware space, you will n
 ```
 
 Which tells you that this is built for running in recovery mode, or as a firmware file, as opposed to it saying 0xA0091000 there, which would indicate it's to be ran from CD, or loaded in the HyperScan OS as a HYPER.EXE.
+
+## Starting a new project in the IDE
+The examples all link to singular library code source in the repo, under the hyperscan folder. The reason for this is that if there's any updates to the libraries, you can just update from the repo and because everything is pulling from the singular location the changes are reflected when you open any existing example, so then you just recompile and the new code gets applied to the binary. Because of this reason, when starting a new project, the easiest way to do so is to simply copy an example from the example folder, paste it in the example folder, give it a new name, and start the new project there as all of the include and source paths should remain the same and create a uniform structure to the code, and this has the added benefit of making your project be in the examples folder just in case someone wants to send a pull request. :p
 
 ## Thanks to
 - Bushing - RIP :( He was responsible for the hyperscan.bin firmware file being dumped originally, and a good source of valid information
