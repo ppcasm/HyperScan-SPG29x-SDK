@@ -5,7 +5,7 @@ import time
 import serial
 from datetime import datetime
 
-CHUNK_SIZE = 4
+CHUNK_SIZE = 8
 
 def resolve_address(address):
     return address - 0xA00001FC
@@ -38,22 +38,22 @@ def main():
 
     new_exec = bytearray(executable)
     # 0x88129001 -> jl 0xA0091000
-    #new_exec[PATCH_OFFSET + 0] = 0x01
-    #new_exec[PATCH_OFFSET + 1] = 0x90
-    #new_exec[PATCH_OFFSET + 2] = 0x12
-    #new_exec[PATCH_OFFSET + 3] = 0x88
+    new_exec[PATCH_OFFSET + 0] = 0x01
+    new_exec[PATCH_OFFSET + 1] = 0x90
+    new_exec[PATCH_OFFSET + 2] = 0x12
+    new_exec[PATCH_OFFSET + 3] = 0x88
 
     # 0x8801F6FD -> jl (Load from CD)
     # proper checksum fix = 0x84b88018
-    #new_exec[CHECKSUM_PATCH_OFFSET + 0] = 0x18
-    #new_exec[CHECKSUM_PATCH_OFFSET + 1] = 0x80
-    #new_exec[CHECKSUM_PATCH_OFFSET + 2] = 0xb8
-    #new_exec[CHECKSUM_PATCH_OFFSET + 3] = 0x84
+    new_exec[CHECKSUM_PATCH_OFFSET + 0] = 0x18
+    new_exec[CHECKSUM_PATCH_OFFSET + 1] = 0x80
+    new_exec[CHECKSUM_PATCH_OFFSET + 2] = 0xb8
+    new_exec[CHECKSUM_PATCH_OFFSET + 3] = 0x84
 
-    #for i in range(0, patch_size):
-    #    new_exec[BIN_OFFSET + i] = patch[i]
+    for i in range(0, patch_size):
+        new_exec[BIN_OFFSET + i] = patch[i]
 
-    with serial.Serial(sys.argv[1], baudrate=115200, parity='E', stopbits=1, timeout=1) as ser:
+    with serial.Serial(sys.argv[1], baudrate=115200, parity='E', stopbits=1) as ser:
         ser.write(executable_size.to_bytes(4, byteorder='little'))
         ser.flush()
         ser.read(1)
@@ -62,7 +62,8 @@ def main():
         start_time = datetime.now()
 
         for i in range(0, len(executable), CHUNK_SIZE):
-            ser.write(new_exec[i:i + CHUNK_SIZE])
+            ser.write(executable[i:i + CHUNK_SIZE])
+            ser.flush()
             ser.flush()
 
             show_progress(i, executable_size)

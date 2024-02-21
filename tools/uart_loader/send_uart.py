@@ -4,7 +4,7 @@ import sys
 import serial
 from datetime import datetime
 
-CHUNK_SIZE = 4
+CHUNK_SIZE = 8
 
 def show_progress(current, total):
     progress = (current / total) * 100
@@ -27,6 +27,8 @@ def main():
 
         for i in range(0, len(executable), CHUNK_SIZE):
             ser.write(executable[i:i + CHUNK_SIZE])
+            ser.flush()
+            #ser.read(1)
             ser.flush()
             show_progress(i, executable_size)
 

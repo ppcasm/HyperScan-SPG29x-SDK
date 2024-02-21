@@ -96,7 +96,7 @@ int main()
 
 	TV_Print(fb, (((640/8)-44)/2), 2, "HyperScan Custom Firmware Installer - ppcasm");
 	TV_Print(fb, (((640/8)-47)/2), 3, "Join the Discord: https://discord.gg/rHh2nW9sue");
-	TV_Print(fb, (((640/8)-41)/2), 27, "NOTE: Screen might glitch, this is normal");
+	TV_Print(fb, (((640/8)-41)/2), 26, "NOTE: Screen might glitch, this is normal");
 	TV_Print(fb, (((640/8)-24)/2), 28, "Please use with CAUTION!");
 	
 	TV_Print(fb, (((640/8)-40)/2), 6, "Press START to install custom firmware");
@@ -139,6 +139,13 @@ int main()
 
 					// Print "...GO!" to let us know we did receive the 4 size bytes 
 					print_string("...GO!\n");
+					
+					if((size-4) > 0xFEFFC){
+						while(1){
+							TV_Print(fb, (((640/8)-27)/2), 10, "FAILED! The file is too big");
+							TV_Print(fb, (((640/8)-45)/2), 12, "HINT: Don't try to flash a full firmware file");
+						}
+					}
 					
 					TV_Print(fb, (((640/8)-25)/2), 10, "        Uploading...      ");				
 
@@ -184,7 +191,7 @@ int main()
 					
 					TV_Print(fb, (((640/8)-25)/2), 10, " Writing data @ ");
 					
-					for(i=0;i<=(size-4 )/4;i++){
+					for(i=0;i<=(size-4)/4;i++){
 						if((i % 0x1000) == 0){
 							TV_PrintHex(fb, 43, 10, 0x9E001000 + (i*4));
 						}
