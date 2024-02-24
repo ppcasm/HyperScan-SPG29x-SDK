@@ -1,6 +1,6 @@
 ####################################################################################################
 #
-#	Created by S+core IDE V2.6.1		01:51:11	02/20/24
+#	Created by S+core IDE V2.6.1		23:49:41	02/23/24
 #
 ####################################################################################################
 
@@ -8,7 +8,7 @@ OUTDIR	= Debug
 APPDIR	= C:\Sunplus\S_CORE~1.1
 
 TOOLDIR	= C:\Sunplus\S_CORE~1.1\gnu\bin
-INCLUDES =  -I"C:/Users/ppcas/OneDrive/Desktop/hyperscandev/hyperscan/examples/FlashRecovery/RescuePatch/"
+INCLUDES =  -I"C:/Users/ppcas/OneDrive/Documents/GitHub/HyperScan-SPG29x-SDK/hyperscan/examples/FlashRecovery/RescuePatch/"
 LIBFOLDER = 
 
 CC	= "$(TOOLDIR)\score-elf-gcc"
@@ -21,7 +21,7 @@ RM	= "$(TOOLDIR)\rm"
 
 OBJCOPY	= "$(TOOLDIR)\score-elf-objcopy"
 OBJDUMP	= "$(TOOLDIR)\score-elf-objdump"
-LDSCRIPT	= "C:\Users\ppcas\OneDrive\Desktop\hyperscandev\hyperscan\examples\FlashRecovery\RescuePatch\hyperscan_Prog.ld"
+LDSCRIPT	= "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\FlashRecovery\RescuePatch\hyperscan_Prog.ld"
 
 CCDEFFLAG	= -mscore7 -mel -g -Wall -nostartfiles -nostdlib
 CCADDFLAG	= 
@@ -41,13 +41,13 @@ OBJFILES	=\
 	"$(OUTDIR)\hyperscan_startup.o"\
 	"$(OUTDIR)\main.o"
 
-"$(OUTDIR)\main.o" "$(OUTDIR)\main.d": "C:\Users\ppcas\OneDrive\Desktop\hyperscandev\hyperscan\examples\FlashRecovery\RescuePatch\main.c"
+"$(OUTDIR)\main.o" "$(OUTDIR)\main.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\FlashRecovery\RescuePatch\main.c"
 	@echo main.c
-	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\main.d" -MT"$(OUTDIR)\main.d" -o "$(OUTDIR)\main.o" "C:\Users\ppcas\OneDrive\Desktop\hyperscandev\hyperscan\examples\FlashRecovery\RescuePatch\main.c" 
+	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\main.d" -MT"$(OUTDIR)\main.d" -o "$(OUTDIR)\main.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\FlashRecovery\RescuePatch\main.c" 
 
-"$(OUTDIR)\hyperscan_startup.o" "$(OUTDIR)\hyperscan_startup.d": "C:\Users\ppcas\OneDrive\Desktop\hyperscandev\hyperscan\examples\FlashRecovery\RescuePatch\hyperscan_startup.s"
+"$(OUTDIR)\hyperscan_startup.o" "$(OUTDIR)\hyperscan_startup.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\FlashRecovery\RescuePatch\hyperscan_startup.s"
 	@echo hyperscan_startup.s
-	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) $(ASDEFFLAG) $(ASADDFLAG) -MMD -MP -MF"$(OUTDIR)\hyperscan_startup.d" -MT"$(OUTDIR)\hyperscan_startup.d" -o "$(OUTDIR)\hyperscan_startup.o" "C:\Users\ppcas\OneDrive\Desktop\hyperscandev\hyperscan\examples\FlashRecovery\RescuePatch\hyperscan_startup.s" 
+	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) $(ASDEFFLAG) $(ASADDFLAG) -MMD -MP -MF"$(OUTDIR)\hyperscan_startup.d" -MT"$(OUTDIR)\hyperscan_startup.d" -o "$(OUTDIR)\hyperscan_startup.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\FlashRecovery\RescuePatch\hyperscan_startup.s" 
 
 
 all : "$(OUTDIR)" $(BINFILE)
@@ -57,7 +57,7 @@ all : "$(OUTDIR)" $(BINFILE)
 
 LINKLIB	= 
 
-$(BINFILE) : $(RESFILES) $(OBJFILES) $(LINKLIB) $(LDSCRIPT) "C:\Users\ppcas\OneDrive\Desktop\hyperscandev\hyperscan\examples\FlashRecovery\RescuePatch\Resource.h"
+$(BINFILE) : $(RESFILES) $(OBJFILES) $(LINKLIB) $(LDSCRIPT) "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\FlashRecovery\RescuePatch\Resource.h"
 			@echo linking...
 			@$(CC) $(CCDEFFLAG) $(CCADDFLAG) -B$(TOOLDIR) "Obj.lst" -o $(BINFILE) "Lib.lst" $(LIBFOLDER) $(LDDEFFLAG) $(LDADDFLAG)
 			@$(OBJCOPY) -O binary $@ $@.bin

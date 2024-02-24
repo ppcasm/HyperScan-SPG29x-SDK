@@ -19,14 +19,14 @@ unsigned short *fb = (unsigned short *) 0xA0400000;
 
 int i = 0;
 
-int main()
-{
-		
+int main(){
+	
 	int nExitCode = 0;
 	/************************************************************************/
 	/*   TODO: add your code here                                           */
 	/************************************************************************/
-
+	//cache_op(0x18, 0xa0000000);
+	
 	/* Initalize Mattel HyperScan controller interface */
 	HS_Controller_Init();
 	

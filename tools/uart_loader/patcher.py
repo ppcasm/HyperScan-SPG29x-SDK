@@ -11,7 +11,7 @@ def resolve_address(address):
     return address - 0xA00001FC
 
 CHECKSUM_PATCH_OFFSET = resolve_address(0xa000f740)
-BIN_OFFSET = resolve_address(0xa0000500)
+BIN_OFFSET = resolve_address(0xA0010D20)
 PATCH_OFFSET = resolve_address(0xA0012370)
 
 # Checksum func stuff at a000f740 needs to be patched
@@ -38,10 +38,10 @@ def main():
 
     new_exec = bytearray(executable)
     # 0x88129001 -> jl 0xA0091000
-    new_exec[PATCH_OFFSET + 0] = 0x01
-    new_exec[PATCH_OFFSET + 1] = 0x90
-    new_exec[PATCH_OFFSET + 2] = 0x12
-    new_exec[PATCH_OFFSET + 3] = 0x88
+    #new_exec[PATCH_OFFSET + 0] = 0x01
+    #new_exec[PATCH_OFFSET + 1] = 0x90
+    #new_exec[PATCH_OFFSET + 2] = 0x12
+    #new_exec[PATCH_OFFSET + 3] = 0x88
 
     # 0x8801F6FD -> jl (Load from CD)
     # proper checksum fix = 0x84b88018
@@ -52,6 +52,7 @@ def main():
 
     for i in range(0, patch_size):
         new_exec[BIN_OFFSET + i] = patch[i]
+        print('{0:x}'.format(BIN_OFFSET + i))
 
     with serial.Serial(sys.argv[1], baudrate=115200, parity='E', stopbits=1) as ser:
         ser.write(executable_size.to_bytes(4, byteorder='little'))

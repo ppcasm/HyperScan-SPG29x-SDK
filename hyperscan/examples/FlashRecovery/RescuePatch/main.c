@@ -61,6 +61,15 @@ static u8 uart_read_byte() {
 	return *P_UART_TXRX_DATA;
 }
 
+static void print_nibble(unsigned char n) {
+	uart_write_byte("0123456789abcdef"[n & 0xF]);
+}
+
+static void print_byte(unsigned char b) {
+	print_nibble(b >> 4);
+	print_nibble(b >> 0);
+}
+
 int main()
 {
 	// Turn all LEDs ON
@@ -86,8 +95,37 @@ int main()
 		// Enable UART
 		uart_enable_interface();
 
+		// invalidate D-Cache
+		asm("cache 0x18, [r15, 0]");
+		asm("nop");
+		asm("nop!");
+		asm("nop!");
+		asm("nop!");
+		asm("nop!");
+		asm("nop");
+		
+		//	invalidate I-Cache
+		asm("cache 0x10, [r15, 0]");
+		asm("nop");
+		asm("nop!");
+		asm("nop!");
+		asm("nop!");
+		asm("nop!");
+		asm("nop");
+
+		// Drain write buffer
+		asm("cache 0x1A, [r15, 0]");
+		asm("nop");
+		asm("nop!");
+		asm("nop!");
+		asm("nop!");
+		asm("nop!");
+		asm("nop");
+				
 		// Flush UART
-		while (!(*P_UART_TXRX_STATUS & UART_RECEIVE_EMPTY));
+		while (!(*P_UART_TXRX_STATUS & UART_RECEIVE_EMPTY)) {
+			print_byte(*P_UART_TXRX_DATA);
+		}
 
 		// Print "Ready! " over UART
 		print_string("Ready! ");
