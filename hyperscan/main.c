@@ -25,7 +25,6 @@ int main(){
 	/************************************************************************/
 	/*   TODO: add your code here                                           */
 	/************************************************************************/
-	//cache_op(0x18, 0xa0000000);
 	
 	/* Initalize Mattel HyperScan controller interface */
 	HS_Controller_Init();
@@ -55,10 +54,23 @@ int main(){
     char *right_msg = "RIGHT";
     
 	while(1){
-	
+		
 		// Print text on TV
 		TV_Print(fb, 28, 2, msgs);
-
+		
+		volatile unsigned int *sram = (volatile unsigned int *)0x98000000;
+		int i = 0;
+		while(1){
+			for(i=0;i<=0x1FFF;i++){
+				printf("%x\n", i);
+				if(sram[i] != 0){
+					while(1){
+					printf("%x\n", sram[i]);
+					}
+				}
+			}
+		}
+		
 		// Read controller 1 and controller 2 inputs into the controller data struct
 		HS_Controller_Read();
 		

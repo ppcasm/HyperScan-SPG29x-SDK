@@ -72,22 +72,21 @@ static void print_byte(unsigned char b) {
 
 int main()
 {
-	// Turn all LEDs ON
-	HS_LEDS(0xFF);
-	
 	// Setup IOB port for correct port direction to get the CD door status
 	*P_IOB_GPIO_SETUP = 0x3F3F3302;
 	
 	// Read CD door status
 	if(*P_IOB_GPIO_INPUT&(1<<9)){
-		// If the CD door is closed on boot, boot as normal
-		asm("la r8, 0xA0001000");
-		asm("br! r8");
-		asm("nop!");
+		// If the CD door is CLOSED on boot, boot as normal
+		void (*resume_boot)(void) = (void *)0xA0001000;
+		resume_boot();
 	}
 	else{
 		
-		// Do this stuff if the CD door is closed on boot
+		// Do this stuff if the CD door is OPENED on boot
+		
+		// Turn all LEDs ON
+		HS_LEDS(0xFF);
 		
 		// Setup SDRAM for copying
 		*P_MIU_SDRAM_SETUP1 = (*P_MIU_SDRAM_SETUP1 & 0xFFFF0000) | 0x4834; 
@@ -149,14 +148,18 @@ int main()
 		u32 counts = 0;
 		
 		// Download the binary data over UART, and "roll" the LEDs by 
-		// having a count that ticks the LEDs forward by 1 for every 500
+		// having a count that ticks the LEDs forward by 1 for every 512
 		// bytes received over UART
 		while (dest < end) {
 			counts++;
-			HS_LEDS(1<<leds);
+			
 			*dest++ = uart_read_byte();
-			if(counts % 500 == 0) leds++;
-			if(leds>=8) leds = 0;
+			if(counts % 512 == 0) HS_LEDS(1<<leds++);
+			
+			if(leds>=8){
+				leds = 0;
+				counts = 0;
+			}
 		}
 
 		*P_MIU_SDRAM_SETUP1 = (*P_MIU_SDRAM_SETUP1 & 0xFFFF0000) | 0x4B04;
@@ -175,4 +178,3 @@ int main()
 
 return 0;		
 }
-

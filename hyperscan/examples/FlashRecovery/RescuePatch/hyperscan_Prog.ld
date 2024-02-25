@@ -68,6 +68,7 @@ SECTIONS
   {
     KEEP (*(.hardware_init))
   } =0
+  
   .init           :
   {
     KEEP (*(.init))
