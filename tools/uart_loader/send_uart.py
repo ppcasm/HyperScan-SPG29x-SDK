@@ -8,7 +8,7 @@ CHUNK_SIZE = 8
 
 def show_progress(current, total):
     progress = (current / total) * 100
-    sys.stdout.write('\rUploading: {0}%'.format(int(progress)+1))
+    sys.stdout.write('\rUploading: {0}%'.format(int(progress)))
     sys.stdout.flush()
 
 def main():
@@ -25,11 +25,10 @@ def main():
 
         start_time = datetime.now()
 
-        for i in range(0, len(executable), CHUNK_SIZE):
+        for i in range(0, len(executable)+1, CHUNK_SIZE):
             ser.write(executable[i:i + CHUNK_SIZE])
             ser.flush()
-            #ser.read(1)
-            ser.flush()
+
             show_progress(i, executable_size)
 
         print('\nTime elapsed: {0} (hh:mm:ss)'.format(str(datetime.now() - start_time)).split('.')[0])

@@ -129,6 +129,11 @@ int main()
 		// Print "Ready! " over UART
 		print_string("Ready! ");
 
+		int i = 0;
+		
+		// Define the LEDs value, and a count that we will use later
+		u8 leds = 0;
+		
 		// Get and pack the size bytes of the binary about to be uploaded (comes from the python send script)
 		u32 size = 0;
 		size |= uart_read_byte() << 0;
@@ -141,25 +146,14 @@ int main()
 		
 		// Set the destination and ending address we intend to upload to in SDRAM
 		u8 *dest = (u8 *)UPLOAD_ADDRESS;
-		u8 *end = (u8 *)UPLOAD_ADDRESS + size;
-		
-		// Define the LEDs value, and a count that we will use later
-		u8 leds = 0;
-		u32 counts = 0;
 		
 		// Download the binary data over UART, and "roll" the LEDs by 
 		// having a count that ticks the LEDs forward by 1 for every 512
 		// bytes received over UART
-		while (dest < end) {
-			counts++;
-			
-			*dest++ = uart_read_byte();
-			if(counts % 512 == 0) HS_LEDS(1<<leds++);
-			
-			if(leds>=8){
-				leds = 0;
-				counts = 0;
-			}
+		for(i=0;i<size;i++){
+			dest[i] = uart_read_byte();
+			if(i % 512 == 0) HS_LEDS(1<<leds++);
+			if(leds>=8) leds = 0;
 		}
 
 		*P_MIU_SDRAM_SETUP1 = (*P_MIU_SDRAM_SETUP1 & 0xFFFF0000) | 0x4B04;
@@ -171,7 +165,7 @@ int main()
 		// just in case something doesn't run, you'll have an indicator that 
 		// at least let's you know everything ran proper
 		HS_LEDS(0x00);
-
+		
 		// Start executing from defined entry point
 		entry_point();
 	}
