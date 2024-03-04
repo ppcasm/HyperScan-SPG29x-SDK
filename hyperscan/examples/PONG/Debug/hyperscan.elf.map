@@ -540,19 +540,19 @@ END GROUP
  .debug_pubnames
                 0x00000000000005bc       0x4f Debug\HS_Controller.o
 
-.debug_info     0x0000000000000000     0x2adb
+.debug_info     0x0000000000000000     0x2bee
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000       0xc2 Debug\hyperscan_startup.o
- .debug_info    0x00000000000000c2      0x5ae Debug\main.o
- .debug_info    0x0000000000000670     0x112d Debug\libgloss.o
- .debug_info    0x000000000000179d      0x177 Debug\UART.o
- .debug_info    0x0000000000001914      0x487 Debug\TV.o
- .debug_info    0x0000000000001d9b      0x2a2 Debug\NorFlash.o
- .debug_info    0x000000000000203d      0x46f Debug\User_IRQ.o
- .debug_info    0x00000000000024ac       0xb8 Debug\Sys_isr.o
- .debug_info    0x0000000000002564      0x12c Debug\Sys_IRQ.o
- .debug_info    0x0000000000002690      0x169 Debug\I2C.o
- .debug_info    0x00000000000027f9      0x2e2 Debug\HS_Controller.o
+ .debug_info    0x0000000000000000       0xdb Debug\hyperscan_startup.o
+ .debug_info    0x00000000000000db      0x5c7 Debug\main.o
+ .debug_info    0x00000000000006a2     0x1146 Debug\libgloss.o
+ .debug_info    0x00000000000017e8      0x190 Debug\UART.o
+ .debug_info    0x0000000000001978      0x4a0 Debug\TV.o
+ .debug_info    0x0000000000001e18      0x2bb Debug\NorFlash.o
+ .debug_info    0x00000000000020d3      0x488 Debug\User_IRQ.o
+ .debug_info    0x000000000000255b       0xd1 Debug\Sys_isr.o
+ .debug_info    0x000000000000262c      0x145 Debug\Sys_IRQ.o
+ .debug_info    0x0000000000002771      0x182 Debug\I2C.o
+ .debug_info    0x00000000000028f3      0x2fb Debug\HS_Controller.o
 
 .debug_abbrev   0x0000000000000000      0x688
  *(.debug_abbrev)
@@ -568,19 +568,19 @@ END GROUP
  .debug_abbrev  0x0000000000000539       0x80 Debug\I2C.o
  .debug_abbrev  0x00000000000005b9       0xcf Debug\HS_Controller.o
 
-.debug_line     0x0000000000000000      0xbca
+.debug_line     0x0000000000000000      0xcb8
  *(.debug_line)
- .debug_line    0x0000000000000000       0xa7 Debug\hyperscan_startup.o
- .debug_line    0x00000000000000a7      0x1de Debug\main.o
- .debug_line    0x0000000000000285      0x1af Debug\libgloss.o
- .debug_line    0x0000000000000434       0x90 Debug\UART.o
- .debug_line    0x00000000000004c4      0x154 Debug\TV.o
- .debug_line    0x0000000000000618       0xeb Debug\NorFlash.o
- .debug_line    0x0000000000000703      0x11c Debug\User_IRQ.o
- .debug_line    0x000000000000081f      0x10f Debug\Sys_isr.o
- .debug_line    0x000000000000092e       0xd7 Debug\Sys_IRQ.o
- .debug_line    0x0000000000000a05       0x9c Debug\I2C.o
- .debug_line    0x0000000000000aa1      0x129 Debug\HS_Controller.o
+ .debug_line    0x0000000000000000       0xb8 Debug\hyperscan_startup.o
+ .debug_line    0x00000000000000b8      0x200 Debug\main.o
+ .debug_line    0x00000000000002b8      0x1c0 Debug\libgloss.o
+ .debug_line    0x0000000000000478       0xa1 Debug\UART.o
+ .debug_line    0x0000000000000519      0x176 Debug\TV.o
+ .debug_line    0x000000000000068f       0xfc Debug\NorFlash.o
+ .debug_line    0x000000000000078b      0x12d Debug\User_IRQ.o
+ .debug_line    0x00000000000008b8      0x120 Debug\Sys_isr.o
+ .debug_line    0x00000000000009d8       0xe8 Debug\Sys_IRQ.o
+ .debug_line    0x0000000000000ac0       0xad Debug\I2C.o
+ .debug_line    0x0000000000000b6d      0x14b Debug\HS_Controller.o
 
 .debug_frame    0x0000000000000000      0x97c
  *(.debug_frame)

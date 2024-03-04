@@ -61,15 +61,6 @@ static u8 uart_read_byte() {
 	return *P_UART_TXRX_DATA;
 }
 
-static void print_nibble(unsigned char n) {
-	uart_write_byte("0123456789abcdef"[n & 0xF]);
-}
-
-static void print_byte(unsigned char b) {
-	print_nibble(b >> 4);
-	print_nibble(b >> 0);
-}
-
 int main()
 {
 	// Setup IOB port for correct port direction to get the CD door status
@@ -120,11 +111,9 @@ int main()
 		asm("nop!");
 		asm("nop!");
 		asm("nop");
-				
+			
 		// Flush UART
-		while (!(*P_UART_TXRX_STATUS & UART_RECEIVE_EMPTY)) {
-			print_byte(*P_UART_TXRX_DATA);
-		}
+		while (!(*P_UART_TXRX_STATUS & UART_RECEIVE_EMPTY));
 
 		// Print "Ready! " over UART
 		print_string("Ready! ");
@@ -165,7 +154,37 @@ int main()
 		// just in case something doesn't run, you'll have an indicator that 
 		// at least let's you know everything ran proper
 		HS_LEDS(0x00);
+
+		// invalidate D-Cache
+		asm("la r15, 0xA00001FC");
+		asm("cache 0x18, [r15, 0]");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
 		
+		//	invalidate I-Cache
+		asm("la r15, 0xA00001FC");
+		asm("cache 0x10, [r15, 0]");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		
+		// Drain write buffer
+		asm("la r15, 0xA00001FC");
+		asm("cache 0x1A, [r15, 0]");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+		asm("nop");
+
 		// Start executing from defined entry point
 		entry_point();
 	}

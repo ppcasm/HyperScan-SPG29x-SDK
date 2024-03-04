@@ -4,6 +4,8 @@ import sys
 import serial
 from datetime import datetime
 
+SHOW_PRINTF = 1
+
 CHUNK_SIZE = 8
 
 def show_progress(current, total):
@@ -32,6 +34,11 @@ def main():
             show_progress(i, executable_size)
 
         print('\nTime elapsed: {0} (hh:mm:ss)'.format(str(datetime.now() - start_time)).split('.')[0])
+
+        if(SHOW_PRINTF):
+            while(1):
+                print(ser.readline().strip().decode("utf-8"))
+
         
 if __name__ == "__main__":
      if(len(sys.argv) != 3):
