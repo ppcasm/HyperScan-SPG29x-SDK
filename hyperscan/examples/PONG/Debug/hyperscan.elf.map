@@ -35,8 +35,7 @@ LOAD Debug\UART.o
 LOAD Debug\TV.o
 LOAD Debug\NorFlash.o
 LOAD Debug\User_IRQ.o
-LOAD Debug\Sys_isr.o
-LOAD Debug\Sys_IRQ.o
+LOAD Debug\sys_isr.o
 LOAD Debug\I2C.o
 LOAD Debug\HS_Controller.o
 LOAD Lib.lst
@@ -52,10 +51,12 @@ LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-
 LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a
 END GROUP
 
-.exception      0x00000000a00901fc      0x23c
+.exception      0x00000000a00901fc      0x304
  *(.exception_vec)
  .exception_vec
-                0x00000000a00901fc      0x23c Debug\Sys_isr.o
+                0x00000000a00901fc      0x304 Debug\hyperscan_startup.o
+                0x00000000a0090300                hal_interrupt_handlers
+                0x00000000a0090400                hal_interrupt_data
 
 .stack          0x00000000a0fffff0        0x0
                 0x00000000a0fffff0                _stack = .
@@ -99,7 +100,7 @@ END GROUP
  *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
  *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
- .rel.dyn       0x0000000000000000        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+ .rel.dyn       0x0000000000000000        0x0 Debug\hyperscan_startup.o
 
 .rela.dyn
  *(.rela.init)
@@ -124,11 +125,14 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.hardware_init  0x00000000a0091000       0x94
+.hardware_init  0x00000000a0091000      0x268
  *(.hardware_init)
  .hardware_init
-                0x00000000a0091000       0x94 Debug\hyperscan_startup.o
+                0x00000000a0091000      0x268 Debug\hyperscan_startup.o
                 0x00000000a0091000                _hardware_init
+                0x00000000a00910d0                general_service
+                0x00000000a0091264                hal_default_isr
+                0x00000000a00910cc                norm_debug_service
 
 .init
  *(.init)
@@ -136,147 +140,106 @@ END GROUP
 .plt
  *(.plt)
 
-.text           0x00000000a0091094     0x33e4
+.text           0x00000000a0091268     0x312c
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x00000000a0091094        0x0 Debug\hyperscan_startup.o
- .text          0x00000000a0091094     0x113c Debug\main.o
-                0x00000000a0091094                draw_player1
-                0x00000000a00912a4                draw_ball
-                0x00000000a009119c                draw_player2
-                0x00000000a0091408                main
- .text          0x00000000a00921d0      0x3c0 Debug\libgloss.o
-                0x00000000a0092500                _getpid
-                0x00000000a0092480                _lseek_r
-                0x00000000a0092558                _kill_r
-                0x00000000a0092498                _fstat_r
-                0x00000000a00924b8                isatty
-                0x00000000a0092510                _getpid_r
-                0x00000000a00923f0                _sbrk_r
-                0x00000000a0092250                _read_r
-                0x00000000a00921d0                _putc_r
-                0x00000000a00923a4                _open_r
-                0x00000000a00923bc                _close_r
-                0x00000000a0092320                _write_r
-                0x00000000a0092520                _kill
-                0x00000000a00923d0                _exit
- .text          0x00000000a0092590       0xd8 Debug\UART.o
-                0x00000000a0092590                UART_Init
-                0x00000000a009259c                UART_SendChar
-                0x00000000a00925ec                UART_GetChar
- .text          0x00000000a0092668      0x46c Debug\TV.o
-                0x00000000a0092a74                TV_FadeIn
-                0x00000000a00926bc                TV_Init
-                0x00000000a0092784                TV_Buffer_Sel
-                0x00000000a0092668                TV_ClearScreen
-                0x00000000a00927e0                TV_Fade
-                0x00000000a0092a1c                TV_FadeOut
-                0x00000000a0092944                TV_PrintHex
-                0x00000000a0092750                TV_Buffer_Set
-                0x00000000a0092800                TV_Print
-                0x00000000a00927c0                TV_Hue
-                0x00000000a00927a0                TV_Saturation
- .text          0x00000000a0092ad4      0x3cc Debug\NorFlash.o
-                0x00000000a0092b0c                NorFlash_ChipErase
-                0x00000000a0092c48                NorFlash_SectorErase
-                0x00000000a0092ad4                NorFlash_Init
-                0x00000000a0092e18                NorFlash_SetAddress
-                0x00000000a0092da8                NorFlash_WordWrite
-                0x00000000a0092b90                NorFlash_BlockErase
-                0x00000000a0092d00                NorFlash_Write32
-                0x00000000a0092e6c                NorFlash_Delay
- .text          0x00000000a0092ea0      0x1e0 Debug\User_IRQ.o
-                0x00000000a0093044                IRQ28
-                0x00000000a0092f00                IRQ55
-                0x00000000a0092edc                IRQ58
-                0x00000000a0092fb4                IRQ40
-                0x00000000a0092fe4                IRQ36
-                0x00000000a0093020                IRQ31
-                0x00000000a0092eac                IRQ62
-                0x00000000a0092eb8                IRQ61
-                0x00000000a0092fd8                IRQ37
-                0x00000000a0092fcc                IRQ38
-                0x00000000a009302c                IRQ30
-                0x00000000a0093038                IRQ29
-                0x00000000a0092f0c                IRQ54
-                0x00000000a0092f9c                IRQ42
-                0x00000000a0092ee8                IRQ57
-                0x00000000a0092ef4                IRQ56
-                0x00000000a0092fa8                IRQ41
-                0x00000000a0092f60                IRQ47
-                0x00000000a0093008                IRQ33
-                0x00000000a0092ed0                IRQ59
-                0x00000000a0093074                IRQ24
-                0x00000000a0092fc0                IRQ39
-                0x00000000a0092f84                IRQ44
-                0x00000000a0093050                IRQ27
-                0x00000000a0092f30                IRQ51
-                0x00000000a0092ffc                IRQ34
-                0x00000000a0092f3c                IRQ50
-                0x00000000a0092ec4                IRQ60
-                0x00000000a0093068                IRQ25
-                0x00000000a0092f18                IRQ53
-                0x00000000a0092f48                IRQ49
-                0x00000000a0092f6c                IRQ46
-                0x00000000a0092f78                IRQ45
-                0x00000000a009305c                IRQ26
-                0x00000000a0092f24                IRQ52
-                0x00000000a0093014                IRQ32
-                0x00000000a0092f90                IRQ43
-                0x00000000a0092f54                IRQ48
-                0x00000000a0092ea0                IRQ63
-                0x00000000a0092ff0                IRQ35
- .text          0x00000000a0093080        0x0 Debug\Sys_isr.o
- .text          0x00000000a0093080      0x198 Debug\Sys_IRQ.o
-                0x00000000a0093088                irq_dispatch
-                0x00000000a0093080                intmsg
- .text          0x00000000a0093218      0x164 Debug\I2C.o
-                0x00000000a00932f4                I2C_Write8
-                0x00000000a0093218                I2C_Init
-                0x00000000a0093268                I2C_Read8
- .text          0x00000000a009337c      0x138 Debug\HS_Controller.o
-                0x00000000a00933d0                HS_Controller_Read
-                0x00000000a009337c                HS_Controller_Init
- .text          0x00000000a00934b4       0x14 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
-                0x00000000a00934b4                abort
- .text          0x00000000a00934c8      0x2a8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
-                0x00000000a00936d0                _signal_r
-                0x00000000a00935f4                _raise_r
-                0x00000000a0093544                __sigtramp_r
-                0x00000000a0093748                signal
-                0x00000000a0093534                _init_signal
-                0x00000000a00934c8                _init_signal_r
-                0x00000000a00935d4                __sigtramp
-                0x00000000a00936b0                raise
- .text          0x00000000a0093770       0x28 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
-                0x00000000a0093770                write
- .text          0x00000000a0093798        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
- .text          0x00000000a0093798      0x8ac c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
-                0x00000000a0093798                _malloc_r
- .text          0x00000000a0094044        0x8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
-                0x00000000a0094048                __malloc_unlock
-                0x00000000a0094044                __malloc_lock
- .text          0x00000000a009404c      0x42c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
-                0x00000000a0094168                _free_r
-                0x00000000a009404c                _malloc_trim_r
+ .text          0x00000000a0091268        0x0 Debug\hyperscan_startup.o
+ .text          0x00000000a0091268     0x113c Debug\main.o
+                0x00000000a0091268                draw_player1
+                0x00000000a0091478                draw_ball
+                0x00000000a0091370                draw_player2
+                0x00000000a00915dc                main
+ .text          0x00000000a00923a4      0x3c0 Debug\libgloss.o
+                0x00000000a00926d4                _getpid
+                0x00000000a0092654                _lseek_r
+                0x00000000a009272c                _kill_r
+                0x00000000a009266c                _fstat_r
+                0x00000000a009268c                isatty
+                0x00000000a00926e4                _getpid_r
+                0x00000000a00925c4                _sbrk_r
+                0x00000000a0092424                _read_r
+                0x00000000a00923a4                _putc_r
+                0x00000000a0092578                _open_r
+                0x00000000a0092590                _close_r
+                0x00000000a00924f4                _write_r
+                0x00000000a00926f4                _kill
+                0x00000000a00925a4                _exit
+ .text          0x00000000a0092764       0xd8 Debug\UART.o
+                0x00000000a0092764                UART_Init
+                0x00000000a0092770                UART_SendChar
+                0x00000000a00927c0                UART_GetChar
+ .text          0x00000000a009283c      0x46c Debug\TV.o
+                0x00000000a0092c48                TV_FadeIn
+                0x00000000a0092890                TV_Init
+                0x00000000a0092958                TV_Buffer_Sel
+                0x00000000a009283c                TV_ClearScreen
+                0x00000000a00929b4                TV_Fade
+                0x00000000a0092bf0                TV_FadeOut
+                0x00000000a0092b18                TV_PrintHex
+                0x00000000a0092924                TV_Buffer_Set
+                0x00000000a00929d4                TV_Print
+                0x00000000a0092994                TV_Hue
+                0x00000000a0092974                TV_Saturation
+ .text          0x00000000a0092ca8      0x3d0 Debug\NorFlash.o
+                0x00000000a0092ce0                NorFlash_ChipErase
+                0x00000000a0092e1c                NorFlash_SectorErase
+                0x00000000a0092ca8                NorFlash_Init
+                0x00000000a0092ff0                NorFlash_SetAddress
+                0x00000000a0092f7c                NorFlash_WordWrite
+                0x00000000a0092d64                NorFlash_BlockErase
+                0x00000000a0092ed4                NorFlash_Write32
+                0x00000000a0093044                NorFlash_Delay
+ .text          0x00000000a0093078        0xc Debug\User_IRQ.o
+                0x00000000a0093078                AP_Init_SysIRQs
+ .text          0x00000000a0093084       0xb0 Debug\sys_isr.o
+                0x00000000a00930e0                AP_Attach_ISR
+                0x00000000a0093084                irq_dispatch
+ .text          0x00000000a0093134      0x164 Debug\I2C.o
+                0x00000000a0093210                I2C_Write8
+                0x00000000a0093134                I2C_Init
+                0x00000000a0093184                I2C_Read8
+ .text          0x00000000a0093298      0x138 Debug\HS_Controller.o
+                0x00000000a00932ec                HS_Controller_Read
+                0x00000000a0093298                HS_Controller_Init
+ .text          0x00000000a00933d0       0x14 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+                0x00000000a00933d0                abort
+ .text          0x00000000a00933e4      0x2a8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+                0x00000000a00935ec                _signal_r
+                0x00000000a0093510                _raise_r
+                0x00000000a0093460                __sigtramp_r
+                0x00000000a0093664                signal
+                0x00000000a0093450                _init_signal
+                0x00000000a00933e4                _init_signal_r
+                0x00000000a00934f0                __sigtramp
+                0x00000000a00935cc                raise
+ .text          0x00000000a009368c       0x28 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+                0x00000000a009368c                write
+ .text          0x00000000a00936b4        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+ .text          0x00000000a00936b4      0x8ac c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+                0x00000000a00936b4                _malloc_r
+ .text          0x00000000a0093f60        0x8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+                0x00000000a0093f64                __malloc_unlock
+                0x00000000a0093f60                __malloc_lock
+ .text          0x00000000a0093f68      0x42c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+                0x00000000a0094084                _free_r
+                0x00000000a0093f68                _malloc_trim_r
  *(.gnu.warning)
  *(.glue_7t)
  *(.glue_7)
 
 .fini
  *(.fini)
-                0x00000000a0094478                PROVIDE (__etext, .)
-                0x00000000a0094478                PROVIDE (_etext, .)
-                0x00000000a0094478                PROVIDE (etext, .)
+                0x00000000a0094394                PROVIDE (__etext, .)
+                0x00000000a0094394                PROVIDE (_etext, .)
+                0x00000000a0094394                PROVIDE (etext, .)
 
-.rodata         0x00000000a0094478     0x1150
+.rodata         0x00000000a0094394     0x10b0
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00000000a0094478       0x98 Debug\main.o
- .rodata        0x00000000a0094510       0x10 Debug\libgloss.o
- .rodata        0x00000000a0094520     0x1004 Debug\TV.o
-                0x00000000a0094520                font
- .rodata        0x00000000a0095524       0xa0 Debug\Sys_IRQ.o
+ .rodata        0x00000000a0094394       0x98 Debug\main.o
+ .rodata        0x00000000a009442c       0x10 Debug\libgloss.o
+ .rodata        0x00000000a009443c     0x1004 Debug\TV.o
+                0x00000000a009443c                font
  .rodata.str1.4
-                0x00000000a00955c4        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+                0x00000000a0095440        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
 
 .rodata1
  *(.rodata1)
@@ -289,50 +252,49 @@ END GROUP
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
-                0x00000000a00956c8                . = (ALIGN (0x100) + (. & 0xff))
-                0x00000000a00956c8                . = ALIGN (0x4)
-                0x00000000a00956c8                PROVIDE (__preinit_array_start, .)
+                0x00000000a0095544                . = (ALIGN (0x100) + (. & 0xff))
+                0x00000000a0095544                . = ALIGN (0x4)
+                0x00000000a0095544                PROVIDE (__preinit_array_start, .)
 
 .preinit_array
  *(.preinit_array)
-                0x00000000a00956c8                PROVIDE (__preinit_array_end, .)
-                0x00000000a00956c8                PROVIDE (__init_array_start, .)
+                0x00000000a0095544                PROVIDE (__preinit_array_end, .)
+                0x00000000a0095544                PROVIDE (__init_array_start, .)
 
 .init_array
  *(.init_array)
-                0x00000000a00956c8                PROVIDE (__init_array_end, .)
-                0x00000000a00956c8                PROVIDE (__fini_array_start, .)
+                0x00000000a0095544                PROVIDE (__init_array_end, .)
+                0x00000000a0095544                PROVIDE (__fini_array_start, .)
 
 .fini_array
  *(.fini_array)
-                0x00000000a00956c8                PROVIDE (__fini_array_end, .)
+                0x00000000a0095544                PROVIDE (__fini_array_end, .)
 
-.data           0x00000000a00956c8      0x898
-                0x00000000a00956c8                __data_start = .
+.data           0x00000000a0095548      0x898
+                0x00000000a0095548                __data_start = .
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x00000000a00956c8        0x0 Debug\hyperscan_startup.o
- .data          0x00000000a00956c8      0x100 Debug\main.o
-                0x00000000a00956c8                ball
- .data          0x00000000a00957c8        0x0 Debug\libgloss.o
- .data          0x00000000a00957c8        0x0 Debug\UART.o
- .data          0x00000000a00957c8        0x0 Debug\TV.o
- .data          0x00000000a00957c8        0x0 Debug\NorFlash.o
- .data          0x00000000a00957c8        0x0 Debug\User_IRQ.o
- .data          0x00000000a00957c8        0x0 Debug\Sys_isr.o
- .data          0x00000000a00957c8        0x0 Debug\Sys_IRQ.o
- .data          0x00000000a00957c8        0x0 Debug\I2C.o
- .data          0x00000000a00957c8        0x0 Debug\HS_Controller.o
- .data          0x00000000a00957c8        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
- .data          0x00000000a00957c8        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
- .data          0x00000000a00957c8        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
- .data          0x00000000a00957c8      0x388 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
-                0x00000000a00957c8                _impure_ptr
- .data          0x00000000a0095b50      0x410 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
-                0x00000000a0095f5c                __malloc_sbrk_base
-                0x00000000a0095b50                __malloc_av_
-                0x00000000a0095f58                __malloc_trim_threshold
- .data          0x00000000a0095f60        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
- .data          0x00000000a0095f60        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+ .data          0x00000000a0095548        0x0 Debug\hyperscan_startup.o
+ .data          0x00000000a0095548      0x100 Debug\main.o
+                0x00000000a0095548                ball
+ .data          0x00000000a0095648        0x0 Debug\libgloss.o
+ .data          0x00000000a0095648        0x0 Debug\UART.o
+ .data          0x00000000a0095648        0x0 Debug\TV.o
+ .data          0x00000000a0095648        0x0 Debug\NorFlash.o
+ .data          0x00000000a0095648        0x0 Debug\User_IRQ.o
+ .data          0x00000000a0095648        0x0 Debug\sys_isr.o
+ .data          0x00000000a0095648        0x0 Debug\I2C.o
+ .data          0x00000000a0095648        0x0 Debug\HS_Controller.o
+ .data          0x00000000a0095648        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+ .data          0x00000000a0095648        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+ .data          0x00000000a0095648        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+ .data          0x00000000a0095648      0x388 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+                0x00000000a0095648                _impure_ptr
+ .data          0x00000000a00959d0      0x410 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+                0x00000000a0095ddc                __malloc_sbrk_base
+                0x00000000a00959d0                __malloc_av_
+                0x00000000a0095dd8                __malloc_trim_threshold
+ .data          0x00000000a0095de0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+ .data          0x00000000a0095de0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
 
 .data1
  *(.data1)
@@ -371,78 +333,77 @@ END GROUP
 .got
  *(.got.plt)
  *(.got)
-                0x00000000a0099f60                _gp = (. + 0x4000)
+                0x00000000a0099de0                _gp = (. + 0x4000)
 
-.sdata          0x00000000a0095f60       0x34
-                0x00000000a0095f60                _sdata_start = .
+.sdata          0x00000000a0095de0       0x34
+                0x00000000a0095de0                _sdata_start = .
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x00000000a0095f60       0x34 Debug\main.o
-                0x00000000a0095f68                paddle_speed
-                0x00000000a0095f8c                prev_p1_pos
-                0x00000000a0095f64                ball_speed
-                0x00000000a0095f60                fb
-                0x00000000a0095f90                prev_p2_pos
-                0x00000000a0095f88                cur_p2_pos
-                0x00000000a0095f74                cur_ball_x
-                0x00000000a0095f78                cur_ball_y
-                0x00000000a0095f84                cur_p1_pos
-                0x00000000a0095f80                prev_ball_y
-                0x00000000a0095f6c                ball_movement_x
-                0x00000000a0095f7c                prev_ball_x
-                0x00000000a0095f70                ball_movement_y
-                0x00000000a0095f94                _edata = .
-                0x00000000a0095f94                PROVIDE (edata, .)
-                0x00000000a0095f94                . = ALIGN (0x4)
-                0x00000000a0095f94                __bss_start = .
-                0x00000000a0095f94                __bss_start__ = .
+ .sdata         0x00000000a0095de0       0x34 Debug\main.o
+                0x00000000a0095de8                paddle_speed
+                0x00000000a0095e0c                prev_p1_pos
+                0x00000000a0095de4                ball_speed
+                0x00000000a0095de0                fb
+                0x00000000a0095e10                prev_p2_pos
+                0x00000000a0095e08                cur_p2_pos
+                0x00000000a0095df4                cur_ball_x
+                0x00000000a0095df8                cur_ball_y
+                0x00000000a0095e04                cur_p1_pos
+                0x00000000a0095e00                prev_ball_y
+                0x00000000a0095dec                ball_movement_x
+                0x00000000a0095dfc                prev_ball_x
+                0x00000000a0095df0                ball_movement_y
+                0x00000000a0095e14                _edata = .
+                0x00000000a0095e14                PROVIDE (edata, .)
+                0x00000000a0095e14                . = ALIGN (0x4)
+                0x00000000a0095e14                __bss_start = .
+                0x00000000a0095e14                __bss_start__ = .
 
-.sbss           0x00000000a0095f94        0x9
-                0x00000000a0095f94                PROVIDE (__sbss_start, .)
-                0x00000000a0095f94                PROVIDE (___sbss_start, .)
+.sbss           0x00000000a0095e14        0x9
+                0x00000000a0095e14                PROVIDE (__sbss_start, .)
+                0x00000000a0095e14                PROVIDE (___sbss_start, .)
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x00000000a0095f94        0x4 Debug\libgloss.o
+ .sbss          0x00000000a0095e14        0x4 Debug\libgloss.o
  *(.scommon)
- .scommon       0x00000000a0095f98        0x5 Debug\main.o
-                0x00000000a0095f98                controller
- .scommon       0x00000000a0095f9d        0x0 Debug\HS_Controller.o
-                0x00000000a0095f9d                PROVIDE (__sbss_end, .)
-                0x00000000a0095f9d                PROVIDE (___sbss_end, .)
-                0x00000000a0099f60                _gp = (_sdata_start + 0x4000)
+ .scommon       0x00000000a0095e18        0x5 Debug\main.o
+                0x00000000a0095e18                controller
+ .scommon       0x00000000a0095e1d        0x0 Debug\HS_Controller.o
+                0x00000000a0095e1d                PROVIDE (__sbss_end, .)
+                0x00000000a0095e1d                PROVIDE (___sbss_end, .)
+                0x00000000a0099de0                _gp = (_sdata_start + 0x4000)
 
-.bss            0x00000000a0095fa0   0x100034
+.bss            0x00000000a0095e20   0x100034
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x00000000a0095fa0        0x0 Debug\hyperscan_startup.o
- .bss           0x00000000a0095fa0        0x0 Debug\main.o
- .bss           0x00000000a0095fa0   0x100000 Debug\libgloss.o
- .bss           0x00000000a0195fa0        0x0 Debug\UART.o
- .bss           0x00000000a0195fa0        0x0 Debug\TV.o
- .bss           0x00000000a0195fa0        0x0 Debug\NorFlash.o
- .bss           0x00000000a0195fa0        0x0 Debug\User_IRQ.o
- .bss           0x00000000a0195fa0        0x0 Debug\Sys_isr.o
- .bss           0x00000000a0195fa0        0x0 Debug\Sys_IRQ.o
- .bss           0x00000000a0195fa0        0x0 Debug\I2C.o
- .bss           0x00000000a0195fa0        0x0 Debug\HS_Controller.o
- .bss           0x00000000a0195fa0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
- .bss           0x00000000a0195fa0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
- .bss           0x00000000a0195fa0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
- .bss           0x00000000a0195fa0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
- .bss           0x00000000a0195fa0       0x34 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
-                0x00000000a0195fa0                __malloc_top_pad
-                0x00000000a0195fa4                __malloc_max_sbrked_mem
-                0x00000000a0195fac                __malloc_current_mallinfo
-                0x00000000a0195fa8                __malloc_max_total_mem
- .bss           0x00000000a0195fd4        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
- .bss           0x00000000a0195fd4        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+ .bss           0x00000000a0095e20        0x0 Debug\hyperscan_startup.o
+ .bss           0x00000000a0095e20        0x0 Debug\main.o
+ .bss           0x00000000a0095e20   0x100000 Debug\libgloss.o
+ .bss           0x00000000a0195e20        0x0 Debug\UART.o
+ .bss           0x00000000a0195e20        0x0 Debug\TV.o
+ .bss           0x00000000a0195e20        0x0 Debug\NorFlash.o
+ .bss           0x00000000a0195e20        0x0 Debug\User_IRQ.o
+ .bss           0x00000000a0195e20        0x0 Debug\sys_isr.o
+ .bss           0x00000000a0195e20        0x0 Debug\I2C.o
+ .bss           0x00000000a0195e20        0x0 Debug\HS_Controller.o
+ .bss           0x00000000a0195e20        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+ .bss           0x00000000a0195e20        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+ .bss           0x00000000a0195e20        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+ .bss           0x00000000a0195e20        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+ .bss           0x00000000a0195e20       0x34 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+                0x00000000a0195e20                __malloc_top_pad
+                0x00000000a0195e24                __malloc_max_sbrked_mem
+                0x00000000a0195e2c                __malloc_current_mallinfo
+                0x00000000a0195e28                __malloc_max_total_mem
+ .bss           0x00000000a0195e54        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+ .bss           0x00000000a0195e54        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
  *(COMMON)
-                0x00000000a0195fd4                . = ALIGN (0x4)
-                0x00000000a0195fd4                . = ALIGN (0x4)
-                0x00000000a0195fd4                _end = .
-                0x00000000a0195fd4                _bss_end__ = .
-                0x00000000a0195fd4                __bss_end__ = .
-                0x00000000a0195fd4                __end__ = .
-                0x00000000a0195fd4                PROVIDE (end, .)
+                0x00000000a0195e54                . = ALIGN (0x4)
+                0x00000000a0195e54                . = ALIGN (0x4)
+                0x00000000a0195e54                _end = .
+                0x00000000a0195e54                _bss_end__ = .
+                0x00000000a0195e54                __bss_end__ = .
+                0x00000000a0195e54                __end__ = .
+                0x00000000a0195e54                PROVIDE (end, .)
 
 .stab
  *(.stab)
@@ -470,7 +431,7 @@ END GROUP
  .comment       0x0000000000000036       0x12 Debug\TV.o
  .comment       0x0000000000000048       0x12 Debug\NorFlash.o
  .comment       0x000000000000005a       0x12 Debug\User_IRQ.o
- .comment       0x000000000000006c       0x12 Debug\Sys_IRQ.o
+ .comment       0x000000000000006c       0x12 Debug\sys_isr.o
  .comment       0x000000000000007e       0x12 Debug\I2C.o
  .comment       0x0000000000000090       0x12 Debug\HS_Controller.o
  .comment       0x00000000000000a2       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
@@ -493,33 +454,31 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x160
+.debug_aranges  0x0000000000000000      0x148
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x20 Debug\hyperscan_startup.o
+                0x0000000000000000       0x28 Debug\hyperscan_startup.o
  .debug_aranges
-                0x0000000000000020       0x20 Debug\main.o
+                0x0000000000000028       0x20 Debug\main.o
  .debug_aranges
-                0x0000000000000040       0x20 Debug\libgloss.o
+                0x0000000000000048       0x20 Debug\libgloss.o
  .debug_aranges
-                0x0000000000000060       0x20 Debug\UART.o
+                0x0000000000000068       0x20 Debug\UART.o
  .debug_aranges
-                0x0000000000000080       0x20 Debug\TV.o
+                0x0000000000000088       0x20 Debug\TV.o
  .debug_aranges
-                0x00000000000000a0       0x20 Debug\NorFlash.o
+                0x00000000000000a8       0x20 Debug\NorFlash.o
  .debug_aranges
-                0x00000000000000c0       0x20 Debug\User_IRQ.o
+                0x00000000000000c8       0x20 Debug\User_IRQ.o
  .debug_aranges
-                0x00000000000000e0       0x20 Debug\Sys_isr.o
+                0x00000000000000e8       0x20 Debug\sys_isr.o
  .debug_aranges
-                0x0000000000000100       0x20 Debug\Sys_IRQ.o
+                0x0000000000000108       0x20 Debug\I2C.o
  .debug_aranges
-                0x0000000000000120       0x20 Debug\I2C.o
- .debug_aranges
-                0x0000000000000140       0x20 Debug\HS_Controller.o
+                0x0000000000000128       0x20 Debug\HS_Controller.o
 
 .debug_pubnames
-                0x0000000000000000      0x60b
+                0x0000000000000000      0x496
  *(.debug_pubnames)
  .debug_pubnames
                 0x0000000000000000      0x12e Debug\main.o
@@ -532,84 +491,81 @@ END GROUP
  .debug_pubnames
                 0x00000000000002ed       0xc3 Debug\NorFlash.o
  .debug_pubnames
-                0x00000000000003b0      0x1a2 Debug\User_IRQ.o
+                0x00000000000003b0       0x26 Debug\User_IRQ.o
  .debug_pubnames
-                0x0000000000000552       0x2e Debug\Sys_IRQ.o
+                0x00000000000003d6       0x35 Debug\sys_isr.o
  .debug_pubnames
-                0x0000000000000580       0x3c Debug\I2C.o
+                0x000000000000040b       0x3c Debug\I2C.o
  .debug_pubnames
-                0x00000000000005bc       0x4f Debug\HS_Controller.o
+                0x0000000000000447       0x4f Debug\HS_Controller.o
 
-.debug_info     0x0000000000000000     0x2bee
+.debug_info     0x0000000000000000     0x282f
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000       0xdb Debug\hyperscan_startup.o
- .debug_info    0x00000000000000db      0x5c7 Debug\main.o
- .debug_info    0x00000000000006a2     0x1146 Debug\libgloss.o
- .debug_info    0x00000000000017e8      0x190 Debug\UART.o
- .debug_info    0x0000000000001978      0x4a0 Debug\TV.o
- .debug_info    0x0000000000001e18      0x2bb Debug\NorFlash.o
- .debug_info    0x00000000000020d3      0x488 Debug\User_IRQ.o
- .debug_info    0x000000000000255b       0xd1 Debug\Sys_isr.o
- .debug_info    0x000000000000262c      0x145 Debug\Sys_IRQ.o
- .debug_info    0x0000000000002771      0x182 Debug\I2C.o
- .debug_info    0x00000000000028f3      0x2fb Debug\HS_Controller.o
+ .debug_info    0x0000000000000000       0xd7 Debug\hyperscan_startup.o
+ .debug_info    0x00000000000000d7      0x5c7 Debug\main.o
+ .debug_info    0x000000000000069e     0x1146 Debug\libgloss.o
+ .debug_info    0x00000000000017e4      0x190 Debug\UART.o
+ .debug_info    0x0000000000001974      0x4a0 Debug\TV.o
+ .debug_info    0x0000000000001e14      0x2bb Debug\NorFlash.o
+ .debug_info    0x00000000000020cf       0xf0 Debug\User_IRQ.o
+ .debug_info    0x00000000000021bf      0x1f3 Debug\sys_isr.o
+ .debug_info    0x00000000000023b2      0x182 Debug\I2C.o
+ .debug_info    0x0000000000002534      0x2fb Debug\HS_Controller.o
 
-.debug_abbrev   0x0000000000000000      0x688
+.debug_abbrev   0x0000000000000000      0x678
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000       0x14 Debug\hyperscan_startup.o
- .debug_abbrev  0x0000000000000014       0xe9 Debug\main.o
- .debug_abbrev  0x00000000000000fd      0x1ce Debug\libgloss.o
- .debug_abbrev  0x00000000000002cb       0x69 Debug\UART.o
- .debug_abbrev  0x0000000000000334       0xa8 Debug\TV.o
- .debug_abbrev  0x00000000000003dc       0x97 Debug\NorFlash.o
- .debug_abbrev  0x0000000000000473       0x49 Debug\User_IRQ.o
- .debug_abbrev  0x00000000000004bc       0x14 Debug\Sys_isr.o
- .debug_abbrev  0x00000000000004d0       0x69 Debug\Sys_IRQ.o
- .debug_abbrev  0x0000000000000539       0x80 Debug\I2C.o
- .debug_abbrev  0x00000000000005b9       0xcf Debug\HS_Controller.o
+ .debug_abbrev  0x0000000000000000       0x12 Debug\hyperscan_startup.o
+ .debug_abbrev  0x0000000000000012       0xe9 Debug\main.o
+ .debug_abbrev  0x00000000000000fb      0x1ce Debug\libgloss.o
+ .debug_abbrev  0x00000000000002c9       0x69 Debug\UART.o
+ .debug_abbrev  0x0000000000000332       0xa8 Debug\TV.o
+ .debug_abbrev  0x00000000000003da       0x97 Debug\NorFlash.o
+ .debug_abbrev  0x0000000000000471       0x27 Debug\User_IRQ.o
+ .debug_abbrev  0x0000000000000498       0x91 Debug\sys_isr.o
+ .debug_abbrev  0x0000000000000529       0x80 Debug\I2C.o
+ .debug_abbrev  0x00000000000005a9       0xcf Debug\HS_Controller.o
 
-.debug_line     0x0000000000000000      0xcb8
+.debug_line     0x0000000000000000      0xb41
  *(.debug_line)
- .debug_line    0x0000000000000000       0xb8 Debug\hyperscan_startup.o
- .debug_line    0x00000000000000b8      0x200 Debug\main.o
- .debug_line    0x00000000000002b8      0x1c0 Debug\libgloss.o
- .debug_line    0x0000000000000478       0xa1 Debug\UART.o
- .debug_line    0x0000000000000519      0x176 Debug\TV.o
- .debug_line    0x000000000000068f       0xfc Debug\NorFlash.o
- .debug_line    0x000000000000078b      0x12d Debug\User_IRQ.o
- .debug_line    0x00000000000008b8      0x120 Debug\Sys_isr.o
- .debug_line    0x00000000000009d8       0xe8 Debug\Sys_IRQ.o
- .debug_line    0x0000000000000ac0       0xad Debug\I2C.o
- .debug_line    0x0000000000000b6d      0x14b Debug\HS_Controller.o
+ .debug_line    0x0000000000000000      0x147 Debug\hyperscan_startup.o
+ .debug_line    0x0000000000000147      0x200 Debug\main.o
+ .debug_line    0x0000000000000347      0x1c0 Debug\libgloss.o
+ .debug_line    0x0000000000000507       0xa1 Debug\UART.o
+ .debug_line    0x00000000000005a8      0x176 Debug\TV.o
+ .debug_line    0x000000000000071e       0xfc Debug\NorFlash.o
+ .debug_line    0x000000000000081a       0x95 Debug\User_IRQ.o
+ .debug_line    0x00000000000008af       0x9a Debug\sys_isr.o
+ .debug_line    0x0000000000000949       0xad Debug\I2C.o
+ .debug_line    0x00000000000009f6      0x14b Debug\HS_Controller.o
 
-.debug_frame    0x0000000000000000      0x97c
+.debug_frame    0x0000000000000000      0x5d4
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x88 Debug\main.o
  .debug_frame   0x0000000000000088      0x184 Debug\libgloss.o
  .debug_frame   0x000000000000020c       0x5c Debug\UART.o
  .debug_frame   0x0000000000000268      0x140 Debug\TV.o
  .debug_frame   0x00000000000003a8      0x100 Debug\NorFlash.o
- .debug_frame   0x00000000000004a8      0x3d0 Debug\User_IRQ.o
- .debug_frame   0x0000000000000878       0x48 Debug\Sys_IRQ.o
- .debug_frame   0x00000000000008c0       0x60 Debug\I2C.o
- .debug_frame   0x0000000000000920       0x5c Debug\HS_Controller.o
+ .debug_frame   0x00000000000004a8       0x28 Debug\User_IRQ.o
+ .debug_frame   0x00000000000004d0       0x48 Debug\sys_isr.o
+ .debug_frame   0x0000000000000518       0x60 Debug\I2C.o
+ .debug_frame   0x0000000000000578       0x5c Debug\HS_Controller.o
 
 .debug_str      0x0000000000000000       0x3a
  *(.debug_str)
  .debug_str     0x0000000000000000       0x1f Debug\libgloss.o
  .debug_str     0x000000000000001f       0x1b Debug\TV.o
 
-.debug_loc      0x0000000000000000     0x10d3
+.debug_loc      0x0000000000000000      0xa46
  *(.debug_loc)
  .debug_loc     0x0000000000000000       0xea Debug\main.o
  .debug_loc     0x00000000000000ea      0x2c6 Debug\libgloss.o
  .debug_loc     0x00000000000003b0       0x8d Debug\UART.o
  .debug_loc     0x000000000000043d      0x251 Debug\TV.o
  .debug_loc     0x000000000000068e      0x1e8 Debug\NorFlash.o
- .debug_loc     0x0000000000000876      0x6b8 Debug\User_IRQ.o
- .debug_loc     0x0000000000000f2e       0x6e Debug\Sys_IRQ.o
- .debug_loc     0x0000000000000f9c       0x99 Debug\I2C.o
- .debug_loc     0x0000000000001035       0x9e Debug\HS_Controller.o
+ .debug_loc     0x0000000000000876       0x2b Debug\User_IRQ.o
+ .debug_loc     0x00000000000008a1       0x6e Debug\sys_isr.o
+ .debug_loc     0x000000000000090f       0x99 Debug\I2C.o
+ .debug_loc     0x00000000000009a8       0x9e Debug\HS_Controller.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -627,22 +583,24 @@ END GROUP
  *(.debug_varnames)
 OUTPUT(Debug\hyperscan.elf elf32-littlescore)
 
-.pdr            0x0000000000000000      0xcc0
+.pdr            0x0000000000000000      0x7e0
  .pdr           0x0000000000000000        0x0 Debug\hyperscan_startup.o
  .pdr           0x0000000000000000       0x80 Debug\main.o
  .pdr           0x0000000000000080      0x1c0 Debug\libgloss.o
  .pdr           0x0000000000000240       0x60 Debug\UART.o
  .pdr           0x00000000000002a0      0x160 Debug\TV.o
  .pdr           0x0000000000000400      0x100 Debug\NorFlash.o
- .pdr           0x0000000000000500      0x500 Debug\User_IRQ.o
- .pdr           0x0000000000000a00        0x0 Debug\Sys_isr.o
- .pdr           0x0000000000000a00       0x40 Debug\Sys_IRQ.o
- .pdr           0x0000000000000a40       0x60 Debug\I2C.o
- .pdr           0x0000000000000aa0       0x40 Debug\HS_Controller.o
- .pdr           0x0000000000000ae0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
- .pdr           0x0000000000000b00      0x100 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
- .pdr           0x0000000000000c00       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
- .pdr           0x0000000000000c20        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
- .pdr           0x0000000000000c20       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
- .pdr           0x0000000000000c40       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
- .pdr           0x0000000000000c80       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+ .pdr           0x0000000000000500       0x20 Debug\User_IRQ.o
+ .pdr           0x0000000000000520       0x40 Debug\sys_isr.o
+ .pdr           0x0000000000000560       0x60 Debug\I2C.o
+ .pdr           0x00000000000005c0       0x40 Debug\HS_Controller.o
+ .pdr           0x0000000000000600       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+ .pdr           0x0000000000000620      0x100 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+ .pdr           0x0000000000000720       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+ .pdr           0x0000000000000740        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+ .pdr           0x0000000000000740       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+ .pdr           0x0000000000000760       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+ .pdr           0x00000000000007a0       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+
+.debug_ranges   0x0000000000000000       0x20
+ .debug_ranges  0x0000000000000000       0x20 Debug\hyperscan_startup.o

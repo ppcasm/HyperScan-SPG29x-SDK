@@ -164,10 +164,6 @@ Address Check = 0
 # Begin Group "Source Files"
 #PROP Default_Filter = c;cpp;cc;C;cxx;asm;s;
 
-# Begin Group "Debug"
-#PROP Default_Filter = 
-
-# End Group
 # Begin Group "hslibs"
 #PROP Default_Filter = 
 
@@ -199,13 +195,7 @@ PARAM=
 #PROP Default_Filter = 
 
 # Begin Source File
-SOURCE=..\..\scorelibs\IRQ\Sys_IRQ.c
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
-SOURCE=..\..\scorelibs\IRQ\Sys_isr.s
+SOURCE=..\..\scorelibs\IRQ\sys_isr.c
 USEPARAM=FALSE
 PARAM=
 # End Source File

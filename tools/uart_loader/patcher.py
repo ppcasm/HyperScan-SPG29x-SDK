@@ -12,13 +12,13 @@ from datetime import datetime
 # basically from 0x84B8801A to 0x84B88018
 
 # Set this to what addr to insert the j/jl insn
-JUMP_PATCH_ADDR = 0xA0000800
+JUMP_PATCH_ADDR = 0xA00010A4 #0xA0012360 # Patch "System Test" with our loader 
 
 # Set this to the address of where the embedded binary is to be injected
 BIN_ADDR = 0xA00F5D00
 
 # Set whether the jump to BIN_ADDR is j or jl
-LINK = False
+LINK = True
 
 CHUNK_SIZE = 1
 

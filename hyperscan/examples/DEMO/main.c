@@ -14,12 +14,14 @@ This is a basic canvas to start your HyperScan project. Check around for documen
 #include "../../include/SPG290_Constants.h"
 #include "../../include/HS_Controller/HS_Controller.h"
 
-// Stupid framebuffer for now
-unsigned short *fb = (unsigned short *) 0xA0400000;
 
 int main(){
 	
+	// Stupid framebuffer for now
+	unsigned short *fb = (unsigned short *) 0xA0400000;
+
 	int nExitCode = 0;
+	
 	/************************************************************************/
 	/*   TODO: add your code here                                           */
 	/************************************************************************/
@@ -34,8 +36,12 @@ int main(){
 	*/
 	TV_Init(RESOLUTION_640_480, COLOR_RGB565, 0xA0400000, 0xA0400000, 0xA0400000);
 
+	// Turn on all LEDs on HyperScan
+	HS_LEDS(0xFF);
+	
 	char *msgs = "HyperScan Basic Example";
-    char *start_msg = "START button pressed";
+
+	char *start_msg = "START button pressed";
     char *select_msg = "SELECT button pressed";
     char *right_t_msg = "RIGHT TRIGGER pressed";
     char *left_t_msg = "LEFT TRIGGER pressed";
@@ -49,7 +55,7 @@ int main(){
     char *down_msg = "DOWN";
     char *left_msg = "LEFT";
     char *right_msg = "RIGHT";
-
+		
 	while(1){
 
 		// Read controller 1 and controller 2 inputs into the controller data struct
@@ -57,7 +63,7 @@ int main(){
 				
 		// Print text on TV
 		TV_Print(fb, 28, 2, msgs);
-		
+
 		if(controller[hs_controller_1].input.start) TV_Print(fb, ((640/8)-strlen(start_msg)-1)/2, 4, start_msg); else TV_Print(fb, ((640/8)-strlen(start_msg)-1)/2, 4, "                    ");
 		if(controller[hs_controller_1].input.select) TV_Print(fb, ((640/8)-strlen(select_msg)-1)/2, 5, select_msg); else TV_Print(fb, ((640/8)-strlen(select_msg)-1)/2, 5, "                     ");		
 		if(controller[hs_controller_1].input.rt) TV_Print(fb, ((640/8)-strlen(right_t_msg)-1)/2, 6, right_t_msg); else TV_Print(fb, ((640/8)-strlen(right_t_msg)-1)/2, 6, "                     ");
@@ -75,7 +81,7 @@ int main(){
 		if(controller[hs_controller_1].input.joystick_x >= 0xB0) TV_Print(fb, ((640/8)-strlen(left_msg)-1)/2, 16, left_msg); else TV_Print(fb, ((640/8)-strlen(left_msg)-1)/2, 16, "    ");
 
 		printf("Example debug over serial\n");
-				
+
 	}
 		
 	return nExitCode;
