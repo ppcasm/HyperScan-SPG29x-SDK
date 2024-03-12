@@ -105,6 +105,7 @@ int main()
 	int file_size = 0;
 	int i = 0;
 	
+	// Mount the USB drive with FatFS support
 	f_mount(&fs0, "0:", 1);
 	
 	// Read config file so that we can set parameters for loading a binary from the USB drive
@@ -117,21 +118,24 @@ int main()
 				bin_start = (void *)strtoul(entries[i].value, NULL, 16);
 			}
 			if(!strcmp(entries[i].key, "LOAD_FILE")){
-				if(sizeof(file_name) > sizeof(entries[i].value)){
+				if(strlen(entries[i].value) > sizeof(file_name)){
 					file_name[0] = "usbload.bin";
 				}
 				else{
-					file_name[0] = (char *)entries[i].value;
+					*file_name = (char *)entries[i].value;
 				}
 			}
 		}	
 	}
 	
-	
+	// Open the binary on the root of the USB drive by either the default name of "usbload.bin" if no
+	// config.ini exists, or by the "LOAD_FILE" key=value if config.ini does exist
 	fr = f_open(&fil, file_name[0], FA_READ);
 
 	file_size = f_size(&fil);
 	
+	// Read binary file into either the default address space, or the one set up in the config.ini file
+	// on the root of the USB drive
 	fr = f_read(&fil, ldrptr, file_size, &br);
 		
 	f_close(&fil);
