@@ -26,7 +26,7 @@ More will hopefully be added in the future..
 This SDK includes multiple examples for how to interface with the hardware, and most of
 the code should be documented.
 
-- [Default (outside of examples)] - This shows a very basic controller/framebuffer demo
+- [DEMO] - This shows a very basic controller/framebuffer demo
 - [FlashRecovery] - This flashes a custom bootloader to allow CFW/OFW recovery, and live loading FW
 - [PONG] - A very terrible PONG game, I wouldn't use it for production of any kind
 - [FlashCFW] - This allows flashing a CFW/OFW permanently from recovery mode on HyperScan
