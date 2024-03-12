@@ -4,7 +4,7 @@ import sys
 import serial
 from datetime import datetime
 
-SHOW_PRINTF = 1
+SHOW_PRINTF = 0
 
 CHUNK_SIZE = 8
 

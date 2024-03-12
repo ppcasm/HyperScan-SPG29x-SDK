@@ -63,6 +63,20 @@ CHUNK_SIZE = 1
 ######################################################################################
 
 ######################################################################################
+# You can use this to change the firmware revision string in the CFW so that you     #
+# can keep track of changes you've released through a custom versioning system.      #
+#                                                                                    #
+# This string can be accessed from the HyperScan "Test Menu" but this also has the   #
+# added benefit of being able to be used as a signature marker in your own code so   #
+# that you can create compatibility profiles for custom firmware releases.           #
+#                                                                                    #
+# CHANGE_FW_REVISION - Obvious                                                       #
+# FW_REV_STRING - The string you want to replace the OFW revision string with.       #
+######################################################################################
+CHANGE_FW_REVISION = True
+FW_REV_STRING = "UMOD 0.1 NTSC"
+
+######################################################################################
 # There's some checksum related code at A000F740 that could possibly need to be      #
 # patched when running some types of custom firmware, and for now we do that by      #
 # patching it to return 0x0C and to not return 0x0D in this area. This goes to a     #
@@ -151,6 +165,12 @@ def main():
 
     new_exec = bytearray(executable)
     
+    if(CHANGE_FW_REVISION):
+        print("Changing FW revision to {0}".format(FW_REV_STRING))
+        REV_STRING_OFFSET = resolve_address(0xA00383E4)
+        for i in range(0, len(FW_REV_STRING)):
+            new_exec[REV_STRING_OFFSET + i] = ord(FW_REV_STRING[i])
+
     if(ENABLE_JUMP_PATCH):
         JUMP_INSN = asm_j_insn(BIN_ADDR, LINK)
 

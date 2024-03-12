@@ -65,19 +65,43 @@ static u8 uart_read_byte() {
 	return *P_UART_TXRX_DATA;
 }
 
-static int USB_Boot(void){
+void USB_Boot(void){
 
-	// USB_Init	
+	HS_LEDS(0xFF);
+	
+	// We must do some interrupt and GP setup with the firmware
+	// that should already be loaded into mem prior to doing
+	// anything USB related.
+	asm("la r28, 0xA0045140");
+	asm("ldi r4, 0x1");
+	asm("mtcr r4, cr0");
+	asm("nop!");
+	asm("nop!");
+	asm("nop!");
+	asm("nop!");
+	asm("nop");
+	asm("ldis r4, 0xA000");
+	asm("mtcr r4, cr3");
+	
+	// Now do USB init	
 	*P_CLK_PLLAU_CONF |= C_PLLU_CLK_EN;
 	*P_INT_MASK_CTRL1 &= ~C_INT_USB_DIS;
-	
-	if(DrvUSBH_Initial() == 0){
-		unsigned int *patchptr = (unsigned int *)0xA00010A4;
-		*patchptr = 0x881EDD01;
-		return 1;
+
+	// This firmware callback *SHOULD* return 0 if a USB device is plugged
+	// in and has adequate power.
+	if(!DrvUSBH_Initial()){
+		print_string("USB Boot...\n");
+		void (*usb_boot)(void) = (void *)0xA00F5D00;
+		usb_boot();		
+	}
+	else{
+		print_string("Default Boot...\n");
+		void (*resume_boot)(void) = (void *)0xA0001000;
+		resume_boot();
 	}
 	
-	return 0;
+	// Should never happen...
+	return;
 }
 
 int main()
@@ -87,7 +111,14 @@ int main()
 
 	// Read CD door status
 	if(*P_IOB_GPIO_INPUT&(1<<9)){
-		// If the CD door is CLOSED on boot, and no USB device is present, then boot as normal
+		// Check the installed firmware revision if the CD door is CLOSED on 
+		// boot to see if it supports USB loading
+		unsigned int *rev_string = (unsigned int *)0xA00383E4;
+		
+		// Simple check for "UMOD" firmware rev string, signaling CFW with USB support
+		if(rev_string[0] == 0x444F4D55) USB_Boot();
+		
+		// If the CD door is CLOSED on boot then boot as normal
 		print_string("Default Boot...\n");
 		void (*resume_boot)(void) = (void *)0xA0001000;
 		resume_boot();

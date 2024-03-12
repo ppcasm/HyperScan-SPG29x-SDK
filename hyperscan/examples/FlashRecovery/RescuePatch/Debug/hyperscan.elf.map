@@ -100,24 +100,25 @@ END GROUP
 .plt
  *(.plt)
 
-.text           0x000000009f000748      0x458
+.text           0x000000009f000748      0x4c8
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x000000009f000748        0x0 Debug\hyperscan_startup.o
- .text          0x000000009f000748      0x458 Debug\main.o
-                0x000000009f0008f0                main
+ .text          0x000000009f000748      0x4c8 Debug\main.o
+                0x000000009f00085c                USB_Boot
+                0x000000009f00093c                main
  *(.gnu.warning)
  *(.glue_7t)
  *(.glue_7)
 
 .fini
  *(.fini)
-                0x000000009f000ba0                PROVIDE (__etext, .)
-                0x000000009f000ba0                PROVIDE (_etext, .)
-                0x000000009f000ba0                PROVIDE (etext, .)
+                0x000000009f000c10                PROVIDE (__etext, .)
+                0x000000009f000c10                PROVIDE (_etext, .)
+                0x000000009f000c10                PROVIDE (etext, .)
 
-.rodata         0x000000009f000ba0       0x30
+.rodata         0x000000009f000c10       0x40
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x000000009f000ba0       0x30 Debug\main.o
+ .rodata        0x000000009f000c10       0x40 Debug\main.o
 
 .rodata1
  *(.rodata1)
@@ -130,29 +131,29 @@ END GROUP
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
-                0x000000009f000cd0                . = (ALIGN (0x100) + (. & 0xff))
-                0x000000009f000cd0                . = ALIGN (0x4)
-                0x000000009f000cd0                PROVIDE (__preinit_array_start, .)
+                0x000000009f000d50                . = (ALIGN (0x100) + (. & 0xff))
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                PROVIDE (__preinit_array_start, .)
 
 .preinit_array
  *(.preinit_array)
-                0x000000009f000cd0                PROVIDE (__preinit_array_end, .)
-                0x000000009f000cd0                PROVIDE (__init_array_start, .)
+                0x000000009f000d50                PROVIDE (__preinit_array_end, .)
+                0x000000009f000d50                PROVIDE (__init_array_start, .)
 
 .init_array
  *(.init_array)
-                0x000000009f000cd0                PROVIDE (__init_array_end, .)
-                0x000000009f000cd0                PROVIDE (__fini_array_start, .)
+                0x000000009f000d50                PROVIDE (__init_array_end, .)
+                0x000000009f000d50                PROVIDE (__fini_array_start, .)
 
 .fini_array
  *(.fini_array)
-                0x000000009f000cd0                PROVIDE (__fini_array_end, .)
+                0x000000009f000d50                PROVIDE (__fini_array_end, .)
 
-.data           0x000000009f000cd0        0x0
-                0x000000009f000cd0                __data_start = .
+.data           0x000000009f000d50        0x0
+                0x000000009f000d50                __data_start = .
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x000000009f000cd0        0x0 Debug\hyperscan_startup.o
- .data          0x000000009f000cd0        0x0 Debug\main.o
+ .data          0x000000009f000d50        0x0 Debug\hyperscan_startup.o
+ .data          0x000000009f000d50        0x0 Debug\main.o
 
 .data1
  *(.data1)
@@ -191,40 +192,40 @@ END GROUP
 .got
  *(.got.plt)
  *(.got)
-                0x000000009f004cd0                _gp = (. + 0x4000)
+                0x000000009f004d50                _gp = (. + 0x4000)
 
-.sdata          0x000000009f000cd0        0x0
-                0x000000009f000cd0                _sdata_start = .
+.sdata          0x000000009f000d50        0x0
+                0x000000009f000d50                _sdata_start = .
  *(.sdata .sdata.* .gnu.linkonce.s.*)
-                0x000000009f000cd0                _edata = .
-                0x000000009f000cd0                PROVIDE (edata, .)
-                0x000000009f000cd0                . = ALIGN (0x4)
-                0x000000009f000cd0                __bss_start = .
-                0x000000009f000cd0                __bss_start__ = .
+                0x000000009f000d50                _edata = .
+                0x000000009f000d50                PROVIDE (edata, .)
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                __bss_start = .
+                0x000000009f000d50                __bss_start__ = .
 
-.sbss           0x000000009f000cd0        0x0
-                0x000000009f000cd0                PROVIDE (__sbss_start, .)
-                0x000000009f000cd0                PROVIDE (___sbss_start, .)
+.sbss           0x000000009f000d50        0x0
+                0x000000009f000d50                PROVIDE (__sbss_start, .)
+                0x000000009f000d50                PROVIDE (___sbss_start, .)
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
  *(.scommon)
-                0x000000009f000cd0                PROVIDE (__sbss_end, .)
-                0x000000009f000cd0                PROVIDE (___sbss_end, .)
-                0x000000009f004cd0                _gp = (_sdata_start + 0x4000)
+                0x000000009f000d50                PROVIDE (__sbss_end, .)
+                0x000000009f000d50                PROVIDE (___sbss_end, .)
+                0x000000009f004d50                _gp = (_sdata_start + 0x4000)
 
-.bss            0x000000009f000cd0        0x0
+.bss            0x000000009f000d50        0x0
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x000000009f000cd0        0x0 Debug\hyperscan_startup.o
- .bss           0x000000009f000cd0        0x0 Debug\main.o
+ .bss           0x000000009f000d50        0x0 Debug\hyperscan_startup.o
+ .bss           0x000000009f000d50        0x0 Debug\main.o
  *(COMMON)
-                0x000000009f000cd0                . = ALIGN (0x4)
-                0x000000009f000cd0                . = ALIGN (0x4)
-                0x000000009f000cd0                _end = .
-                0x000000009f000cd0                _bss_end__ = .
-                0x000000009f000cd0                __bss_end__ = .
-                0x000000009f000cd0                __end__ = .
-                0x000000009f000cd0                PROVIDE (end, .)
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                _end = .
+                0x000000009f000d50                _bss_end__ = .
+                0x000000009f000d50                __bss_end__ = .
+                0x000000009f000d50                __end__ = .
+                0x000000009f000d50                PROVIDE (end, .)
 
 .stab
  *(.stab)
@@ -268,32 +269,33 @@ END GROUP
                 0x0000000000000020       0x20 Debug\main.o
 
 .debug_pubnames
-                0x0000000000000000       0x1b
+                0x0000000000000000       0x28
  *(.debug_pubnames)
  .debug_pubnames
-                0x0000000000000000       0x1b Debug\main.o
+                0x0000000000000000       0x28 Debug\main.o
 
-.debug_info     0x0000000000000000      0x41d
+.debug_info     0x0000000000000000      0x443
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0xfd Debug\hyperscan_startup.o
- .debug_info    0x00000000000000fd      0x320 Debug\main.o
+ .debug_info    0x00000000000000fd      0x346 Debug\main.o
 
-.debug_abbrev   0x0000000000000000      0x103
+.debug_abbrev   0x0000000000000000      0x112
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x14 Debug\hyperscan_startup.o
- .debug_abbrev  0x0000000000000014       0xef Debug\main.o
+ .debug_abbrev  0x0000000000000014       0xfe Debug\main.o
 
-.debug_line     0x0000000000000000      0x1d0
+.debug_line     0x0000000000000000      0x1e1
  *(.debug_line)
  .debug_line    0x0000000000000000       0xad Debug\hyperscan_startup.o
- .debug_line    0x00000000000000ad      0x123 Debug\main.o
+ .debug_line    0x00000000000000ad      0x134 Debug\main.o
 
 .debug_frame    0x0000000000000000       0xe4
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0xe4 Debug\main.o
 
-.debug_str
+.debug_str      0x0000000000000000        0xc
  *(.debug_str)
+ .debug_str     0x0000000000000000        0xc Debug\main.o
 
 .debug_loc      0x0000000000000000      0x1a5
  *(.debug_loc)
