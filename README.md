@@ -9,6 +9,8 @@
 HyperScan specifc:
 - HyperScan controller support
 - HyperScan LEDs
+- USB FAT32 Disk Support (FAT32 formatted as MBR)
+- USB Booting
 
 SPG29x specific:
 - I2C
