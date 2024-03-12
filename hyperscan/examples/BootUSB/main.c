@@ -24,11 +24,13 @@ DO NOT TRY TO RUN THIS AS A HYPER.EXE APP; IT WILL NOT WORK...
 #include "../../include/SPG290_Registers.h"
 #include "../../include/SPG290_Constants.h"
 
-#define USB_LOAD() ((void (*)(void))0xA0F00000)()
+#define USB_LOAD() ((void (*)(void))0xA0091000)()
 
 int main()
 {
-	BYTE *ldrptr = (BYTE *)0x80F00000;
+	HS_LEDS(0xFF);
+	
+	BYTE *ldrptr = (BYTE *)0xA00901FC;
 	
 	FATFS fs0;
 	FIL fil;
@@ -45,6 +47,8 @@ int main()
 		
 	f_close(&fil);
 
+	HS_LEDS(0x00);
+	
 	USB_LOAD();	
 
 return 0;		

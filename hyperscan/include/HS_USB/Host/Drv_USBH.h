@@ -1,5 +1,0 @@
-#define PROTO_DrvUSBH_Initial() ((int (*)(void))0xA001E5D4)()
-#define PROTO_DrvUSBH_LUNInitial(LUN) ((int(*)(int))0xA001E9E4)(LUN)
-#define PROTO_DrvUSBH_ReadSector(block, blocknum, inaddr, ukn1) ((int (*) (unsigned int, unsigned int, unsigned int *, int))0xA001EEE8)(block, blocknum, inaddr, ukn1)
-#define PROTO_DrvUSBH_WriteSector(block, blocknum, outaddr, ukn1) ((int (*) (unsigned int, unsigned int, unsigned int *, int))0xA001EFCC)(block, blocknum, outaddr, ukn1) 
-#define PROTO_DrvUSBH_ReadFormatCapacity(unk1, unk2) ((unsigned int (*) (unsigned int, unsigned int))0xA001EC7C)(ukn1, ukn2)

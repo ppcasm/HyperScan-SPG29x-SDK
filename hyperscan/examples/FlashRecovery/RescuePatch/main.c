@@ -8,6 +8,10 @@ better understand what this is.
 */
 
 #include "../../../include/SPG290_Registers.h"
+#include "../../../include/SPG290_Constants.h"
+
+// HyperScan firmware callback functions
+#define DrvUSBH_Initial() ((int (*)(void))0xA0001460)()
 
 // Macro for controlling the HyperScan LEDs
 #define HS_LEDS(value) (*P_CSI_GPIO_SETUP = (0x1FFE0000+(value<<5)))
@@ -61,14 +65,30 @@ static u8 uart_read_byte() {
 	return *P_UART_TXRX_DATA;
 }
 
+static int USB_Boot(void){
+
+	// USB_Init	
+	*P_CLK_PLLAU_CONF |= C_PLLU_CLK_EN;
+	*P_INT_MASK_CTRL1 &= ~C_INT_USB_DIS;
+	
+	if(DrvUSBH_Initial() == 0){
+		unsigned int *patchptr = (unsigned int *)0xA00010A4;
+		*patchptr = 0x881EDD01;
+		return 1;
+	}
+	
+	return 0;
+}
+
 int main()
 {
 	// Setup IOB port for correct port direction to get the CD door status
 	*P_IOB_GPIO_SETUP = 0x3F3F3302;
-	
+
 	// Read CD door status
 	if(*P_IOB_GPIO_INPUT&(1<<9)){
-		// If the CD door is CLOSED on boot, boot as normal
+		// If the CD door is CLOSED on boot, and no USB device is present, then boot as normal
+		print_string("Default Boot...\n");
 		void (*resume_boot)(void) = (void *)0xA0001000;
 		resume_boot();
 	}
@@ -116,7 +136,7 @@ int main()
 		while (!(*P_UART_TXRX_STATUS & UART_RECEIVE_EMPTY));
 
 		// Print "Ready! " over UART
-		print_string("Ready! ");
+		print_string("Recovery Boot...");
 
 		int i = 0;
 		

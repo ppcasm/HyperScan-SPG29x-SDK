@@ -5,7 +5,7 @@
 .ent _hardware_init
 _hardware_init:
 
-		jl main
+		j main
 		nop
 		
 .end _hardware_init
