@@ -23,35 +23,43 @@
 #define DEV_USB 0
 
 int DiskB_Initial(void){
-	
+	asm("la r28, 0xA0045140");	
+
 	if(DrvUSBH_Initial()){
 		return 1;
 	}
 	if(DrvUSBH_LUNInitial(0)){
 		return 1;
 	}
-		
+
+	asm("la r28, _gp");
 	return 0;
 }
 
 int USB_disk_initialize(void){
 
+	asm("la r28, 0xA0045140");
 	// USB_Init	
 	*P_CLK_PLLAU_CONF |= C_PLLU_CLK_EN;
 	*P_INT_MASK_CTRL1 &= ~C_INT_USB_DIS;
 	
 	while(DiskB_Initial());
 	
+	asm("la r28, _gp");
 	return 0;
 }
 
 int DiskB_ReadSector(LBA_t block, UINT blocknum, BYTE *inaddr){
+	asm("la r28, 0xA0045140");
 	DrvUSBH_ReadSector(block, blocknum, inaddr, 0);
+	asm("la r28, _gp");
 	return 0;
 }
 
 int DiskB_WriteSector(LBA_t block, UINT blocknum, BYTE *outaddr){
+	asm("la r28, 0xA0045140");
 	DrvUSBH_WriteSector(block, blocknum, outaddr, 0);
+	asm("la r28, _gp");
 	return 0;
 }
 
