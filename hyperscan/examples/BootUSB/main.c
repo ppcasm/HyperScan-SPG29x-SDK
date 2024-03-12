@@ -35,6 +35,7 @@ typedef struct {
     char value[MAX_VALUE_LENGTH];
 } ConfigEntry;
 
+// This will parse some values from a config file in a "KEY=VALUE" format
 int parseConfigFile(const char *filename, ConfigEntry *entries, int *num_entries) {
     FIL file;
     FRESULT res;
@@ -85,9 +86,15 @@ int main()
 {
 	HS_LEDS(0xFF);
 	
+	// Set up some defaults, just in case there's no config file
+	// we will attempt to load "usbload.bin" from the USB drive to the
+	// normal Hyper.Exe address space
 	BYTE *ldrptr = (BYTE *)0xA00901FC;
-	void (*bin_start)(void) = (void *)0xA0001000;
+
+	void (*bin_start)(void) = (void *)0xA0091000;
+	
 	char *file_name[12];
+	file_name[0] = "usbload.bin";
 	
 	FATFS fs0;
 	FIL fil;
@@ -110,10 +117,16 @@ int main()
 				bin_start = (void *)strtoul(entries[i].value, NULL, 16);
 			}
 			if(!strcmp(entries[i].key, "LOAD_FILE")){
-				file_name[0] = (char *)entries[i].value;
+				if(sizeof(file_name) > sizeof(entries[i].value)){
+					file_name[0] = "usbload.bin";
+				}
+				else{
+					file_name[0] = (char *)entries[i].value;
+				}
 			}
 		}	
 	}
+	
 	
 	fr = f_open(&fil, file_name[0], FA_READ);
 
