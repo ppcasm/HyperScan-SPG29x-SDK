@@ -24,7 +24,7 @@ More will hopefully be added in the future..
 ## Features
 
 This SDK includes multiple examples for how to interface with the hardware, and most of
-the code should be documented.
+the code should be documented. Some examples are as listed:
 
 - [DEMO] - This shows a very basic controller/framebuffer demo
 - [FlashRecovery] - This flashes a custom bootloader to allow CFW/OFW recovery, and live loading FW
