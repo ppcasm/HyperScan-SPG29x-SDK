@@ -1353,6 +1353,7 @@ void D_DoomMain (void)
     DEH_printf("V_Init: allocate screens.\n");
     V_Init ();
 
+	//printf("Skip loading defaults\n");
     // Load configuration files before initialising other subsystems.
     DEH_printf("M_LoadDefaults: Load system defaults.\n");
     M_SetConfigFilenames("default.cfg", PROGRAM_PREFIX "doom.cfg");
@@ -1767,10 +1768,10 @@ void D_DoomMain (void)
     P_Init ();
 
     DEH_printf("S_Init: Setting up sound.\n");
-    S_Init (sfxVolume * 8, musicVolume * 8);
+    //S_Init (sfxVolume * 8, musicVolume * 8);
 
     DEH_printf("D_CheckNetGame: Checking network game status.\n");
-    D_CheckNetGame ();
+    //D_CheckNetGame ();
 
     PrintGameVersion();
 

@@ -15,10 +15,8 @@
 #include "../../include/HS_Controller/HS_Controller.h"
 #include "../../include/FatFS/ff.h"
 
-#define FB_ADDR 0xA0A00000
-
 // Stupid Framebuffer
-unsigned short *fb = (unsigned short *) FB_ADDR;
+unsigned short *fb = (unsigned short *) 0xA0400000;
 
 static int FrameBufferFd = -1;
 static int* FrameBuffer = 0;
@@ -132,7 +130,7 @@ void enableRawMode()
 }
 
 void *fake_mmap(int null, size_t length, int prot, int flags, int fd, off_t offset){
-	return (unsigned int *)FB_ADDR;
+	return (unsigned int *)0xA0400000;
 }
 
 void DG_Init()
@@ -143,7 +141,7 @@ void DG_Init()
 		to stupid framebuffer address, TV_Init will select the first framebuffer
 		as default.
 	*/
-	TV_Init(RESOLUTION_640_480, COLOR_RGB565, FB_ADDR, FB_ADDR, FB_ADDR);
+	TV_Init(RESOLUTION_640_480, COLOR_RGB565, 0xA0400000, 0xA0400000, 0xA0400000);
 
 	printf("Getting screen width...");
 	s_ScreenWidth = 640;
@@ -285,9 +283,12 @@ int main(int argc, char **argv)
 {
 	int i = 0;
 	
-	char *fake_argv[] = {"doom.bin", "-iwad", "doom1.wad", NULL};
-    int fake_argc = sizeof(fake_argv) / sizeof(fake_argv[0]) - 1; 
-    
+	char *fake_argv[] = {"HYPER.EXE", "-mmap", "-iwad", "doom1.wad", NULL};
+	int fake_argc = sizeof(fake_argv) / sizeof(fake_argv[0]) - 1;
+
+	//FATFS fs0;
+	f_mount(&fs, "0:", 1);
+	
     doomgeneric_Create(fake_argc, fake_argv);
 
     for (i = 0; ; i++)

@@ -32,6 +32,7 @@
 #define    JP        r29
 #define    K0        r30
 #define    K1        r31
+
 // CP0 register define
 #define CP0_STATUS   cr0
 #define CP0_COND     cr1
@@ -57,6 +58,7 @@
 #define CP0_DSAVE    cr31
 #define SPR_HI       sr1
 #define SPR_LO       sr2
+
 //specification define
 #define SR_CNT       sr0
 #define SR_LCR       sr1
@@ -126,11 +128,16 @@ clear_bss_loop:
 		ble!	clear_bss_loop
 		nop
 		
+		// Setup SDRAM
+		la	r9, 0x88070060
+		la r10, 0x95404b04
+		sw r10, [r9, 0]
+		
 		// Setup stack pointer
 		la r0,_stack
-		
+
 		// void main();
-		j main
+		jl main
 		nop
 		
 		// Hang if we return from main, but later we will have it
@@ -140,6 +147,7 @@ loop_to_self:
 		nop
 		 
 .end _hardware_init
+
 //=========================================================
 // Soft exception isr
 //=========================================================
@@ -298,3 +306,13 @@ hal_interrupt_data:
 	.rept	64 
 	.long	0
 	.endr
+	
+
+
+
+
+	
+	
+	
+	
+	

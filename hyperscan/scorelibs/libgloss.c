@@ -1,7 +1,10 @@
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include "../include/FatFS/ff.h"
 
 /*
 	_putc_r  -- put a character out of the serial port.
@@ -87,7 +90,7 @@ void _exit (int extcode){
 	RAM. We just increment a pointer in what's
 	left of memory on the board.
 */
-#define HEAPSIZE 8*(1024*1024)
+#define HEAPSIZE (512*1024)
 static unsigned char _heap[HEAPSIZE];
 char * _sbrk_r (struct _reent *ptr, int nbytes){
 	static unsigned char *heap_end = NULL;
@@ -155,4 +158,3 @@ int _kill_r (int pid, int sig){
 		return 0;
 	return -1;
 }
-

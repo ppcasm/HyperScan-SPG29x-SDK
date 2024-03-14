@@ -13,11 +13,19 @@ better understand what this is.
 // HyperScan firmware callback functions
 #define DrvUSBH_Initial() ((int (*)(void))0xA0001460)()
 
-// Macro for controlling the HyperScan LEDs
-#define HS_LEDS(value) (*P_CSI_GPIO_SETUP = (0x1FFE0000+(value<<5)))
+// This is the address where to go to reach the embedded USB loader code
+// if it exists in the firmware
+#define USB_LOADER_ADDRESS 0xA00F5D00
 
-#define UPLOAD_ADDRESS 0x800001FC
-#define ENTRY_ADDRESS 0xA0001000
+// This is the address that stores the OFW/CFW revision string
+#define FW_REV_STRING_ADDRESS 0xA00383E4
+
+// This is the address where we upload the OFW/CFW firmware to
+// when using UART recovery
+#define FW_UPLOAD_ADDRESS 0x800001FC
+
+// This is the standard entry point address of the uploaded OFW/CFW
+#define FW_ENTRY_ADDRESS 0xA0001000
 
 #define BIT(n)	(1 << n)
 
@@ -67,8 +75,6 @@ static u8 uart_read_byte() {
 
 void USB_Boot(void){
 
-	HS_LEDS(0xFF);
-	
 	// We must do some interrupt and GP setup with the firmware
 	// that should already be loaded into mem prior to doing
 	// anything USB related.
@@ -80,7 +86,7 @@ void USB_Boot(void){
 	asm("nop!");
 	asm("nop!");
 	asm("nop");
-	asm("ldis r4, 0xA000");
+	asm("la r4, 0xA0000000");
 	asm("mtcr r4, cr3");
 	
 	// Now do USB init	
@@ -88,15 +94,16 @@ void USB_Boot(void){
 	*P_INT_MASK_CTRL1 &= ~C_INT_USB_DIS;
 
 	// This firmware callback *SHOULD* return 0 if a USB device is plugged
-	// in and has adequate power.
+	// in and has adequate power and properly initializes.
 	if(!DrvUSBH_Initial()){
+		HS_LEDS(0xFF);
 		print_string("USB Boot...\n");
-		void (*usb_boot)(void) = (void *)0xA00F5D00;
+		void (*usb_boot)(void) = (void *)USB_LOADER_ADDRESS;
 		usb_boot();		
 	}
 	else{
 		print_string("Default Boot...\n");
-		void (*resume_boot)(void) = (void *)0xA0001000;
+		void (*resume_boot)(void) = (void *)FW_ENTRY_ADDRESS;
 		resume_boot();
 	}
 	
@@ -111,16 +118,17 @@ int main()
 
 	// Read CD door status
 	if(*P_IOB_GPIO_INPUT&(1<<9)){
-		// Check the installed firmware revision if the CD door is CLOSED on 
-		// boot to see if it supports USB loading
-		unsigned int *rev_string = (unsigned int *)0xA00383E4;
+		// This is the address of the installed firmware revision string so that if
+		// the CD door is CLOSED on boot we can check to see if it's been modified
+		// to support USB loading
+		unsigned int *rev_string = (unsigned int *)FW_REV_STRING_ADDRESS;
 		
-		// Simple check for "UMOD" firmware rev string, signaling CFW with USB support
+		// Simple check for "UMOD" firmware rev string, signaling CFW with USB loading support
 		if(rev_string[0] == 0x444F4D55) USB_Boot();
 		
-		// If the CD door is CLOSED on boot then boot as normal
+		// If the CD door is CLOSED on boot and there's no CFW USB loader, then boot as normal
 		print_string("Default Boot...\n");
-		void (*resume_boot)(void) = (void *)0xA0001000;
+		void (*resume_boot)(void) = (void *)FW_ENTRY_ADDRESS;
 		resume_boot();
 	}
 	else{
@@ -185,7 +193,7 @@ int main()
 		print_string("...GO!\n");
 		
 		// Set the destination and ending address we intend to upload to in SDRAM
-		u8 *dest = (u8 *)UPLOAD_ADDRESS;
+		u8 *dest = (u8 *)FW_UPLOAD_ADDRESS;
 		
 		// Download the binary data over UART, and "roll" the LEDs by 
 		// having a count that ticks the LEDs forward by 1 for every 512
@@ -199,7 +207,7 @@ int main()
 		*P_MIU_SDRAM_SETUP1 = (*P_MIU_SDRAM_SETUP1 & 0xFFFF0000) | 0x4B04;
 		
 		// Function pointer to our entry address
-		void (*entry_point)(void) = (void *)ENTRY_ADDRESS;
+		void (*entry_point)(void) = (void *)FW_ENTRY_ADDRESS;
 		
 		// Turn off LEDs to let us know everything actually did complete
 		// just in case something doesn't run, you'll have an indicator that 

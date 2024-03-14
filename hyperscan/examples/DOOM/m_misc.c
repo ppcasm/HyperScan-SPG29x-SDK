@@ -57,7 +57,7 @@ void M_MakeDirectory(char *path)
 #ifdef _WIN32
     mkdir(path);
 #else
-	printf("mkdir called: %s\n", path);
+//	printf("mkdir called: %s\n", path);
     //mkdir(path, 0755);
 #endif
 }
@@ -68,11 +68,12 @@ boolean M_FileExists(char *filename)
 {
     FILE *fstream;
 
-    fstream = ffopen(filename, "r");
+	printf("M_FileExists: %s\n", filename);
+    fstream = fopen_fatfs(filename, "r");
 
     if (fstream != NULL)
     {
-        fclose(fstream);
+        fclose_fatfs(fstream);
         return true;
     }
     else

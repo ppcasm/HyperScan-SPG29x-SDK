@@ -35,7 +35,7 @@ Stack base address = a0fffff0
 Pre-Link Description = 
 Pre-Link Command = 
 Post-Build Description = makehyper
-Post-Build Command = 	cd ./Debug && copy hyperscan.elf.bin Hyper.Exe	cd ./Debug && copy hyperscan.elf.bin doom.bin && copy doom.bin e:\
+Post-Build Command = 	cd ./Debug && copy hyperscan.elf.bin Hyper.Exe	cd ./Debug && copy hyperscan.elf.bin e:\doom.bin
 Custom Build Enable = 0
 WorkDir = 
 Custom Build = 
@@ -186,12 +186,6 @@ PARAM=
 
 # Begin Source File
 SOURCE=..\..\hslibs\FatFS\diskio.c
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
-SOURCE=..\..\hslibs\FatFS\diskio.h
 USEPARAM=FALSE
 PARAM=
 # End Source File

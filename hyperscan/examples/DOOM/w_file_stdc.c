@@ -18,37 +18,36 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "m_misc.h"
 #include "w_file.h"
 #include "z_zone.h"
-
 #include "../../include/FatFS/ff.h"
 
-/*
-FATFS fs;
-
-typedef struct {
-    FIL file;
-} FatFileStream;
-
-FatFileStream* fatfs_fopen(const char* filename, const char* mode) {
-	FRESULT res = f_mount(&fs, "0:", 1);
-    if (res != FR_OK) {
-        printf("Error mounting filesystem: %d\n", res);
-        return 1;
-    }
-
-	if(res == FR_OK){
-		printf("Opening %s\n", filename);
-	}
-	    
+FatFileStream* fopen_fatfs(const char* filename, const char* mode) {
     FatFileStream* stream = malloc(sizeof(FatFileStream));
     if (stream == NULL) {
         return NULL;
     }
 
-    res = f_open(&(stream->file), filename, FA_READ);
+    UINT fmode;
+    if (strcmp(mode, "r") == 0) {
+        fmode = FA_READ;
+    } else if (strcmp(mode, "w") == 0) {
+        fmode = FA_WRITE | FA_CREATE_ALWAYS;
+    } else if (strcmp(mode, "a") == 0) {
+        fmode = FA_WRITE | FA_OPEN_ALWAYS | FA_OPEN_APPEND;
+    } else if (strcmp(mode, "r+") == 0) {
+        fmode = FA_READ | FA_WRITE;
+    } else if (strcmp(mode, "w+") == 0) {
+        fmode = FA_READ | FA_WRITE | FA_CREATE_ALWAYS;
+    } else if (strcmp(mode, "a+") == 0) {
+        fmode = FA_READ | FA_WRITE | FA_OPEN_ALWAYS | FA_OPEN_APPEND;
+    } else {
+        free(stream);
+        return NULL; // Unsupported mode
+    }
+
+    FRESULT res = f_open(&(stream->file), filename, fmode);
     if (res != FR_OK) {
         free(stream);
         return NULL;
@@ -57,7 +56,7 @@ FatFileStream* fatfs_fopen(const char* filename, const char* mode) {
     return stream;
 }
 
-size_t fatfs_fread(void *ptr, size_t size, size_t nmemb, FatFileStream *stream) {
+size_t fread_fatfs(void *ptr, size_t size, size_t nmemb, FatFileStream *stream) {
     UINT bytesRead;
     FRESULT res = f_read(&(stream->file), ptr, size * nmemb, &bytesRead);
     if (res != FR_OK) {
@@ -66,18 +65,16 @@ size_t fatfs_fread(void *ptr, size_t size, size_t nmemb, FatFileStream *stream) 
     return bytesRead / size;
 }
 
-int fatfs_fclose(FatFileStream *stream) {
-    f_close(&(stream->file));
-    free(stream);
-    FRESULT res = f_mount(NULL, "0:", 0);
+size_t fwrite_fatfs(const void *ptr, size_t size, size_t nmemb, FatFileStream *stream) {
+    UINT bytesWritten;
+    FRESULT res = f_write(&(stream->file), ptr, size * nmemb, &bytesWritten);
     if (res != FR_OK) {
-        printf("Error mounting filesystem: %d\n", res);
-        return 1;
+        return 0;
     }
-    return 0;
+    return bytesWritten / size;
 }
 
-int fatfs_fseek(FatFileStream *stream, long offset, int whence) {
+int fseek_fatfs(FatFileStream *stream, long offset, int whence) {
     FRESULT res = f_lseek(&(stream->file), offset);
     if (res != FR_OK) {
         return -1;
@@ -85,23 +82,12 @@ int fatfs_fseek(FatFileStream *stream, long offset, int whence) {
     return 0;
 }
 
-// Define fopen, fread, and fclose functions that use FatFs internally
-FILE* ffopen(const char* filename, const char* mode) {
-  	return (FILE*)fatfs_fopen(filename, mode);
+int fclose_fatfs(FatFileStream *stream) {
+    f_close(&(stream->file));
+    free(stream);
+    return 0;
 }
 
-size_t ffread(void *ptr, size_t size, size_t nmemb, FILE *stream) {
-    return fatfs_fread(ptr, size, nmemb, (FatFileStream*)stream);
-}
-
-int ffclose(FILE *stream) {
-    return fatfs_fclose((FatFileStream*)stream);
-}
-
-int ffseek(FILE *stream, long offset, int whence) {
-    return fatfs_fseek((FatFileStream*)stream, offset, whence);
-}
-*/
 typedef struct
 {
     wad_file_t wad;
@@ -113,13 +99,12 @@ extern wad_file_class_t stdc_wad_file;
 static wad_file_t *W_StdC_OpenFile(char *path)
 {
     stdc_wad_file_t *result;
-    FILE *fstream;
-
-	printf("W_StdC_OpenFile\n");
-	
-    fstream = ffopen(path, "rb");
-
-    if (fstream == NULL)
+    
+    FIL fp;
+    FRESULT res;
+    res = f_open(&fp, path, FA_READ);
+    
+    if (res == NULL)
     {
         return NULL;
     }
@@ -129,23 +114,21 @@ static wad_file_t *W_StdC_OpenFile(char *path)
     result = Z_Malloc(sizeof(stdc_wad_file_t), PU_STATIC, 0);
     result->wad.file_class = &stdc_wad_file;
     result->wad.mapped = NULL;
-    result->wad.length = M_FileLength(fstream);
-    result->fstream = fstream;
+    result->wad.length = f_size(&fp); //M_FileLength(fstream);
+    printf("SIZE: %x\n", f_size(&fp));
+    result->fstream = 0; //fstream;
 
     return &result->wad;
-
 }
 
 static void W_StdC_CloseFile(wad_file_t *wad)
 {
-
     stdc_wad_file_t *stdc_wad;
 
     stdc_wad = (stdc_wad_file_t *) wad;
 
-    ffclose(stdc_wad->fstream);
+    fclose_fatfs(stdc_wad->fstream);
     Z_Free(stdc_wad);
-
 }
 
 // Read data from the specified position in the file into the 
@@ -161,11 +144,11 @@ size_t W_StdC_Read(wad_file_t *wad, unsigned int offset,
 
     // Jump to the specified position in the file.
 
-    ffseek(stdc_wad->fstream, offset, SEEK_SET);
+    fseek_fatfs(stdc_wad->fstream, offset, SEEK_SET);
 
     // Read into the buffer.
 
-    result = ffread(buffer, 1, buffer_len, stdc_wad->fstream);
+    result = fread_fatfs(buffer, 1, buffer_len, stdc_wad->fstream);
 
     return result;
 }

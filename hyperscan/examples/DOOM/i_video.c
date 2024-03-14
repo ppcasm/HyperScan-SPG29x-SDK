@@ -92,7 +92,7 @@ byte *I_VideoBuffer = NULL;
 
 // If true, game is running as a screensaver
 
-boolean screensaver_mode = false;
+boolean screensaver_mode = true;
 
 // Flag indicating whether the screen is currently visible:
 // when the screen isnt visible, don't render the screen

@@ -32,7 +32,6 @@ extern "C" {
 #error Wrong configuration file (ffconf.h).
 #endif
 
-
 /* Integer types used for FatFs API */
 
 #if defined(_WIN32)		/* Windows VC++ (for development only) */
@@ -46,6 +45,8 @@ typedef unsigned __int64 QWORD;
 #elif (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L) || defined(__cplusplus)	/* C99 or later */
 #define FF_INTDEF 2
 //#include <stdint.h>
+
+
 typedef unsigned int	UINT;	/* int must be 16-bit or 32-bit */
 typedef unsigned char	BYTE;	/* char must be 8-bit */
 typedef uint16_t		WORD;	/* 16-bit unsigned integer */
@@ -422,6 +423,11 @@ void ff_mutex_give (int vol);		/* Unlock sync object */
 #define AM_DIR	0x10	/* Directory */
 #define AM_ARC	0x20	/* Archive */
 
+FATFS fs;
+
+typedef struct {
+    FIL file;
+} FatFileStream;
 
 #ifdef __cplusplus
 }

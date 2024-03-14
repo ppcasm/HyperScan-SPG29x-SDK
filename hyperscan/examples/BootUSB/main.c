@@ -109,7 +109,7 @@ int main()
 	f_mount(&fs0, "0:", 1);
 	
 	// Read config file so that we can set parameters for loading a binary from the USB drive
-	if(parseConfigFile("config.ini", entries, &num_entries)){
+	if(parseConfigFile("usbload.ini", entries, &num_entries)){
 		for(i=0;i<num_entries;++i){
 			if(!strcmp(entries[i].key, "LOAD_ADDR")){
 				ldrptr = (BYTE *)strtoul(entries[i].value, NULL, 16);

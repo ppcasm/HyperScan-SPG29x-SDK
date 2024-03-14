@@ -9,7 +9,7 @@ SEARCH_DIR("/home/aladdin/working/Score/install/score-linux-elf/lib");
 GROUP( -lc -lm -lgcc)
 SECTIONS
 {
-	.exception 0xA01001fc :
+	.exception 0xA01001FC :
   {
     *(.exception_vec)
   } = 0
@@ -153,7 +153,7 @@ SECTIONS
   /* We want the small data sections together, so single-instruction offsets
      can access them all, and initialized data all before uninitialized, so
      we can shorten the on-disk segment size.  */
-  _gp = + 0x4000 ;
+  _gp = . + 0x4000 ;
   .sdata          :
   {
     _sdata_start = . ;
