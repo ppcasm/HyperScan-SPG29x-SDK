@@ -123,6 +123,7 @@ typedef volatile unsigned int UV32;
 //**************************************************************//
 //                           DAC                                //
 //**************************************************************//
+#define P_DAC_BUFFER_SA                     (UV32*)0x88070054
 #define P_DAC_CLK_CONF                      (UV32*)0x8821003C
 #define P_DAC_FIFOBA_LOW                    (UV32*)0x88051080
 #define P_DAC_FIFOBA_HIGH                   (UV32*)0x88051084

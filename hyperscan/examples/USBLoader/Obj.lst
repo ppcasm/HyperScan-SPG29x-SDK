@@ -1,0 +1,25 @@
+/*	Created by S+core IDE	*/
+
+INPUT("Debug\RES_BROWN_EYES_8K_TEST_WAV_MP3.res")
+
+INPUT("Debug\hyperscan_startup.o")
+INPUT("Debug\main.o")
+INPUT("Debug\MP3Table.o")
+INPUT("Debug\MP3Drv.o")
+INPUT("Debug\libgloss.o")
+INPUT("Debug\UART.o")
+INPUT("Debug\TV.o")
+INPUT("Debug\NorFlash.o")
+INPUT("Debug\User_IRQ.o")
+INPUT("Debug\Sys_isr.o")
+INPUT("Debug\Sys_IRQ.o")
+INPUT("Debug\I2C.o")
+INPUT("Debug\ff.o")
+INPUT("Debug\diskio.o")
+INPUT("Debug\HS_Controller.o")
+
+SECTIONS
+{
+
+}
+

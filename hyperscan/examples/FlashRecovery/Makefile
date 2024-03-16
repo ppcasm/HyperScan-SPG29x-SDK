@@ -1,6 +1,6 @@
 ####################################################################################################
 #
-#	Created by S+core IDE V2.6.1		20:37:15	03/13/24
+#	Created by S+core IDE V2.6.1		23:17:15	03/15/24
 #
 ####################################################################################################
 
@@ -45,7 +45,8 @@ OBJFILES	=\
 	"$(OUTDIR)\TV.o"\
 	"$(OUTDIR)\NorFlash.o"\
 	"$(OUTDIR)\User_IRQ.o"\
-	"$(OUTDIR)\sys_isr.o"\
+	"$(OUTDIR)\Sys_isr.o"\
+	"$(OUTDIR)\Sys_IRQ.o"\
 	"$(OUTDIR)\I2C.o"\
 	"$(OUTDIR)\HS_Controller.o"
 
@@ -57,9 +58,13 @@ OBJFILES	=\
 	@echo I2C.c
 	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\I2C.d" -MT"$(OUTDIR)\I2C.d" -o "$(OUTDIR)\I2C.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\I2C\I2C.c" 
 
-"$(OUTDIR)\sys_isr.o" "$(OUTDIR)\sys_isr.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\IRQ\sys_isr.c"
-	@echo sys_isr.c
-	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\sys_isr.d" -MT"$(OUTDIR)\sys_isr.d" -o "$(OUTDIR)\sys_isr.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\IRQ\sys_isr.c" 
+"$(OUTDIR)\Sys_IRQ.o" "$(OUTDIR)\Sys_IRQ.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\IRQ\Sys_IRQ.c"
+	@echo Sys_IRQ.c
+	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\Sys_IRQ.d" -MT"$(OUTDIR)\Sys_IRQ.d" -o "$(OUTDIR)\Sys_IRQ.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\IRQ\Sys_IRQ.c" 
+
+"$(OUTDIR)\Sys_isr.o" "$(OUTDIR)\Sys_isr.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\IRQ\Sys_isr.s"
+	@echo Sys_isr.s
+	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) $(ASDEFFLAG) $(ASADDFLAG) -MMD -MP -MF"$(OUTDIR)\Sys_isr.d" -MT"$(OUTDIR)\Sys_isr.d" -o "$(OUTDIR)\Sys_isr.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\IRQ\Sys_isr.s" 
 
 "$(OUTDIR)\User_IRQ.o" "$(OUTDIR)\User_IRQ.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\scorelibs\IRQ\User_IRQ.c"
 	@echo User_IRQ.c
@@ -114,7 +119,8 @@ DEPFILES	=\
 	"$(OUTDIR)\TV.d"\
 	"$(OUTDIR)\NorFlash.d"\
 	"$(OUTDIR)\User_IRQ.d"\
-	"$(OUTDIR)\sys_isr.d"\
+	"$(OUTDIR)\Sys_isr.d"\
+	"$(OUTDIR)\Sys_IRQ.d"\
 	"$(OUTDIR)\I2C.d"\
 	"$(OUTDIR)\HS_Controller.d"
 

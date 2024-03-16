@@ -199,7 +199,13 @@ PARAM=
 #PROP Default_Filter = 
 
 # Begin Source File
-SOURCE=..\..\scorelibs\IRQ\sys_isr.c
+SOURCE=..\..\scorelibs\IRQ\Sys_IRQ.c
+USEPARAM=FALSE
+PARAM=
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\scorelibs\IRQ\Sys_isr.s
 USEPARAM=FALSE
 PARAM=
 # End Source File

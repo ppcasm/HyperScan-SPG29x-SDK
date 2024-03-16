@@ -21,7 +21,7 @@ clear_bss_loop:
 //		la r0,_stack
 		
 		// void main();
-		j main
+		jl main
 		nop
 
 		// Hang if we return from main, but later we will have it
