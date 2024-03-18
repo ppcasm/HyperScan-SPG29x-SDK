@@ -243,11 +243,14 @@ int Load_Directory_List(char **dir_buf){
 static int Show_Selection(char **dir_buf, int dir_count, int index, int selection){
 	int i = 0;
 
-	if(selection > dir_count - 1) selection = dir_count - 1;
+	if(dir_count >= 16) dir_count = 16;
+	
 	if(selection < 0) selection = 0;
 	if(selection > 16) selection = 16;
+	if(selection > dir_count - 1) selection = dir_count - 1;
+
+	for(i=index;i<dir_count-index;i++){
 		
-	for(i=index;i<dir_count;i++){
 		if(i == selection){
 			TV_Print((unsigned short *)FRAMEBUFFER_ADDRESS, 34, 8+i, "-->");
 			TV_PrintColor((unsigned short *)FRAMEBUFFER_ADDRESS, 37, 8+i, dir_buf[i], 0x7E0);
