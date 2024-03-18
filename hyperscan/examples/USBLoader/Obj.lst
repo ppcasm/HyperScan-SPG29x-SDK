@@ -1,10 +1,8 @@
 /*	Created by S+core IDE	*/
 
-INPUT("Debug\RES_BROWN_EYES_8K_TEST_WAV_MP3.res")
 
 INPUT("Debug\hyperscan_startup.o")
 INPUT("Debug\main.o")
-INPUT("Debug\MP3Table.o")
 INPUT("Debug\MP3Drv.o")
 INPUT("Debug\libgloss.o")
 INPUT("Debug\UART.o")

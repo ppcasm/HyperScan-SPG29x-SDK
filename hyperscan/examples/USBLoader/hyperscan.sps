@@ -279,12 +279,6 @@ USEPARAM=FALSE
 PARAM=
 # End Source File
 
-# Begin Source File
-SOURCE=.\MP3Drv\MP3Table.c
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
 # End Group
 # Begin Source File
 SOURCE=.\main.c
@@ -416,18 +410,6 @@ PARAM=
 # End Source File
 
 # End Group
-# Begin Source File
-SOURCE=.\Resource.h
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
-SOURCE=.\Resource.inc
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
 # End Group
 # Begin Group "Resource Files"
 #PROP Default_Filter = rc;
