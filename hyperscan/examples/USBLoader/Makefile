@@ -1,6 +1,6 @@
 ####################################################################################################
 #
-#	Created by S+core IDE V2.6.1		03:02:53	03/16/24
+#	Created by S+core IDE V2.6.1		18:31:43	03/18/24
 #
 ####################################################################################################
 
@@ -35,17 +35,11 @@ RMFLAG		= -rf
 BINFILE		= "$(OUTDIR)\hyperscan.elf"
 
 
-RESFILES	=\
-	"$(OUTDIR)\RES_BROWN_EYES_8K_TEST_WAV_MP3.res"
-
-"$(OUTDIR)\RES_BROWN_EYES_8K_TEST_WAV_MP3.res": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\USBLoader\Resource\Brown_Eyes_8k_test.wav.mp3"
-	@echo Compiling resource: Brown_Eyes_8k_test.wav.mp3
-	@$(LD) $(RESDEFFLAG) -o "$(OUTDIR)\RES_BROWN_EYES_8K_TEST_WAV_MP3.res" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\USBLoader\Resource\Brown_Eyes_8k_test.wav.mp3" 
+RESFILES	=
 
 OBJFILES	=\
 	"$(OUTDIR)\hyperscan_startup.o"\
 	"$(OUTDIR)\main.o"\
-	"$(OUTDIR)\MP3Table.o"\
 	"$(OUTDIR)\MP3Drv.o"\
 	"$(OUTDIR)\libgloss.o"\
 	"$(OUTDIR)\UART.o"\
@@ -107,10 +101,6 @@ OBJFILES	=\
 	@echo MP3Drv.c
 	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\MP3Drv.d" -MT"$(OUTDIR)\MP3Drv.d" -o "$(OUTDIR)\MP3Drv.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\USBLoader\MP3Drv\MP3Drv.c" 
 
-"$(OUTDIR)\MP3Table.o" "$(OUTDIR)\MP3Table.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\USBLoader\MP3Drv\MP3Table.c"
-	@echo MP3Table.c
-	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\MP3Table.d" -MT"$(OUTDIR)\MP3Table.d" -o "$(OUTDIR)\MP3Table.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\USBLoader\MP3Drv\MP3Table.c" 
-
 "$(OUTDIR)\main.o" "$(OUTDIR)\main.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\USBLoader\main.c"
 	@echo main.c
 	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\main.d" -MT"$(OUTDIR)\main.d" -o "$(OUTDIR)\main.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\hyperscan\examples\USBLoader\main.c" 
@@ -139,7 +129,6 @@ clean :
 DEPFILES	=\
 	"$(OUTDIR)\hyperscan_startup.d"\
 	"$(OUTDIR)\main.d"\
-	"$(OUTDIR)\MP3Table.d"\
 	"$(OUTDIR)\MP3Drv.d"\
 	"$(OUTDIR)\libgloss.d"\
 	"$(OUTDIR)\UART.d"\

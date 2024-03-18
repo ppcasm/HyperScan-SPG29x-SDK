@@ -146,6 +146,33 @@ void TV_Print(unsigned short *fb, unsigned int x, unsigned int y, char *text){
 }
 
 // =============================================================
+//	void TV_PrintColor(unsigned int x, unsigned int y, unsigned char *text, unsigned short color)
+// 
+//	Print to TV screen via low level framebuffer access, but with color
+// 
+//	void return
+// =============================================================
+void TV_PrintColor(unsigned short *fb, unsigned int x, unsigned int y, char *text, unsigned short color){
+	
+    short xx, yy;
+    while (*text) 
+    {
+        for (yy = 0; yy < 16; yy++) 
+        {
+	      for (xx = 0; xx < 8; xx++)
+	      {
+            if(font[(*text)*16+yy] & (1<<(8-xx))) fb[(y*16+yy)*640+(x*8+xx)] = color; //fb[(y*16+yy)*640+(x*8+xx)];
+	        
+	      }
+	}
+	x++;
+	text++;
+    }
+    
+  return;
+}
+
+// =============================================================
 // void TV_Print(unsigned int x, unsigned int y, unsigned char *text)
 // 
 // Print to TV screen via low level framebuffer access

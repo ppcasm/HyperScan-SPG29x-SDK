@@ -1,12 +1,5 @@
 # Begin Project
 # Begin SubItem "hyperscan resources"
 
-# Begin Source File
-SOURCE=.\Resource\Brown_Eyes_8k_test.wav.mp3
-ID=RES_BROWN_EYES_8K_TEST_WAV_MP3
-SPECIFY_ADDRESS=FALSE
-START_ADDRESS=0x00000000
-ELF_SECTION_NAME=
-# End Source File
 # End SubItem
 # End Project

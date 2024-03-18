@@ -20,6 +20,7 @@ void TV_Fade(unsigned int fade);
 void TV_FadeIn(void);
 void TV_FadeOut(void);
 void TV_Print(unsigned short *fb, unsigned int x, unsigned int y, char *text);
+void TV_PrintColor(unsigned short *fb, unsigned int x, unsigned int y, char *text, unsigned short color);
 void TV_PrintHex(unsigned short *fb, unsigned intx,  unsigned int y, unsigned long value);
 
 #endif
