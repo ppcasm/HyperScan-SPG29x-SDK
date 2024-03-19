@@ -4,9 +4,9 @@ import sys
 import serial
 from datetime import datetime
 
-SHOW_PRINTF = 0
+SHOW_PRINTF = 1
 
-CHUNK_SIZE = 8
+CHUNK_SIZE = 1
 
 def show_progress(current, total):
     progress = (current / total) * 100
