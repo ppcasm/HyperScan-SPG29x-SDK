@@ -117,28 +117,20 @@ void DG_Init()
 	to stupid framebuffer address, TV_Init will select the first framebuffer
 	as default.
 	*/
-	TV_Init(RESOLUTION_640_480, COLOR_RGB565, 0xA0500000, 0xA0500000, 0xA0500000);
+	TV_Init(RESOLUTION_320_240, COLOR_RGB565, 0xA0500000, 0xA0500000, 0xA0500000);
 
 	printf("Getting screen width...");
-	s_ScreenWidth = 640;
+	s_ScreenWidth = 320;
 	printf("%d\n", s_ScreenWidth);
 
 	printf("Getting screen height...");
-	s_ScreenHeight = 480;
+	s_ScreenHeight = 240;
     printf("%d\n", s_ScreenHeight);
 
     if (0 == s_ScreenWidth || 0 == s_ScreenHeight)
     {
         printf("Unable to obtain screen info!");
         exit(1);
-    }
-
-    //KeyboardFd = open("/dev/keyboard", 0);
-
-    if (KeyboardFd >= 0)
-    {
-        //enter non-blocking mode
-        //ioctl(KeyboardFd, 1, (void*)1);
     }
 
     int argPosX = 0;
@@ -187,30 +179,19 @@ static void handleKeyInput()
 
 void DG_DrawFrame()
 {
-	int i = 0;
-	
-	unsigned int *framebuf = (unsigned int *)0xA0500000;
-	unsigned int *screenbuf = (unsigned int *)&DG_ScreenBuffer;
-	
-   	for(i=0;i<=(DOOMGENERIC_RESX*DOOMGENERIC_RESY);++i){
-    	framebuf[i] = screenbuf[i];
-    }	
-    
+	TV_Buffer_Set(&DG_ScreenBuffer, &DG_ScreenBuffer, &DG_ScreenBuffer);
     handleKeyInput();
 }
 
 void DG_SleepMs(uint32_t ms)
 {
-	int i = 0;
-	for(i=0;i<=ms;i++){}
-    //sleep_ms(ms);
 }
 
 uint32_t ticks = 0;
+
 uint32_t DG_GetTicksMs()
 {
-	ticks++;
-    return ticks; //get_uptime_ms();
+    return ticks++; //get_uptime_ms();
 }
 
 int DG_GetKey(int* pressed, unsigned char* doomKey)
@@ -244,7 +225,7 @@ int main(int argc, char **argv)
 	FATFS fs0;
 	f_mount(&fs0, "0:", 1);
 	
-	char *fake_argv[] = {"HYPER.EXE", "-iwad", "doom1.wad", NULL};
+	char *fake_argv[] = {"HYPER.EXE", "-iwad", "doom1.wad", "-nosound", "-scaling", "1", NULL};
 	
 	int fake_argc = sizeof(fake_argv) / sizeof(fake_argv[0]) - 1;
 	
@@ -255,7 +236,6 @@ int main(int argc, char **argv)
         doomgeneric_Tick();
     }
     
-
     return 0;
 }
 

@@ -43,6 +43,10 @@ void TV_Init(unsigned int Resolution, unsigned int ColorMode, unsigned int FB1_A
 		*P_TV_MODE_CTRL |= C_TV_VGA_MODE;
 	}
 	
+	if(Resolution == RESOLUTION_320_240){
+		*P_TV_MODE_CTRL |= C_TV_QVGA_MODE;
+	}
+	
 	if(ColorMode == COLOR_RGB565){
 		*P_TV_MODE_CTRL	|= 	C_TV_RGB_MODE 				
 							| C_TV_RGB565_MODE;

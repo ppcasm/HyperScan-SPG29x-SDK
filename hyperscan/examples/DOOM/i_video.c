@@ -79,7 +79,6 @@ struct color {
     uint32_t b:8;
     uint32_t g:8;
     uint32_t r:8;
-    //uint32_t a:8;
 };
 
 static struct color colors[256];
@@ -196,8 +195,8 @@ void I_InitGraphics (void)
     printf("I_InitGraphics: framebuffer: x_res: %d, y_res: %d, x_virtual: %d, y_virtual: %d, bpp: %d\n",
             s_Fb.xres, s_Fb.yres, s_Fb.xres_virtual, s_Fb.yres_virtual, s_Fb.bits_per_pixel);
 
-    printf("I_InitGraphics: framebuffer: RGBA: %d%d%d%d, red_off: %d, green_off: %d, blue_off: %d, transp_off: N/A\n",
-            s_Fb.red.length, s_Fb.green.length, s_Fb.blue.length, s_Fb.transp.length, s_Fb.red.offset, s_Fb.green.offset, s_Fb.blue.offset);
+    printf("I_InitGraphics: framebuffer: RGB565: %d%d%d, red_off: %d, green_off: %d, blue_off: %d\n",
+            s_Fb.red.length, s_Fb.green.length, s_Fb.blue.length, s_Fb.red.offset, s_Fb.green.offset, s_Fb.blue.offset);
 
     printf("I_InitGraphics: DOOM screen size: w x h: %d x %d\n", SCREENWIDTH, SCREENHEIGHT);
 
@@ -214,9 +213,8 @@ void I_InitGraphics (void)
         printf("I_InitGraphics: Auto-scaling factor: %d\n", fb_scaling);
     }
 
-
     /* Allocate screen to draw to */
-	I_VideoBuffer = (byte*)Z_Malloc (SCREENWIDTH * SCREENHEIGHT, PU_STATIC, NULL);  // For DOOM to draw on
+	I_VideoBuffer = (unsigned int*)Z_Malloc (SCREENWIDTH * SCREENHEIGHT, PU_STATIC, NULL);  // For DOOM to draw on
 
 	screenvisible = true;
 
@@ -259,12 +257,12 @@ void I_FinishUpdate (void)
     /* 2048 =s_Fb width, 320 screenwidth */
     y_offset     = (((s_Fb.yres - (SCREENHEIGHT * fb_scaling)) * s_Fb.bits_per_pixel/8)) / 2;
     //x_offset     = (((s_Fb.xres - (SCREENWIDTH  * fb_scaling)) * s_Fb.bits_per_pixel/8)) / 2; // XXX: siglent FB hack: /4 instead of /2, since it seems to handle the resolution in a funny way
-    x_offset     = 444;
+    x_offset = 408;
     x_offset_end = ((s_Fb.xres - (SCREENWIDTH  * fb_scaling)) * s_Fb.bits_per_pixel/8) - x_offset;
 
     /* DRAW SCREEN */
-    line_in  = (unsigned char *) I_VideoBuffer;
-    line_out = (unsigned char *) DG_ScreenBuffer;
+    line_in  = (unsigned int *) I_VideoBuffer;
+    line_out = (unsigned int *) DG_ScreenBuffer;
 
     y = SCREENHEIGHT;
 
@@ -329,7 +327,6 @@ void I_SetPalette (byte* palette)
      * map to the right pixel format over here! */
 
     for (i=0; i<256; ++i ) {
-//        colors[i].a = 0;
         colors[i].r = gammatable[usegamma][*palette++];
         colors[i].g = gammatable[usegamma][*palette++];
         colors[i].b = gammatable[usegamma][*palette++];
