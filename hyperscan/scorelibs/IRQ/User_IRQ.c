@@ -11,7 +11,9 @@ extern void MP3_Service_Loop_ISR();
 //====================================================
 void IRQ63(void)
 {
-//	MP3_Service_Loop_ISR();
+	#ifdef MP3_IRQ
+		MP3_Service_Loop_ISR();
+	#endif
 }
 
 //====================================================

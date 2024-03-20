@@ -15,9 +15,6 @@
 #include "../../include/HS_Controller/HS_Controller.h"
 #include "../../include/FatFS/ff.h"
 
-// Stupid Framebuffer
-unsigned short *fb = (unsigned short *) 0xA0400000;
-
 static int FrameBufferFd = -1;
 static int* FrameBuffer = 0;
 
@@ -112,45 +109,22 @@ static void addKeyToQueue(int pressed, unsigned char keyCode)
         s_KeyQueueWriteIndex %= KEYQUEUE_SIZE;
 }
 
-
-void disableRawMode()
-{
-  //printf("returning original termios\n");
-  //tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
-}
-
-void enableRawMode()
-{
-  //tcgetattr(STDIN_FILENO, &orig_termios);
-  //atexit(disableRawMode);
-  //struct termios raw = orig_termios;
-  //raw.c_lflag &= ~(ECHO);
-  //raw.c_cc[VMIN] = 0;
-  //tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
-}
-
-void *fake_mmap(int null, size_t length, int prot, int flags, int fd, off_t offset){
-	return (unsigned int *)0xA0400000;
-}
-
 void DG_Init()
 {
 
 	/*
-		Set TV output up with RGB565 color scheme and make set all framebuffers
-		to stupid framebuffer address, TV_Init will select the first framebuffer
-		as default.
+	Set TV output up with RGB565 color scheme and make set all framebuffers
+	to stupid framebuffer address, TV_Init will select the first framebuffer
+	as default.
 	*/
-	TV_Init(RESOLUTION_640_480, COLOR_RGB565, 0xA0400000, 0xA0400000, 0xA0400000);
+	TV_Init(RESOLUTION_640_480, COLOR_RGB565, 0xA0500000, 0xA0500000, 0xA0500000);
 
 	printf("Getting screen width...");
 	s_ScreenWidth = 640;
-	//s_ScreenWidth = ioctl(FrameBufferFd, FB_GET_WIDTH);
 	printf("%d\n", s_ScreenWidth);
 
 	printf("Getting screen height...");
 	s_ScreenHeight = 480;
-	//s_ScreenHeight = ioctl(FrameBufferFd, FB_GET_HEIGHT);
     printf("%d\n", s_ScreenHeight);
 
     if (0 == s_ScreenWidth || 0 == s_ScreenHeight)
@@ -158,19 +132,6 @@ void DG_Init()
         printf("Unable to obtain screen info!");
         exit(1);
     }
-
-    FrameBuffer = fake_mmap(0, s_ScreenWidth * s_ScreenHeight * 4, 0, 0, FrameBufferFd, 0);
-
-    if (FrameBuffer != (int*)-1)
-    {
-        printf("FrameBuffer mmap success\n");
-    }
-    else
-    {
-        printf("FrameBuffermmap failed\n");
-    }
-    
-    enableRawMode();
 
     //KeyboardFd = open("/dev/keyboard", 0);
 
@@ -228,15 +189,13 @@ void DG_DrawFrame()
 {
 	int i = 0;
 	
-    if (FrameBuffer)
-    {
-        for (i = 0; i < DOOMGENERIC_RESY; ++i)
-        {
-        	printf("DRAWFRAME CALLED\n");
-            memcpy(FrameBuffer + s_PositionX + (i + s_PositionY) * s_ScreenWidth, DG_ScreenBuffer + i * DOOMGENERIC_RESX, DOOMGENERIC_RESX * 4);
-        }
-    }
-
+	unsigned int *framebuf = (unsigned int *)0xA0500000;
+	unsigned int *screenbuf = (unsigned int *)&DG_ScreenBuffer;
+	
+   	for(i=0;i<=(DOOMGENERIC_RESX*DOOMGENERIC_RESY);++i){
+    	framebuf[i] = screenbuf[i];
+    }	
+    
     handleKeyInput();
 }
 
@@ -285,7 +244,7 @@ int main(int argc, char **argv)
 	FATFS fs0;
 	f_mount(&fs0, "0:", 1);
 	
-	char *fake_argv[] = {"HYPER.EXE", "-iwad", "doom1.wad", "-mmap", NULL};
+	char *fake_argv[] = {"HYPER.EXE", "-iwad", "doom1.wad", NULL};
 	
 	int fake_argc = sizeof(fake_argv) / sizeof(fake_argv[0]) - 1;
 	
