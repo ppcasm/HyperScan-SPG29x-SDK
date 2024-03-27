@@ -1,8 +1,12 @@
 # HyperScan SPG29x SDK
  SPG29x SDK with Mattel HyperScan support
 
-# This is all still very much a work in progress, so it's possibly dangerous.
-# I assume no risk for things that you decide to do with the tools and information provided here.  
+## This is all still very much a work in progress, so it's possibly dangerous.
+## I assume no risk for things that you decide to do with the tools and information provided here.  
+
+Sections:
+[Installation](#installation)
+[UART Loader]
 
 ## Support
 
@@ -31,8 +35,6 @@ the code should be documented. Some examples are as listed:
 - [PONG] - A very terrible PONG game, I wouldn't use it for production of any kind
 - [FlashCFW] - This allows flashing a CFW/OFW permanently from recovery mode on HyperScan
 
-Sections:
-[Installation](#installation)
 ## Installation
 I've included the S+Core IDE in the tools directory. This only works for Windows, but could be installed in WINE under Linux, which was the reason I chose to develop with this method since the S+Core Binutils/GCC hasn't been supported in years it makes trying to track down and build the toolchain from source unneccessary, and a lot more accessible, plus we can ensure that anyone who uses the IDE from this repo will be on the same versions since the back-end of the IDE uses a fixed version Bintuils/GCC.
 
