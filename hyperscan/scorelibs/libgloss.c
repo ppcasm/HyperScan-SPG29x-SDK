@@ -90,7 +90,11 @@ void _exit (int extcode){
 	RAM. We just increment a pointer in what's
 	left of memory on the board.
 */
-#define HEAPSIZE 8*(1024*1024)
+#ifdef NEW_HEAPSIZE
+	#define HEAPSIZE NEW_HEAPSIZE
+#else
+	#define HEAPSIZE (512*1024)
+#endif
 static unsigned char _heap[HEAPSIZE];
 char * _sbrk_r (struct _reent *ptr, int nbytes){
 	static unsigned char *heap_end = NULL;
