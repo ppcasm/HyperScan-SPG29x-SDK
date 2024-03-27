@@ -1,0 +1,1617 @@
+Archive member included because of file (symbol)
+
+.\Lib\MP3Core.a(scr_mp3entry.o)
+                              Debug\MP3Drv.o (mp3_decoder_run)
+.\Lib\MP3Core.a(mpgaudio.o)   Debug\MP3Drv.o (mp3_decoder_init)
+.\Lib\MP3Core.a(mp3enc.o)     .\Lib\MP3Core.a(scr_mp3entry.o) (__mp3_encoder_run)
+.\Lib\MP3Core.a(layer3_enc.o)
+                              .\Lib\MP3Core.a(mp3enc.o) (init_slot_state)
+.\Lib\MP3Core.a(layer3.o)     .\Lib\MP3Core.a(mpgaudio.o) (mp3_do_layer3)
+.\Lib\MP3Core.a(layer2.o)     .\Lib\MP3Core.a(mpgaudio.o) (mp3_do_layer2)
+.\Lib\MP3Core.a(layer1.o)     .\Lib\MP3Core.a(mpgaudio.o) (mp3_do_layer1)
+.\Lib\MP3Core.a(L3subband.o)  .\Lib\MP3Core.a(mp3enc.o) (init_analysis_filterbank)
+.\Lib\MP3Core.a(L3mdct.o)     .\Lib\MP3Core.a(mp3enc.o) (mdct_analysis)
+.\Lib\MP3Core.a(L3loop.o)     .\Lib\MP3Core.a(mp3enc.o) (iteration_loop)
+.\Lib\MP3Core.a(L3bitstream.o)
+                              .\Lib\MP3Core.a(mp3enc.o) (encode_side_info)
+.\Lib\MP3Core.a(i_stereo.o)   .\Lib\MP3Core.a(layer3.o) (III_i_stereo)
+.\Lib\MP3Core.a(hybrid.o)     .\Lib\MP3Core.a(mpgaudio.o) (mp3_reset_old_block)
+.\Lib\MP3Core.a(huffman.o)    .\Lib\MP3Core.a(L3loop.o) (count1_eht)
+.\Lib\MP3Core.a(filterbank.o)
+                              .\Lib\MP3Core.a(mpgaudio.o) (mp3_reset_Vi)
+.\Lib\MP3Core.a(common.o)     .\Lib\MP3Core.a(mpgaudio.o) (mp3_freqs)
+.\Lib\MP3Core.a(bitstream.o)  .\Lib\MP3Core.a(mp3enc.o) (init_putbits)
+.\Lib\MP3Core.a(tables.o)     .\Lib\MP3Core.a(L3loop.o) (scf_band_index)
+.\Lib\MP3Core.a(scr_windowing.o)
+                              .\Lib\MP3Core.a(filterbank.o) (windowing_a)
+.\Lib\MP3Core.a(scr_scaled_dct.o)
+                              .\Lib\MP3Core.a(filterbank.o) (scaled_chen_DCT_32_a)
+.\Lib\MP3Core.a(scr_ms_stereo.o)
+                              .\Lib\MP3Core.a(layer3.o) (do_ms_stereo_a)
+.\Lib\MP3Core.a(scr_mdct32_type3.o)
+                              .\Lib\MP3Core.a(L3subband.o) (dct32_type3_a)
+.\Lib\MP3Core.a(scr_mdct.o)   .\Lib\MP3Core.a(L3mdct.o) (FDCT18_type4_inv_a)
+.\Lib\MP3Core.a(scr_imdct36.o)
+                              .\Lib\MP3Core.a(scr_mdct.o) (FFT9_radix3_a)
+.\Lib\MP3Core.a(scr_imdct12.o)
+                              .\Lib\MP3Core.a(hybrid.o) (imdct12_a)
+.\Lib\MP3Core.a(scr_enc_aa.o)
+                              .\Lib\MP3Core.a(L3mdct.o) (enc_antialiasing_a)
+.\Lib\MP3Core.a(scr_antialiasing.o)
+                              .\Lib\MP3Core.a(layer3.o) (III_antialias_a)
+.\Lib\MP3Core.a(scr_analysis_filter.o)
+                              .\Lib\MP3Core.a(L3subband.o) (analysis_filtering_a)
+.\Lib\MP3Core.a(reservoir.o)  .\Lib\MP3Core.a(L3loop.o) (bits_per_channel)
+.\Lib\MP3Core.a(mp3deq.o)     .\Lib\MP3Core.a(layer3.o) (III_dequantize_sample)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+                              Debug\libgloss.o (abort)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(exit.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o (exit)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(exit.o) (_impure_ptr)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o)
+                              Debug\main.o (malloc)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o) (_malloc_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcmp.o)
+                              Debug\ff.o (memcmp)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcpy.o)
+                              Debug\ff.o (memcpy)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memset.o)
+                              Debug\ff.o (memset)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o) (__malloc_lock)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(printf.o)
+                              Debug\main.o (printf)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o) (raise)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(sprintf.o)
+                              Debug\main.o (sprintf)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strchr.o)
+                              Debug\ff.o (strchr)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcpy.o)
+                              Debug\main.o (strcpy)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strlen.o)
+                              Debug\main.o (strlen)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+                              Debug\libgloss.o (write)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(printf.o) (vfprintf)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcrtomb.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (_wcrtomb_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcsrtombs.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (_wcsrtombs_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcrtomb.o) (_wctomb_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wsetup.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (__swsetup)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (_dtoa_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fflush.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (fflush)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(findfp.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (__sinit)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o) (_free_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (__sfvwrite)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fwalk.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fflush.o) (_fwalk)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (localeconv)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(makebuf.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wsetup.o) (__smakebuf)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memchr.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (memchr)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memmove.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o) (memmove)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (_Bfree)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(reallocr.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o) (_realloc_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isinf.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (isinf)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isnan.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o) (isnan)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(stdio.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(findfp.o) (__sclose)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcmp.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o) (strcmp)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(callocr.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o) (_calloc_r)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(errno.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o) (__errno)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_addsub_df.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (__subdf3)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_muldf3.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (__muldf3)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_divdf3.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (__divdf3)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz64.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_muldf3.o) (countLeadingZeros64)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatsidf.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (__floatsidf)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatunsidf.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (__floatunsidf)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fixdfsi.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (__fixdfsi)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fpcmp_parts_df.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o) (__gtdf2)
+c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz32.o)
+                              c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatsidf.o) (countLeadingZeros32)
+
+Allocating common symbols
+Common symbol       size              file
+
+Fill_count          0x4               Debug\MP3Drv.o
+MP3_Start_Addr      0x4               Debug\MP3Drv.o
+FIFOArray           0x2000            Debug\MP3Drv.o
+fs                  0x230             Debug\main.o
+TempPCM_ready       0x4               Debug\MP3Drv.o
+TempAddress         0x4               Debug\MP3Drv.o
+MP3_Encoded_Data_Ptr
+                    0x4               Debug\MP3Drv.o
+PCM_buf             0x1200            Debug\MP3Drv.o
+enc                 0x50d0            .\Lib\MP3Core.a(mp3enc.o)
+decoder_instance    0x4800            Debug\MP3Drv.o
+temp_wp             0x4               Debug\MP3Drv.o
+space               0x4               Debug\MP3Drv.o
+TempPCM             0x2000            Debug\MP3Drv.o
+Address             0x4               Debug\MP3Drv.o
+controller          0x5               Debug\main.o
+wp                  0x4               Debug\MP3Drv.o
+MP3_Length          0x4               Debug\MP3Drv.o
+pcm_wp              0x4               Debug\MP3Drv.o
+ADC_PCM_Buf_1       0x1200            Debug\MP3Drv.o
+rp                  0x4               Debug\MP3Drv.o
+pcm_rp              0x4               Debug\MP3Drv.o
+Need_PCM_Flag       0x4               Debug\MP3Drv.o
+FIFOAddress         0x4               Debug\MP3Drv.o
+pcm_cnt             0x4               Debug\MP3Drv.o
+PCMAddress          0x4               Debug\MP3Drv.o
+ADC_PCM_Buf_2       0x1200            Debug\MP3Drv.o
+bitrate             0x4               Debug\MP3Drv.o
+MP3_Output_Type     0x4               Debug\MP3Drv.o
+samplerate          0x4               Debug\MP3Drv.o
+error_msg           0x4               Debug\MP3Drv.o
+MP3_bs_buf          0x1000            Debug\MP3Drv.o
+temp_rp             0x4               Debug\MP3Drv.o
+MP3_Status          0x4               Debug\MP3Drv.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+LOAD Obj.lst
+LOAD Debug\hyperscan_startup.o
+LOAD Debug\main.o
+LOAD Debug\MP3Drv.o
+LOAD Debug\libgloss.o
+LOAD Debug\UART.o
+LOAD Debug\TV.o
+LOAD Debug\NorFlash.o
+LOAD Debug\User_IRQ.o
+LOAD Debug\Sys_isr.o
+LOAD Debug\Sys_IRQ.o
+LOAD Debug\I2C.o
+LOAD Debug\ff.o
+LOAD Debug\diskio.o
+LOAD Debug\HS_Controller.o
+LOAD Lib.lst
+LOAD .\Lib\MP3Core.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libm.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtn.o
+START GROUP
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libm.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a
+END GROUP
+
+.exception      0x00000000a0e001fc      0x23c
+ *(.exception_vec)
+ .exception_vec
+                0x00000000a0e001fc      0x23c Debug\Sys_isr.o
+
+.stack          0x00000000a0fffff0        0x0
+                0x00000000a0fffff0                _stack = .
+ *(.stack)
+                0x00000000a0e01000                . = 0xa0e01000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.dyn        0x00000000a0e01000        0x0
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.dyn       0x0000000000000000        0x0 .\Lib\MP3Core.a(layer3.o)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.hardware_init  0x00000000a0e01000       0x70
+ *(.hardware_init)
+ .hardware_init
+                0x00000000a0e01000       0x70 Debug\hyperscan_startup.o
+                0x00000000a0e01000                _hardware_init
+
+.init           0x00000000a0e01070       0x70
+ *(.init)
+ .init          0x00000000a0e01070       0x5c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o
+                0x00000000a0e010bc                _init_argv
+                0x00000000a0e010c4                _init
+                0x00000000a0e01070                _start
+ .init          0x00000000a0e010cc        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .init          0x00000000a0e010d0        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+ .init          0x00000000a0e010d4        0xc c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtn.o
+
+.plt
+ *(.plt)
+
+.text           0x00000000a0e010e0    0x16678
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00000000a0e010e0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o
+ .text          0x00000000a0e010e0       0xe4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .text          0x00000000a0e011c4        0x0 Debug\hyperscan_startup.o
+ .text          0x00000000a0e011c4      0x998 Debug\main.o
+                0x00000000a0e015c0                execute_binary
+                0x00000000a0e01200                box
+                0x00000000a0e01680                Load_Directory_List
+                0x00000000a0e011c4                draw_pixel
+                0x00000000a0e0178c                Get_Dir_List_Size
+                0x00000000a0e01398                Menu_Border
+                0x00000000a0e018fc                main
+                0x00000000a0e0142c                DAC_Init
+                0x00000000a0e01864                Load_BG_Music
+ .text          0x00000000a0e01b5c      0x948 Debug\MP3Drv.o
+                0x00000000a0e01f48                MP3_Output_Left_Only
+                0x00000000a0e01f28                Repeat_OFF_MP3
+                0x00000000a0e01f18                Repeat_ON_MP3
+                0x00000000a0e02090                bs_byte_size
+                0x00000000a0e01ef4                Resume_MP3
+                0x00000000a0e021a4                MP3_Service_Loop_ISR
+                0x00000000a0e01f60                read_bs
+                0x00000000a0e01e00                EnableSoftCh
+                0x00000000a0e02224                MP3_Service_Loop
+                0x00000000a0e01f54                MP3_Output_Right_Only
+                0x00000000a0e01fe8                get_bs_free_bytes
+                0x00000000a0e01f3c                MP3_Output_Stereo
+                0x00000000a0e01ea4                Get_MP3_Status
+                0x00000000a0e01b5c                FillSoftFIFO
+                0x00000000a0e01e7c                Init_MP3
+                0x00000000a0e020c8                Play_MP3
+                0x00000000a0e02020                read_bitstream
+                0x00000000a0e01ecc                Pause_MP3
+                0x00000000a0e01eac                Stop_MP3
+ .text          0x00000000a0e024a4      0x240 Debug\libgloss.o
+                0x00000000a0e0264c                _getpid
+                0x00000000a0e02524                _lseek_r
+                0x00000000a0e02668                _kill_r
+                0x00000000a0e0252c                _fstat_r
+                0x00000000a0e0253c                isatty
+                0x00000000a0e02650                _getpid_r
+                0x00000000a0e0267c                _sbrk_r
+                0x00000000a0e0259c                _read_r
+                0x00000000a0e024a4                _putc_r
+                0x00000000a0e024f8                _open_r
+                0x00000000a0e02500                _close_r
+                0x00000000a0e0254c                _write_r
+                0x00000000a0e02654                _kill
+                0x00000000a0e02508                _exit
+ .text          0x00000000a0e026e4       0x78 Debug\UART.o
+                0x00000000a0e026e4                UART_Init
+                0x00000000a0e026e8                UART_SendChar
+                0x00000000a0e02718                UART_GetChar
+ .text          0x00000000a0e0275c      0x394 Debug\TV.o
+                0x00000000a0e02ac0                TV_FadeIn
+                0x00000000a0e027ac                TV_Init
+                0x00000000a0e027a0                TV_Buffer_Sel
+                0x00000000a0e0275c                TV_ClearScreen
+                0x00000000a0e02860                TV_Fade
+                0x00000000a0e02944                TV_PrintColor
+                0x00000000a0e02a90                TV_FadeOut
+                0x00000000a0e02a04                TV_PrintHex
+                0x00000000a0e02788                TV_Buffer_Set
+                0x00000000a0e02870                TV_Print
+                0x00000000a0e02850                TV_Hue
+                0x00000000a0e02840                TV_Saturation
+ .text          0x00000000a0e02af0      0x294 Debug\NorFlash.o
+                0x00000000a0e02d28                NorFlash_ChipErase
+                0x00000000a0e02c20                NorFlash_SectorErase
+                0x00000000a0e02af0                NorFlash_Init
+                0x00000000a0e02b18                NorFlash_SetAddress
+                0x00000000a0e02b54                NorFlash_WordWrite
+                0x00000000a0e02ca4                NorFlash_BlockErase
+                0x00000000a0e02bb0                NorFlash_Write32
+                0x00000000a0e02b50                NorFlash_Delay
+ .text          0x00000000a0e02d84       0xa0 Debug\User_IRQ.o
+                0x00000000a0e02e0c                IRQ28
+                0x00000000a0e02da0                IRQ55
+                0x00000000a0e02d94                IRQ58
+                0x00000000a0e02ddc                IRQ40
+                0x00000000a0e02dec                IRQ36
+                0x00000000a0e02e00                IRQ31
+                0x00000000a0e02d84                IRQ62
+                0x00000000a0e02d88                IRQ61
+                0x00000000a0e02de8                IRQ37
+                0x00000000a0e02de4                IRQ38
+                0x00000000a0e02e04                IRQ30
+                0x00000000a0e02e08                IRQ29
+                0x00000000a0e02da4                IRQ54
+                0x00000000a0e02dd4                IRQ42
+                0x00000000a0e02d98                IRQ57
+                0x00000000a0e02d9c                IRQ56
+                0x00000000a0e02dd8                IRQ41
+                0x00000000a0e02dc0                IRQ47
+                0x00000000a0e02df8                IRQ33
+                0x00000000a0e02d90                IRQ59
+                0x00000000a0e02e1c                IRQ24
+                0x00000000a0e02de0                IRQ39
+                0x00000000a0e02dcc                IRQ44
+                0x00000000a0e02e10                IRQ27
+                0x00000000a0e02db0                IRQ51
+                0x00000000a0e02df4                IRQ34
+                0x00000000a0e02db4                IRQ50
+                0x00000000a0e02d8c                IRQ60
+                0x00000000a0e02e18                IRQ25
+                0x00000000a0e02da8                IRQ53
+                0x00000000a0e02db8                IRQ49
+                0x00000000a0e02dc4                IRQ46
+                0x00000000a0e02dc8                IRQ45
+                0x00000000a0e02e14                IRQ26
+                0x00000000a0e02dac                IRQ52
+                0x00000000a0e02dfc                IRQ32
+                0x00000000a0e02dd0                IRQ43
+                0x00000000a0e02dbc                IRQ48
+                0x00000000a0e02e20                IRQ63
+                0x00000000a0e02df0                IRQ35
+ .text          0x00000000a0e02e24        0x0 Debug\Sys_isr.o
+ .text          0x00000000a0e02e24       0xd0 Debug\Sys_IRQ.o
+                0x00000000a0e02e28                irq_dispatch
+                0x00000000a0e02e24                intmsg
+ .text          0x00000000a0e02ef4       0xe4 Debug\I2C.o
+                0x00000000a0e02f84                I2C_Write8
+                0x00000000a0e02ef4                I2C_Init
+                0x00000000a0e02f30                I2C_Read8
+ .text          0x00000000a0e02fd8     0x2e94 Debug\ff.o
+                0x00000000a0e058bc                f_rename
+                0x00000000a0e05330                f_truncate
+                0x00000000a0e03294                f_closedir
+                0x00000000a0e05c24                f_unlink
+                0x00000000a0e05e2c                f_close
+                0x00000000a0e04004                f_read
+                0x00000000a0e050d8                f_readdir
+                0x00000000a0e05d5c                f_sync
+                0x00000000a0e03a3c                f_mount
+                0x00000000a0e04f40                f_opendir
+                0x00000000a0e04514                f_lseek
+                0x00000000a0e04eb0                f_stat
+                0x00000000a0e0474c                f_write
+                0x00000000a0e05468                f_open
+                0x00000000a0e05a70                f_mkdir
+                0x00000000a0e03e50                f_getfree
+ .text          0x00000000a0e05e6c      0x178 Debug\diskio.o
+                0x00000000a0e05ec0                USB_disk_initialize
+                0x00000000a0e05f1c                DiskB_ReadSector
+                0x00000000a0e05f88                disk_initialize
+                0x00000000a0e05f84                disk_status
+                0x00000000a0e05fe0                disk_ioctl
+                0x00000000a0e05e6c                DiskB_Initial
+                0x00000000a0e05f50                DiskB_WriteSector
+                0x00000000a0e05fc0                disk_write
+                0x00000000a0e05fa0                disk_read
+ .text          0x00000000a0e05fe4       0xf4 Debug\HS_Controller.o
+                0x00000000a0e05fe4                HS_Controller_Read
+                0x00000000a0e06098                HS_Controller_Init
+ *fill*         0x00000000a0e060d8        0x8 00000000
+ .text          0x00000000a0e060e0       0x60 .\Lib\MP3Core.a(scr_mp3entry.o)
+                0x00000000a0e06118                mp3_encoder_run
+                0x00000000a0e060e0                mp3_decoder_run
+ .text          0x00000000a0e06140      0x5f0 .\Lib\MP3Core.a(mpgaudio.o)
+                0x00000000a0e06604                mp3_get_channel_number
+                0x00000000a0e0670c                mp3_errno
+                0x00000000a0e065d0                mp3_decoder_read_index
+                0x00000000a0e066ac                mp3_get_sampling_rate
+                0x00000000a0e066f4                mp3_get_frame_count
+                0x00000000a0e06140                mp3_decoder_init
+                0x00000000a0e06724                mp3_version_string
+                0x00000000a0e065e8                mp3_decoder_set_file_end
+                0x00000000a0e0618c                __mp3_decoder_run
+                0x00000000a0e06638                mp3_get_bitrate
+ .text          0x00000000a0e06730      0x538 .\Lib\MP3Core.a(mp3enc.o)
+                0x00000000a0e0694c                __mp3_encoder_run
+                0x00000000a0e06c58                mp3_encoder_frame_size
+                0x00000000a0e06730                mp3_encoder_init
+ .text          0x00000000a0e06c68      0x124 .\Lib\MP3Core.a(layer3_enc.o)
+                0x00000000a0e06c68                init_slot_state
+                0x00000000a0e06cd0                update_slot_state
+ .text          0x00000000a0e06d8c     0x1138 .\Lib\MP3Core.a(layer3.o)
+                0x00000000a0e07560                mp3_do_layer3
+ .text          0x00000000a0e07ec4      0xb34 .\Lib\MP3Core.a(layer2.o)
+                0x00000000a0e07ec4                mp3_do_layer2
+ .text          0x00000000a0e089f8      0x634 .\Lib\MP3Core.a(layer1.o)
+                0x00000000a0e089f8                mp3_do_layer1
+ .text          0x00000000a0e0902c      0x1ec .\Lib\MP3Core.a(L3subband.o)
+                0x00000000a0e09074                analysis_filterbank
+                0x00000000a0e0902c                init_analysis_filterbank
+ .text          0x00000000a0e09218      0x23c .\Lib\MP3Core.a(L3mdct.o)
+                0x00000000a0e09218                mdct_analysis
+ .text          0x00000000a0e09454     0x11b0 .\Lib\MP3Core.a(L3loop.o)
+                0x00000000a0e098a0                iteration_loop
+ .text          0x00000000a0e0a604      0x918 .\Lib\MP3Core.a(L3bitstream.o)
+                0x00000000a0e0a884                HuffmanCode
+                0x00000000a0e0a604                encode_side_info
+                0x00000000a0e0aab4                L3_huffman_coder_count1
+                0x00000000a0e0ae44                write_padding_bits
+                0x00000000a0e0abd0                format_main_data
+ .text          0x00000000a0e0af1c      0x324 .\Lib\MP3Core.a(i_stereo.o)
+                0x00000000a0e0af1c                III_i_stereo
+ .text          0x00000000a0e0b240      0x250 .\Lib\MP3Core.a(hybrid.o)
+                0x00000000a0e0b258                III_hybrid
+                0x00000000a0e0b240                mp3_reset_old_block
+ .text          0x00000000a0e0b490        0x0 .\Lib\MP3Core.a(huffman.o)
+ .text          0x00000000a0e0b490      0x2f8 .\Lib\MP3Core.a(filterbank.o)
+                0x00000000a0e0b490                mp3_reset_Vi
+                0x00000000a0e0b4a8                synthesis_gr
+ .text          0x00000000a0e0b788     0x118c .\Lib\MP3Core.a(common.o)
+                0x00000000a0e0c550                mp3_go_to_next_header
+                0x00000000a0e0bbe4                mp3_reload_bitstream
+                0x00000000a0e0bc8c                mp3_search_possible_header
+                0x00000000a0e0bc18                mp3_get_bits
+                0x00000000a0e0b868                mp3_decode_header
+                0x00000000a0e0c5a8                match_next_header
+                0x00000000a0e0b788                mp3_check_header
+                0x00000000a0e0b974                mp3_set_frame
+                0x00000000a0e0c834                mp3_set_main_data_index
+                0x00000000a0e0c738                mp3_decode_and_check_header
+ .text          0x00000000a0e0c914      0x12c .\Lib\MP3Core.a(bitstream.o)
+                0x00000000a0e0c9dc                flush_bits
+                0x00000000a0e0c92c                put_bits
+                0x00000000a0e0c914                init_putbits
+ .text          0x00000000a0e0ca40        0x0 .\Lib\MP3Core.a(tables.o)
+ .text          0x00000000a0e0ca40      0x220 .\Lib\MP3Core.a(scr_windowing.o)
+                0x00000000a0e0cc10                dct_32_to_64_a
+                0x00000000a0e0ca40                windowing_a
+ .text          0x00000000a0e0cc60      0x970 .\Lib\MP3Core.a(scr_scaled_dct.o)
+                0x00000000a0e0cc60                scaled_chen_DCT_32_a
+ .text          0x00000000a0e0d5d0       0x40 .\Lib\MP3Core.a(scr_ms_stereo.o)
+                0x00000000a0e0d5d0                do_ms_stereo_a
+ .text          0x00000000a0e0d610      0x440 .\Lib\MP3Core.a(scr_mdct32_type3.o)
+                0x00000000a0e0d948                dct16_type3_inv_a
+                0x00000000a0e0d9f0                dct32_type3_a
+                0x00000000a0e0d610                srfft8_a
+                0x00000000a0e0d85e                dct16_type4_a
+ .text          0x00000000a0e0da50       0xf0 .\Lib\MP3Core.a(scr_mdct.o)
+                0x00000000a0e0da50                FDCT18_type4_inv_a
+ .text          0x00000000a0e0db40      0x3d0 .\Lib\MP3Core.a(scr_imdct36.o)
+                0x00000000a0e0dbca                FFT9_radix3_a
+                0x00000000a0e0db40                FFT3_winograde_3_a
+                0x00000000a0e0dd62                FDCT18_type4_a
+                0x00000000a0e0de4a                imdct36_a
+ .text          0x00000000a0e0df10      0x360 .\Lib\MP3Core.a(scr_imdct12.o)
+                0x00000000a0e0dfa0                FDCT6_type4_a
+                0x00000000a0e0df10                FFT3_winograde_a
+                0x00000000a0e0e100                imdct12_a
+                0x00000000a0e0e0a0                dct6_to_12_a
+ .text          0x00000000a0e0e270       0x80 .\Lib\MP3Core.a(scr_enc_aa.o)
+                0x00000000a0e0e270                enc_antialiasing_a
+ .text          0x00000000a0e0e2f0       0x90 .\Lib\MP3Core.a(scr_antialiasing.o)
+                0x00000000a0e0e2f0                III_antialias_a
+ .text          0x00000000a0e0e380       0x90 .\Lib\MP3Core.a(scr_analysis_filter.o)
+                0x00000000a0e0e380                analysis_filtering_a
+ .text          0x00000000a0e0e410       0x38 .\Lib\MP3Core.a(reservoir.o)
+                0x00000000a0e0e410                bits_per_channel
+ .text          0x00000000a0e0e448     0x1430 .\Lib\MP3Core.a(mp3deq.o)
+                0x00000000a0e0e448                III_dequantize_sample
+ .text          0x00000000a0e0f878       0x14 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+                0x00000000a0e0f878                abort
+ .text          0x00000000a0e0f88c       0xd4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(exit.o)
+                0x00000000a0e0f88c                exit
+ .text          0x00000000a0e0f960        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+ .text          0x00000000a0e0f960       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o)
+                0x00000000a0e0f980                malloc
+                0x00000000a0e0f960                free
+ .text          0x00000000a0e0f9a0      0x8ac c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+                0x00000000a0e0f9a0                _malloc_r
+ .text          0x00000000a0e1024c       0x90 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcmp.o)
+                0x00000000a0e1024c                memcmp
+ .text          0x00000000a0e102dc       0xb0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcpy.o)
+                0x00000000a0e102dc                memcpy
+ .text          0x00000000a0e1038c       0xb4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memset.o)
+                0x00000000a0e1038c                memset
+ .text          0x00000000a0e10440        0x8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+                0x00000000a0e10444                __malloc_unlock
+                0x00000000a0e10440                __malloc_lock
+ .text          0x00000000a0e10448       0x4c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(printf.o)
+                0x00000000a0e10448                printf
+                0x00000000a0e10474                _printf_r
+ .text          0x00000000a0e10494      0x2a8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+                0x00000000a0e1069c                _signal_r
+                0x00000000a0e105c0                _raise_r
+                0x00000000a0e10510                __sigtramp_r
+                0x00000000a0e10714                signal
+                0x00000000a0e10500                _init_signal
+                0x00000000a0e10494                _init_signal_r
+                0x00000000a0e105a0                __sigtramp
+                0x00000000a0e1067c                raise
+ .text          0x00000000a0e1073c       0xb0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(sprintf.o)
+                0x00000000a0e1079c                _sprintf_r
+                0x00000000a0e1073c                sprintf
+ .text          0x00000000a0e107ec       0xfc c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strchr.o)
+                0x00000000a0e107ec                strchr
+ .text          0x00000000a0e108e8       0x64 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcpy.o)
+                0x00000000a0e108e8                strcpy
+ .text          0x00000000a0e1094c       0x60 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strlen.o)
+                0x00000000a0e1094c                strlen
+ .text          0x00000000a0e109ac       0x28 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+                0x00000000a0e109ac                write
+ .text          0x00000000a0e109d4     0x1bb0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+                0x00000000a0e10a74                _vfprintf_r
+                0x00000000a0e10a18                vfprintf
+ .text          0x00000000a0e12584       0x78 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcrtomb.o)
+                0x00000000a0e12584                _wcrtomb_r
+                0x00000000a0e125d4                wcrtomb
+ .text          0x00000000a0e125fc      0x174 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcsrtombs.o)
+                0x00000000a0e125fc                _wcsrtombs_r
+                0x00000000a0e12744                wcsrtombs
+ .text          0x00000000a0e12770      0x4d8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o)
+                0x00000000a0e12770                _wctomb_r
+ .text          0x00000000a0e12c48      0x124 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wsetup.o)
+                0x00000000a0e12c48                __swsetup
+ .text          0x00000000a0e12d6c     0x14b0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+                0x00000000a0e12f5c                _dtoa_r
+ .text          0x00000000a0e1421c       0xf8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fflush.o)
+                0x00000000a0e1421c                fflush
+ .text          0x00000000a0e14314      0x24c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(findfp.o)
+                0x00000000a0e14370                __sinit
+                0x00000000a0e1440c                __sfmoreglue
+                0x00000000a0e143fc                _cleanup
+                0x00000000a0e143e0                _cleanup_r
+                0x00000000a0e14470                __sfp
+ .text          0x00000000a0e14560      0x42c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+                0x00000000a0e1467c                _free_r
+                0x00000000a0e14560                _malloc_trim_r
+ .text          0x00000000a0e1498c      0x390 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o)
+                0x00000000a0e1498c                __sfvwrite
+ .text          0x00000000a0e14d1c      0x110 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fwalk.o)
+                0x00000000a0e14d1c                _fwalk
+ .text          0x00000000a0e14e2c       0xdc c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+                0x00000000a0e14e54                _setlocale_r
+                0x00000000a0e14e2c                __locale_charset
+                0x00000000a0e14e38                _localeconv_r
+                0x00000000a0e14ee0                setlocale
+                0x00000000a0e14e44                localeconv
+ .text          0x00000000a0e14f08      0x17c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(makebuf.o)
+                0x00000000a0e14f08                __smakebuf
+ .text          0x00000000a0e15084      0x100 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memchr.o)
+                0x00000000a0e15084                memchr
+ .text          0x00000000a0e15184       0xe8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memmove.o)
+                0x00000000a0e15184                memmove
+ .text          0x00000000a0e1526c      0xd5c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o)
+                0x00000000a0e1560c                _mprec_log10
+                0x00000000a0e1528c                _hi0bits
+                0x00000000a0e1567c                _Balloc
+                0x00000000a0e15718                _d2b
+                0x00000000a0e15ac8                _multiply
+                0x00000000a0e15580                _ratio
+                0x00000000a0e15ebc                _s2b
+                0x00000000a0e15cb8                _i2b
+                0x00000000a0e15300                _lo0bits
+                0x00000000a0e153b4                __mcmp
+                0x00000000a0e15dd0                _pow5mult
+                0x00000000a0e1540c                _ulp
+                0x00000000a0e15468                _b2d
+                0x00000000a0e15ce0                _multadd
+                0x00000000a0e15854                __mdiff
+                0x00000000a0e159ac                _lshift
+                0x00000000a0e1526c                _Bfree
+ .text          0x00000000a0e15fc8      0x5d4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(reallocr.o)
+                0x00000000a0e15fc8                _realloc_r
+ .text          0x00000000a0e1659c       0x3c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isinf.o)
+                0x00000000a0e1659c                isinf
+ .text          0x00000000a0e165d8       0x2c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isnan.o)
+                0x00000000a0e165d8                isnan
+ .text          0x00000000a0e16604      0x170 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(stdio.o)
+                0x00000000a0e1662c                __sseek
+                0x00000000a0e1670c                __sread
+                0x00000000a0e16604                __sclose
+                0x00000000a0e16698                __swrite
+ .text          0x00000000a0e16774       0xc4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcmp.o)
+                0x00000000a0e16774                strcmp
+ .text          0x00000000a0e16838       0xb4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(callocr.o)
+                0x00000000a0e16838                _calloc_r
+ .text          0x00000000a0e168ec        0xc c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(errno.o)
+                0x00000000a0e168ec                __errno
+ .text          0x00000000a0e168f8      0x368 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_addsub_df.o)
+                0x00000000a0e168fa                __adddf3
+                0x00000000a0e168f8                __subdf3
+ .text          0x00000000a0e16c60      0x324 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_muldf3.o)
+                0x00000000a0e16c60                __muldf3
+ .text          0x00000000a0e16f84      0x4c0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_divdf3.o)
+                0x00000000a0e17048                __divdf3
+                0x00000000a0e16f84                Div64by32To32
+ .text          0x00000000a0e17444       0x80 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz64.o)
+                0x00000000a0e17444                countLeadingZeros64
+ .text          0x00000000a0e174c4       0x70 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatsidf.o)
+                0x00000000a0e174c4                __floatsidf
+ .text          0x00000000a0e17534       0x54 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatunsidf.o)
+                0x00000000a0e17534                __floatunsidf
+ .text          0x00000000a0e17588       0x74 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fixdfsi.o)
+                0x00000000a0e17588                __fixdfsi
+ .text          0x00000000a0e175fc       0xa4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fpcmp_parts_df.o)
+                0x00000000a0e17604                __eqdf2
+                0x00000000a0e175fc                __gtdf2
+                0x00000000a0e17604                __ltdf2
+                0x00000000a0e17608                __compare_df2
+                0x00000000a0e17604                __ledf2
+                0x00000000a0e17604                __nedf2
+                0x00000000a0e175fc                __gedf2
+ .text          0x00000000a0e176a0       0x6c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz32.o)
+                0x00000000a0e176a0                countLeadingZeros32
+ .text          0x00000000a0e1770c       0x4c c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+ .text          0x00000000a0e17758        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtn.o
+ *(.gnu.warning)
+ *(.glue_7t)
+ *(.glue_7)
+
+.fini           0x00000000a0e17758       0x18
+ *(.fini)
+ .fini          0x00000000a0e17758        0x8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o
+                0x00000000a0e17758                _fini
+ .fini          0x00000000a0e17760        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .fini          0x00000000a0e17764        0xc c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtn.o
+                0x00000000a0e17770                PROVIDE (__etext, .)
+                0x00000000a0e17770                PROVIDE (_etext, .)
+                0x00000000a0e17770                PROVIDE (etext, .)
+
+.rodata         0x00000000a0e17770     0x9f70
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00000000a0e17770      0x14e Debug\main.o
+                                        0x154 (size before relaxing)
+ *fill*         0x00000000a0e178be        0x2 00
+ .rodata.str1.4
+                0x00000000a0e178c0       0x10 Debug\libgloss.o
+ .rodata.str1.4
+                0x00000000a0e178d0        0x3 Debug\TV.o
+                                          0x4 (size before relaxing)
+ *fill*         0x00000000a0e178d3        0x1 00
+ .rodata        0x00000000a0e178d4     0x1000 Debug\TV.o
+                0x00000000a0e178d4                font
+ .rodata        0x00000000a0e188d4       0xa0 Debug\Sys_IRQ.o
+ .rodata.str1.4
+                0x00000000a0e18974       0x1b Debug\ff.o
+                                         0x1c (size before relaxing)
+ *fill*         0x00000000a0e1898f        0x1 00
+ .rodata        0x00000000a0e18990       0x80 Debug\ff.o
+ .rodata        0x00000000a0e18a10       0x28 .\Lib\MP3Core.a(mpgaudio.o)
+ .rodata        0x00000000a0e18a38       0x90 .\Lib\MP3Core.a(mp3enc.o)
+                0x00000000a0e18ab0                mpeg_fs
+                0x00000000a0e18a38                mpeg_bitrate
+ .rodata        0x00000000a0e18ac8     0x13d0 .\Lib\MP3Core.a(layer3.o)
+                0x00000000a0e18ac8                map
+                0x00000000a0e18cd4                mapbuf1
+                0x00000000a0e18b34                mapbuf2
+                0x00000000a0e19d60                longLimit
+                0x00000000a0e19264                mapbuf0
+                0x00000000a0e19ce0                shortLimit
+                0x00000000a0e197d0                bandInfo
+ .rodata        0x00000000a0e19e98      0x108 .\Lib\MP3Core.a(layer2.o)
+                0x00000000a0e19f00                bn_index
+                0x00000000a0e19f48                bitnumber_pool
+                0x00000000a0e19e98                scf_coef
+ .rodata        0x00000000a0e19fa0      0x800 .\Lib\MP3Core.a(L3subband.o)
+                0x00000000a0e19fa0                C
+ .rodata        0x00000000a0e1a7a0      0x160 .\Lib\MP3Core.a(L3mdct.o)
+                0x00000000a0e1a8c0                aa_coef
+                0x00000000a0e1a830                win_l
+                0x00000000a0e1a7a0                win_l_odd
+ .rodata        0x00000000a0e1a900      0xafc .\Lib\MP3Core.a(L3loop.o)
+                0x00000000a0e1a924                log2_tab16
+                0x00000000a0e1a968                log2_tab32
+                0x00000000a0e1a900                log2_tab8
+                0x00000000a0e1a9ec                log2_tab64
+                0x00000000a0e1ab00                subdv_table
+                0x00000000a0e1abf8                pow34
+                0x00000000a0e1aaf0                huf_table_no_esc
+                0x00000000a0e1abb8                gainpow3o_table
+ .rodata        0x00000000a0e1b3fc      0x500 .\Lib\MP3Core.a(i_stereo.o)
+                0x00000000a0e1b5fc                pow1
+                0x00000000a0e1b87c                tan1
+                0x00000000a0e1b7fc                tan2
+                0x00000000a0e1b3fc                pow2
+ .rodata        0x00000000a0e1b8fc      0x480 .\Lib\MP3Core.a(hybrid.o)
+                0x00000000a0e1bb3c                win
+                0x00000000a0e1b8fc                win_odd
+ .rodata        0x00000000a0e1bd7c     0x1d9c .\Lib\MP3Core.a(huffman.o)
+                0x00000000a0e1c0ac                t16l
+                0x00000000a0e1c504                t2l
+                0x00000000a0e1bd8c                eht
+                0x00000000a0e1c1ac                t15l
+                0x00000000a0e1bf9c                t32l
+                0x00000000a0e1c46c                t9l
+                0x00000000a0e1c4f8                t3l
+                0x00000000a0e1dae4                t2HB
+                0x00000000a0e1da80                t5HB
+                0x00000000a0e1c490                t8l
+                0x00000000a0e1bd7c                count1_eht
+                0x00000000a0e1c4d8                t6l
+                0x00000000a0e1c4e8                t5l
+                0x00000000a0e1d590                t12HB
+                0x00000000a0e1c3ec                t11l
+                0x00000000a0e1c590                t24HB
+                0x00000000a0e1bfac                t24l
+                0x00000000a0e1d920                t8HB
+                0x00000000a0e1c42c                t10l
+                0x00000000a0e1c4b4                t7l
+                0x00000000a0e1dac0                t3HB
+                0x00000000a0e1bf8c                t33l
+                0x00000000a0e1c510                t33HB
+                0x00000000a0e1d190                t13HB
+                0x00000000a0e1c2ac                t13l
+                0x00000000a0e1cd90                t15HB
+                0x00000000a0e1da40                t6HB
+                0x00000000a0e1d790                t10HB
+                0x00000000a0e1db08                t1HB
+                0x00000000a0e1c3ac                t12l
+                0x00000000a0e1d690                t11HB
+                0x00000000a0e1c990                t16HB
+                0x00000000a0e1d9b0                t7HB
+                0x00000000a0e1d890                t9HB
+                0x00000000a0e1c550                t32HB
+ .rodata        0x00000000a0e1db18      0x880 .\Lib\MP3Core.a(filterbank.o)
+                0x00000000a0e1db18                descaled_window_2x
+ .rodata        0x00000000a0e1e398      0x174 .\Lib\MP3Core.a(common.o)
+                0x00000000a0e1e3e8                DIV12_Fs
+                0x00000000a0e1e3b0                mp3_freqs
+                0x00000000a0e1e3d4                DIV144_Fs
+                0x00000000a0e1e3fc                mp3_bitrate_table
+                0x00000000a0e1e398                translate_table
+ .rodata        0x00000000a0e1e50c      0x378 .\Lib\MP3Core.a(tables.o)
+                0x00000000a0e1e50c                scf_band_index
+ *fill*         0x00000000a0e1e884        0xc 00
+ .rodata        0x00000000a0e1e890      0x280 .\Lib\MP3Core.a(scr_mdct32_type3.o)
+ .rodata        0x00000000a0e1eb10       0xb0 .\Lib\MP3Core.a(scr_imdct36.o)
+                0x00000000a0e1eb78                w18_post
+                0x00000000a0e1eb30                w18_pre
+ .rodata        0x00000000a0e1ebc0       0x20 .\Lib\MP3Core.a(scr_imdct12.o)
+ .rodata        0x00000000a0e1ebe0       0x40 .\Lib\MP3Core.a(scr_antialiasing.o)
+ .rodata        0x00000000a0e1ec20     0x272c .\Lib\MP3Core.a(mp3deq.o)
+                0x00000000a0e1ec38                pretab1
+                0x00000000a0e1fcd4                ht
+                0x00000000a0e1fc64                htc
+                0x00000000a0e1fc54                gainpow2
+                0x00000000a0e1ec50                ispow
+                0x00000000a0e1ec20                pretab2
+ .rodata.str1.4
+                0x00000000a0e2134c        0x2 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+                                          0x4 (size before relaxing)
+ *fill*         0x00000000a0e2134e        0x2 00
+ .rodata.str1.4
+                0x00000000a0e21350       0x5b c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+                                         0x5c (size before relaxing)
+ *fill*         0x00000000a0e213ab        0x1 00
+ .rodata        0x00000000a0e213ac      0x184 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+ .rodata.str1.4
+                0x00000000a0e21530       0x1e c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o)
+                                         0x20 (size before relaxing)
+ *fill*         0x00000000a0e2154e        0x2 00
+ .rodata.str1.4
+                0x00000000a0e21550        0x9 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+                                         0x14 (size before relaxing)
+ *fill*         0x00000000a0e21559        0x3 00
+ .rodata        0x00000000a0e2155c       0x18 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+ .rodata.str1.4
+                0x00000000a0e21574        0xc c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+                                         0x18 (size before relaxing)
+ .rodata        0x00000000a0e21580       0x34 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+ *fill*         0x00000000a0e215b4        0x4 00
+ .rodata        0x00000000a0e215b8      0x128 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o)
+                0x00000000a0e216a8                __mprec_tinytens
+                0x00000000a0e215b8                __mprec_tens
+                0x00000000a0e21680                __mprec_bigtens
+
+.rodata1
+ *(.rodata1)
+
+.sdata2
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+                0x00000000a0e217e0                . = (ALIGN (0x100) + (. & 0xff))
+                0x00000000a0e217e0                . = ALIGN (0x4)
+                0x00000000a0e217e0                PROVIDE (__preinit_array_start, .)
+
+.preinit_array
+ *(.preinit_array)
+                0x00000000a0e217e0                PROVIDE (__preinit_array_end, .)
+                0x00000000a0e217e0                PROVIDE (__init_array_start, .)
+
+.init_array
+ *(.init_array)
+                0x00000000a0e217e0                PROVIDE (__init_array_end, .)
+                0x00000000a0e217e0                PROVIDE (__fini_array_start, .)
+
+.fini_array
+ *(.fini_array)
+                0x00000000a0e217e0                PROVIDE (__fini_array_end, .)
+
+.data           0x00000000a0e217e0      0x7a8
+                0x00000000a0e217e0                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000000a0e217e0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o
+ .data          0x00000000a0e217e0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .data          0x00000000a0e217e0        0x0 Debug\hyperscan_startup.o
+ .data          0x00000000a0e217e0        0x0 Debug\main.o
+ .data          0x00000000a0e217e0        0x0 Debug\MP3Drv.o
+ .data          0x00000000a0e217e0        0x0 Debug\libgloss.o
+ .data          0x00000000a0e217e0        0x0 Debug\UART.o
+ .data          0x00000000a0e217e0        0x0 Debug\TV.o
+ .data          0x00000000a0e217e0        0x0 Debug\NorFlash.o
+ .data          0x00000000a0e217e0        0x0 Debug\User_IRQ.o
+ .data          0x00000000a0e217e0        0x0 Debug\Sys_isr.o
+ .data          0x00000000a0e217e0        0x0 Debug\Sys_IRQ.o
+ .data          0x00000000a0e217e0        0x0 Debug\I2C.o
+ .data          0x00000000a0e217e0        0x0 Debug\ff.o
+ .data          0x00000000a0e217e0        0x0 Debug\diskio.o
+ .data          0x00000000a0e217e0        0x0 Debug\HS_Controller.o
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_mp3entry.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(mpgaudio.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(mp3enc.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(layer3_enc.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(layer3.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(layer2.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(layer1.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(L3subband.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(L3mdct.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(L3loop.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(L3bitstream.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(i_stereo.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(hybrid.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(huffman.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(filterbank.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(common.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(bitstream.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(tables.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_windowing.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_scaled_dct.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_ms_stereo.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_mdct32_type3.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_mdct.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_imdct36.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_imdct12.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_enc_aa.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_antialiasing.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(scr_analysis_filter.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(reservoir.o)
+ .data          0x00000000a0e217e0        0x0 .\Lib\MP3Core.a(mp3deq.o)
+ .data          0x00000000a0e217e0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+ .data          0x00000000a0e217e0        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(exit.o)
+ .data          0x00000000a0e217e0      0x388 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+                0x00000000a0e217e0                _impure_ptr
+ .data          0x00000000a0e21b68        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o)
+ .data          0x00000000a0e21b68      0x410 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+                0x00000000a0e21f74                __malloc_sbrk_base
+                0x00000000a0e21b68                __malloc_av_
+                0x00000000a0e21f70                __malloc_trim_threshold
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcmp.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcpy.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memset.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(printf.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(sprintf.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strchr.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcpy.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strlen.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcrtomb.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcsrtombs.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wsetup.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fflush.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(findfp.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o)
+ .data          0x00000000a0e21f78        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fwalk.o)
+ .data          0x00000000a0e21f78       0x10 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+                0x00000000a0e21f78                __mb_cur_max
+                0x00000000a0e21f7c                __lc_ctype
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(makebuf.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memchr.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memmove.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(reallocr.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isinf.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isnan.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(stdio.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcmp.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(callocr.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(errno.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_addsub_df.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_muldf3.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_divdf3.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz64.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatsidf.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatunsidf.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fixdfsi.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fpcmp_parts_df.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz32.o)
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+ .data          0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtn.o
+
+.data1
+ *(.data1)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.eh_frame       0x00000000a0e21f88        0x4
+ *(.eh_frame)
+ .eh_frame      0x00000000a0e21f88        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .eh_frame      0x00000000a0e21f88        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.dynamic
+ *(.dynamic)
+
+.ctors          0x00000000a0e21f8c        0x8
+ *crtbegin.o(.ctors)
+ .ctors         0x00000000a0e21f8c        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x00000000a0e21f90        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+
+.dtors          0x00000000a0e21f94        0x8
+ *crtbegin.o(.dtors)
+ .dtors         0x00000000a0e21f94        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x00000000a0e21f98        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+
+.jcr            0x00000000a0e21f9c        0x4
+ *(.jcr)
+ .jcr           0x00000000a0e21f9c        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .jcr           0x00000000a0e21f9c        0x4 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+
+.got
+ *(.got.plt)
+ *(.got)
+                0x00000000a0e25fa0                _gp = (. + 0x4000)
+
+.sdata          0x00000000a0e21fa0       0x1c
+                0x00000000a0e21fa0                _sdata_start = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00000000a0e21fa0        0x8 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+                0x00000000a0e21fa0                __dso_handle
+ .sdata         0x00000000a0e21fa8        0x8 .\Lib\MP3Core.a(layer2.o)
+                0x00000000a0e21fa8                divider_table
+ .sdata         0x00000000a0e21fb0        0x4 .\Lib\MP3Core.a(huffman.o)
+                0x00000000a0e21fb0                t1l
+ .sdata         0x00000000a0e21fb4        0x8 .\Lib\MP3Core.a(mp3deq.o)
+                0x00000000a0e21fbc                _edata = .
+                0x00000000a0e21fbc                PROVIDE (edata, .)
+                0x00000000a0e21fbc                . = ALIGN (0x4)
+                0x00000000a0e21fbc                __bss_start = .
+                0x00000000a0e21fbc                __bss_start__ = .
+
+.sbss           0x00000000a0e21fbc       0x74
+                0x00000000a0e21fbc                PROVIDE (__sbss_start, .)
+                0x00000000a0e21fbc                PROVIDE (___sbss_start, .)
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x00000000a0e21fbc        0x1 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ *fill*         0x00000000a0e21fbd        0x3 00
+ .sbss          0x00000000a0e21fc0        0x4 Debug\libgloss.o
+ .sbss          0x00000000a0e21fc4        0x8 Debug\ff.o
+ *(.scommon)
+ .scommon       0x00000000a0e21fcc        0x5 Debug\main.o
+                0x00000000a0e21fcc                controller
+ *fill*         0x00000000a0e21fd1        0x3 00
+ .scommon       0x00000000a0e21fd4       0x5c Debug\MP3Drv.o
+                0x00000000a0e21fd4                Fill_count
+                0x00000000a0e21fd8                MP3_Start_Addr
+                0x00000000a0e21fdc                TempPCM_ready
+                0x00000000a0e21fe0                TempAddress
+                0x00000000a0e21fe4                MP3_Encoded_Data_Ptr
+                0x00000000a0e21fe8                temp_wp
+                0x00000000a0e21fec                space
+                0x00000000a0e21ff0                Address
+                0x00000000a0e21ff4                wp
+                0x00000000a0e21ff8                MP3_Length
+                0x00000000a0e21ffc                pcm_wp
+                0x00000000a0e22000                rp
+                0x00000000a0e22004                pcm_rp
+                0x00000000a0e22008                Need_PCM_Flag
+                0x00000000a0e2200c                FIFOAddress
+                0x00000000a0e22010                pcm_cnt
+                0x00000000a0e22014                PCMAddress
+                0x00000000a0e22018                bitrate
+                0x00000000a0e2201c                MP3_Output_Type
+                0x00000000a0e22020                samplerate
+                0x00000000a0e22024                error_msg
+                0x00000000a0e22028                temp_rp
+                0x00000000a0e2202c                MP3_Status
+ .scommon       0x00000000a0e22030        0x0 Debug\HS_Controller.o
+                0x00000000a0e22030                PROVIDE (__sbss_end, .)
+                0x00000000a0e22030                PROVIDE (___sbss_end, .)
+                0x00000000a0e25fa0                _gp = (_sdata_start + 0x4000)
+
+.bss            0x00000000a0e22030    0xde164
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000000a0e22030        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o
+ .bss           0x00000000a0e22030       0x18 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .bss           0x00000000a0e22048        0x0 Debug\hyperscan_startup.o
+ .bss           0x00000000a0e22048        0x0 Debug\main.o
+ .bss           0x00000000a0e22048    0x4c00c Debug\MP3Drv.o
+                0x00000000a0e6d048                MP3_Encoded_Data_Buf_Spare
+                0x00000000a0e6e048                MP3_Encoded_Data_Buf_Index
+                0x00000000a0e22048                MP3_Encoded_Data_Buf_1
+                0x00000000a0e6e050                TempData
+                0x00000000a0e6e04e                FIFO_Offset
+                0x00000000a0e6e04c                FIFOCounter
+                0x00000000a0e47848                MP3_Encoded_Data_Buf_2
+ .bss           0x00000000a0e6e054    0x80000 Debug\libgloss.o
+ .bss           0x00000000a0eee054        0x0 Debug\UART.o
+ .bss           0x00000000a0eee054        0x0 Debug\TV.o
+ .bss           0x00000000a0eee054        0x0 Debug\NorFlash.o
+ .bss           0x00000000a0eee054        0x0 Debug\User_IRQ.o
+ .bss           0x00000000a0eee054        0x0 Debug\Sys_isr.o
+ .bss           0x00000000a0eee054        0x0 Debug\Sys_IRQ.o
+ .bss           0x00000000a0eee054        0x0 Debug\I2C.o
+ .bss           0x00000000a0eee054        0x0 Debug\ff.o
+ .bss           0x00000000a0eee054        0x0 Debug\diskio.o
+ .bss           0x00000000a0eee054        0x0 Debug\HS_Controller.o
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_mp3entry.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(mpgaudio.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(mp3enc.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(layer3_enc.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(layer3.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(layer2.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(layer1.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(L3subband.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(L3mdct.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(L3loop.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(L3bitstream.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(i_stereo.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(hybrid.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(huffman.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(filterbank.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(common.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(bitstream.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(tables.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_windowing.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_scaled_dct.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_ms_stereo.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_mdct32_type3.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_mdct.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_imdct36.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_imdct12.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_enc_aa.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_antialiasing.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(scr_analysis_filter.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(reservoir.o)
+ .bss           0x00000000a0eee054        0x0 .\Lib\MP3Core.a(mp3deq.o)
+ .bss           0x00000000a0eee054        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+ .bss           0x00000000a0eee054        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(exit.o)
+ .bss           0x00000000a0eee054        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+ .bss           0x00000000a0eee054        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o)
+ .bss           0x00000000a0eee054       0x34 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+                0x00000000a0eee054                __malloc_top_pad
+                0x00000000a0eee058                __malloc_max_sbrked_mem
+                0x00000000a0eee060                __malloc_current_mallinfo
+                0x00000000a0eee05c                __malloc_max_total_mem
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcmp.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcpy.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memset.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(printf.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(sprintf.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strchr.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcpy.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strlen.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcrtomb.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcsrtombs.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wsetup.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fflush.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(findfp.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o)
+ .bss           0x00000000a0eee088        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fwalk.o)
+ .bss           0x00000000a0eee088        0xc c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+                0x00000000a0eee088                __nlocale_changed
+                0x00000000a0eee08c                __mlocale_changed
+                0x00000000a0eee090                _PathLocale
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(makebuf.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memchr.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memmove.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(reallocr.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isinf.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isnan.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(stdio.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcmp.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(callocr.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(errno.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_addsub_df.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_muldf3.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_divdf3.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz64.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatsidf.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatunsidf.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fixdfsi.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fpcmp_parts_df.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz32.o)
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+ .bss           0x00000000a0eee094        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtn.o
+ *(COMMON)
+ COMMON         0x00000000a0eee094      0x230 Debug\main.o
+                0x00000000a0eee094                fs
+ COMMON         0x00000000a0eee2c4     0xce00 Debug\MP3Drv.o
+                0x00000000a0eee2c4                FIFOArray
+                0x00000000a0ef02c4                PCM_buf
+                0x00000000a0ef14c4                decoder_instance
+                0x00000000a0ef5cc4                TempPCM
+                0x00000000a0ef7cc4                ADC_PCM_Buf_1
+                0x00000000a0ef8ec4                ADC_PCM_Buf_2
+                0x00000000a0efa0c4                MP3_bs_buf
+ COMMON         0x00000000a0efb0c4     0x50d0 .\Lib\MP3Core.a(mp3enc.o)
+                0x00000000a0efb0c4                enc
+                0x00000000a0f00194                . = ALIGN (0x4)
+                0x00000000a0f00194                . = ALIGN (0x4)
+                0x00000000a0f00194                _end = .
+                0x00000000a0f00194                _bss_end__ = .
+                0x00000000a0f00194                __bss_end__ = .
+                0x00000000a0f00194                __end__ = .
+                0x00000000a0f00194                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x3ba
+ *(.comment)
+ .comment       0x0000000000000000       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .comment       0x0000000000000012       0x12 Debug\main.o
+ .comment       0x0000000000000024       0x12 Debug\MP3Drv.o
+ .comment       0x0000000000000036       0x12 Debug\libgloss.o
+ .comment       0x0000000000000048       0x12 Debug\UART.o
+ .comment       0x000000000000005a       0x12 Debug\TV.o
+ .comment       0x000000000000006c       0x12 Debug\NorFlash.o
+ .comment       0x000000000000007e       0x12 Debug\User_IRQ.o
+ .comment       0x0000000000000090       0x12 Debug\Sys_IRQ.o
+ .comment       0x00000000000000a2       0x12 Debug\I2C.o
+ .comment       0x00000000000000b4       0x12 Debug\ff.o
+ .comment       0x00000000000000c6       0x12 Debug\diskio.o
+ .comment       0x00000000000000d8       0x12 Debug\HS_Controller.o
+ .comment       0x00000000000000ea       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+ .comment       0x00000000000000fc       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(exit.o)
+ .comment       0x000000000000010e       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+ .comment       0x0000000000000120       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o)
+ .comment       0x0000000000000132       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+ .comment       0x0000000000000144       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcmp.o)
+ .comment       0x0000000000000156       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcpy.o)
+ .comment       0x0000000000000168       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memset.o)
+ .comment       0x000000000000017a       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+ .comment       0x000000000000018c       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(printf.o)
+ .comment       0x000000000000019e       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+ .comment       0x00000000000001b0       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(sprintf.o)
+ .comment       0x00000000000001c2       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strchr.o)
+ .comment       0x00000000000001d4       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcpy.o)
+ .comment       0x00000000000001e6       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strlen.o)
+ .comment       0x00000000000001f8       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+ .comment       0x000000000000020a       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+ .comment       0x000000000000021c       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcrtomb.o)
+ .comment       0x000000000000022e       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcsrtombs.o)
+ .comment       0x0000000000000240       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o)
+ .comment       0x0000000000000252       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wsetup.o)
+ .comment       0x0000000000000264       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+ .comment       0x0000000000000276       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fflush.o)
+ .comment       0x0000000000000288       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(findfp.o)
+ .comment       0x000000000000029a       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+ .comment       0x00000000000002ac       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o)
+ .comment       0x00000000000002be       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fwalk.o)
+ .comment       0x00000000000002d0       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+ .comment       0x00000000000002e2       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(makebuf.o)
+ .comment       0x00000000000002f4       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memchr.o)
+ .comment       0x0000000000000306       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memmove.o)
+ .comment       0x0000000000000318       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o)
+ .comment       0x000000000000032a       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(reallocr.o)
+ .comment       0x000000000000033c       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isinf.o)
+ .comment       0x000000000000034e       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isnan.o)
+ .comment       0x0000000000000360       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(stdio.o)
+ .comment       0x0000000000000372       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcmp.o)
+ .comment       0x0000000000000384       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(callocr.o)
+ .comment       0x0000000000000396       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(errno.o)
+ .comment       0x00000000000003a8       0x12 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x1c0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 Debug\hyperscan_startup.o
+ .debug_aranges
+                0x0000000000000020       0x20 Debug\main.o
+ .debug_aranges
+                0x0000000000000040       0x20 Debug\MP3Drv.o
+ .debug_aranges
+                0x0000000000000060       0x20 Debug\libgloss.o
+ .debug_aranges
+                0x0000000000000080       0x20 Debug\UART.o
+ .debug_aranges
+                0x00000000000000a0       0x20 Debug\TV.o
+ .debug_aranges
+                0x00000000000000c0       0x20 Debug\NorFlash.o
+ .debug_aranges
+                0x00000000000000e0       0x20 Debug\User_IRQ.o
+ .debug_aranges
+                0x0000000000000100       0x20 Debug\Sys_isr.o
+ .debug_aranges
+                0x0000000000000120       0x20 Debug\Sys_IRQ.o
+ .debug_aranges
+                0x0000000000000140       0x20 Debug\I2C.o
+ .debug_aranges
+                0x0000000000000160       0x20 Debug\ff.o
+ .debug_aranges
+                0x0000000000000180       0x20 Debug\diskio.o
+ .debug_aranges
+                0x00000000000001a0       0x20 Debug\HS_Controller.o
+
+.debug_pubnames
+                0x0000000000000000      0xb12
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x0000000000000000       0xb8 Debug\main.o
+ .debug_pubnames
+                0x00000000000000b8      0x3c3 Debug\MP3Drv.o
+ .debug_pubnames
+                0x000000000000047b       0xc2 Debug\libgloss.o
+ .debug_pubnames
+                0x000000000000053d       0x43 Debug\UART.o
+ .debug_pubnames
+                0x0000000000000580       0xd3 Debug\TV.o
+ .debug_pubnames
+                0x0000000000000653       0xc3 Debug\NorFlash.o
+ .debug_pubnames
+                0x0000000000000716      0x1a2 Debug\User_IRQ.o
+ .debug_pubnames
+                0x00000000000008b8       0x2e Debug\Sys_IRQ.o
+ .debug_pubnames
+                0x00000000000008e6       0x3c Debug\I2C.o
+ .debug_pubnames
+                0x0000000000000922       0xe3 Debug\ff.o
+ .debug_pubnames
+                0x0000000000000a05       0xbe Debug\diskio.o
+ .debug_pubnames
+                0x0000000000000ac3       0x4f Debug\HS_Controller.o
+
+.debug_info     0x0000000000000000     0x4c76
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0xe4 Debug\hyperscan_startup.o
+ .debug_info    0x00000000000000e4      0xafa Debug\main.o
+ .debug_info    0x0000000000000bde      0x63f Debug\MP3Drv.o
+ .debug_info    0x000000000000121d      0xf01 Debug\libgloss.o
+ .debug_info    0x000000000000211e       0xb4 Debug\UART.o
+ .debug_info    0x00000000000021d2      0x3c4 Debug\TV.o
+ .debug_info    0x0000000000002596      0x186 Debug\NorFlash.o
+ .debug_info    0x000000000000271c      0x337 Debug\User_IRQ.o
+ .debug_info    0x0000000000002a53       0xd5 Debug\Sys_isr.o
+ .debug_info    0x0000000000002b28       0x79 Debug\Sys_IRQ.o
+ .debug_info    0x0000000000002ba1       0xba Debug\I2C.o
+ .debug_info    0x0000000000002c5b     0x1a26 Debug\ff.o
+ .debug_info    0x0000000000004681      0x429 Debug\diskio.o
+ .debug_info    0x0000000000004aaa      0x1cc Debug\HS_Controller.o
+
+.debug_abbrev   0x0000000000000000      0xf89
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x14 Debug\hyperscan_startup.o
+ .debug_abbrev  0x0000000000000014      0x316 Debug\main.o
+ .debug_abbrev  0x000000000000032a      0x1c9 Debug\MP3Drv.o
+ .debug_abbrev  0x00000000000004f3      0x235 Debug\libgloss.o
+ .debug_abbrev  0x0000000000000728       0x81 Debug\UART.o
+ .debug_abbrev  0x00000000000007a9      0x113 Debug\TV.o
+ .debug_abbrev  0x00000000000008bc       0xd7 Debug\NorFlash.o
+ .debug_abbrev  0x0000000000000993       0x49 Debug\User_IRQ.o
+ .debug_abbrev  0x00000000000009dc       0x14 Debug\Sys_isr.o
+ .debug_abbrev  0x00000000000009f0       0x72 Debug\Sys_IRQ.o
+ .debug_abbrev  0x0000000000000a62       0x9a Debug\I2C.o
+ .debug_abbrev  0x0000000000000afc      0x27f Debug\ff.o
+ .debug_abbrev  0x0000000000000d7b      0x12a Debug\diskio.o
+ .debug_abbrev  0x0000000000000ea5       0xe4 Debug\HS_Controller.o
+
+.debug_line     0x0000000000000000     0x1d5b
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0xb9 Debug\hyperscan_startup.o
+ .debug_line    0x00000000000000b9      0x36b Debug\main.o
+ .debug_line    0x0000000000000424      0x27b Debug\MP3Drv.o
+ .debug_line    0x000000000000069f      0x227 Debug\libgloss.o
+ .debug_line    0x00000000000008c6       0xa4 Debug\UART.o
+ .debug_line    0x000000000000096a      0x199 Debug\TV.o
+ .debug_line    0x0000000000000b03      0x128 Debug\NorFlash.o
+ .debug_line    0x0000000000000c2b      0x106 Debug\User_IRQ.o
+ .debug_line    0x0000000000000d31      0x120 Debug\Sys_isr.o
+ .debug_line    0x0000000000000e51       0xc4 Debug\Sys_IRQ.o
+ .debug_line    0x0000000000000f15       0xb4 Debug\I2C.o
+ .debug_line    0x0000000000000fc9      0xa83 Debug\ff.o
+ .debug_line    0x0000000000001a4c      0x199 Debug\diskio.o
+ .debug_line    0x0000000000001be5      0x176 Debug\HS_Controller.o
+
+.debug_frame    0x0000000000000000     0x12d0
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x224 Debug\main.o
+ .debug_frame   0x0000000000000224      0x1b0 Debug\MP3Drv.o
+ .debug_frame   0x00000000000003d4      0x134 Debug\libgloss.o
+ .debug_frame   0x0000000000000508       0x40 Debug\UART.o
+ .debug_frame   0x0000000000000548      0x134 Debug\TV.o
+ .debug_frame   0x000000000000067c       0xe4 Debug\NorFlash.o
+ .debug_frame   0x0000000000000760      0x290 Debug\User_IRQ.o
+ .debug_frame   0x00000000000009f0       0x30 Debug\Sys_IRQ.o
+ .debug_frame   0x0000000000000a20       0x40 Debug\I2C.o
+ .debug_frame   0x0000000000000a60      0x734 Debug\ff.o
+ .debug_frame   0x0000000000001194       0xd8 Debug\diskio.o
+ .debug_frame   0x000000000000126c       0x64 Debug\HS_Controller.o
+
+.debug_str      0x0000000000000000     0x16fc
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x4cd Debug\main.o
+                                        0x53e (size before relaxing)
+ .debug_str     0x00000000000004cd      0x357 Debug\MP3Drv.o
+                                        0x40c (size before relaxing)
+ .debug_str     0x0000000000000824      0x505 Debug\libgloss.o
+                                        0x6cf (size before relaxing)
+ .debug_str     0x0000000000000d29       0x92 Debug\UART.o
+                                         0xfc (size before relaxing)
+ .debug_str     0x0000000000000dbb      0x133 Debug\TV.o
+                                        0x1e6 (size before relaxing)
+ .debug_str     0x0000000000000eee       0xfe Debug\NorFlash.o
+                                        0x16d (size before relaxing)
+ .debug_str     0x0000000000000fec      0x151 Debug\User_IRQ.o
+                                        0x1b6 (size before relaxing)
+ .debug_str     0x000000000000113d       0x85 Debug\Sys_IRQ.o
+                                         0xea (size before relaxing)
+ .debug_str     0x00000000000011c2       0x7a Debug\I2C.o
+                                         0xea (size before relaxing)
+ .debug_str     0x000000000000123c      0x315 Debug\ff.o
+                                        0x64f (size before relaxing)
+ .debug_str     0x0000000000001551       0xfc Debug\diskio.o
+                                        0x292 (size before relaxing)
+ .debug_str     0x000000000000164d       0xaf Debug\HS_Controller.o
+                                        0x185 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x5240
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0xa03 Debug\main.o
+ .debug_loc     0x0000000000000a03      0x374 Debug\MP3Drv.o
+ .debug_loc     0x0000000000000d77      0x2ad Debug\libgloss.o
+ .debug_loc     0x0000000000001024       0x13 Debug\UART.o
+ .debug_loc     0x0000000000001037      0x455 Debug\TV.o
+ .debug_loc     0x000000000000148c      0x1e6 Debug\NorFlash.o
+ .debug_loc     0x0000000000001672       0x13 Debug\Sys_IRQ.o
+ .debug_loc     0x0000000000001685       0x70 Debug\I2C.o
+ .debug_loc     0x00000000000016f5     0x37df Debug\ff.o
+ .debug_loc     0x0000000000004ed4      0x29c Debug\diskio.o
+ .debug_loc     0x0000000000005170       0xd0 Debug\HS_Controller.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+OUTPUT(Debug\hyperscan.elf elf32-littlescore)
+
+.pdr            0x0000000000000000     0x2560
+ .pdr           0x0000000000000000       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crti.o
+ .pdr           0x0000000000000040        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtbegin.o
+ .pdr           0x0000000000000040        0x0 Debug\hyperscan_startup.o
+ .pdr           0x0000000000000040      0x140 Debug\main.o
+ .pdr           0x0000000000000180      0x260 Debug\MP3Drv.o
+ .pdr           0x00000000000003e0      0x1c0 Debug\libgloss.o
+ .pdr           0x00000000000005a0       0x60 Debug\UART.o
+ .pdr           0x0000000000000600      0x180 Debug\TV.o
+ .pdr           0x0000000000000780      0x100 Debug\NorFlash.o
+ .pdr           0x0000000000000880      0x500 Debug\User_IRQ.o
+ .pdr           0x0000000000000d80        0x0 Debug\Sys_isr.o
+ .pdr           0x0000000000000d80       0x40 Debug\Sys_IRQ.o
+ .pdr           0x0000000000000dc0       0x60 Debug\I2C.o
+ .pdr           0x0000000000000e20      0x540 Debug\ff.o
+ .pdr           0x0000000000001360      0x120 Debug\diskio.o
+ .pdr           0x0000000000001480       0x40 Debug\HS_Controller.o
+ .pdr           0x00000000000014c0        0x0 .\Lib\MP3Core.a(scr_mp3entry.o)
+ .pdr           0x00000000000014c0      0x140 .\Lib\MP3Core.a(mpgaudio.o)
+ .pdr           0x0000000000001600       0x60 .\Lib\MP3Core.a(mp3enc.o)
+ .pdr           0x0000000000001660       0x40 .\Lib\MP3Core.a(layer3_enc.o)
+ .pdr           0x00000000000016a0       0x60 .\Lib\MP3Core.a(layer3.o)
+ .pdr           0x0000000000001700       0x20 .\Lib\MP3Core.a(layer2.o)
+ .pdr           0x0000000000001720       0x20 .\Lib\MP3Core.a(layer1.o)
+ .pdr           0x0000000000001740       0x40 .\Lib\MP3Core.a(L3subband.o)
+ .pdr           0x0000000000001780       0x20 .\Lib\MP3Core.a(L3mdct.o)
+ .pdr           0x00000000000017a0       0x40 .\Lib\MP3Core.a(L3loop.o)
+ .pdr           0x00000000000017e0       0xa0 .\Lib\MP3Core.a(L3bitstream.o)
+ .pdr           0x0000000000001880       0x20 .\Lib\MP3Core.a(i_stereo.o)
+ .pdr           0x00000000000018a0       0x40 .\Lib\MP3Core.a(hybrid.o)
+ .pdr           0x00000000000018e0        0x0 .\Lib\MP3Core.a(huffman.o)
+ .pdr           0x00000000000018e0       0x40 .\Lib\MP3Core.a(filterbank.o)
+ .pdr           0x0000000000001920      0x140 .\Lib\MP3Core.a(common.o)
+ .pdr           0x0000000000001a60       0x60 .\Lib\MP3Core.a(bitstream.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(tables.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_windowing.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_scaled_dct.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_ms_stereo.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_mdct32_type3.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_mdct.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_imdct36.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_imdct12.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_enc_aa.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_antialiasing.o)
+ .pdr           0x0000000000001ac0        0x0 .\Lib\MP3Core.a(scr_analysis_filter.o)
+ .pdr           0x0000000000001ac0       0x20 .\Lib\MP3Core.a(reservoir.o)
+ .pdr           0x0000000000001ae0       0x20 .\Lib\MP3Core.a(mp3deq.o)
+ .pdr           0x0000000000001b00       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(abort.o)
+ .pdr           0x0000000000001b20       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(exit.o)
+ .pdr           0x0000000000001b40        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(impure.o)
+ .pdr           0x0000000000001b40       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(malloc.o)
+ .pdr           0x0000000000001b80       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mallocr.o)
+ .pdr           0x0000000000001ba0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcmp.o)
+ .pdr           0x0000000000001bc0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memcpy.o)
+ .pdr           0x0000000000001be0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memset.o)
+ .pdr           0x0000000000001c00       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mlock.o)
+ .pdr           0x0000000000001c40       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(printf.o)
+ .pdr           0x0000000000001c80      0x100 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(signal.o)
+ .pdr           0x0000000000001d80       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(sprintf.o)
+ .pdr           0x0000000000001dc0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strchr.o)
+ .pdr           0x0000000000001de0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcpy.o)
+ .pdr           0x0000000000001e00       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strlen.o)
+ .pdr           0x0000000000001e20       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(syswrite.o)
+ .pdr           0x0000000000001e40       0x60 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(vfprintf.o)
+ .pdr           0x0000000000001ea0       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcrtomb.o)
+ .pdr           0x0000000000001ee0       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wcsrtombs.o)
+ .pdr           0x0000000000001f20       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wctomb_r.o)
+ .pdr           0x0000000000001f40       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(wsetup.o)
+ .pdr           0x0000000000001f60       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(dtoa.o)
+ .pdr           0x0000000000001fa0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fflush.o)
+ .pdr           0x0000000000001fc0       0xc0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(findfp.o)
+ .pdr           0x0000000000002080       0x40 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(freer.o)
+ .pdr           0x00000000000020c0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fvwrite.o)
+ .pdr           0x00000000000020e0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(fwalk.o)
+ .pdr           0x0000000000002100       0xa0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(locale.o)
+ .pdr           0x00000000000021a0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(makebuf.o)
+ .pdr           0x00000000000021c0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memchr.o)
+ .pdr           0x00000000000021e0       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(memmove.o)
+ .pdr           0x0000000000002200      0x220 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(mprec.o)
+ .pdr           0x0000000000002420       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(reallocr.o)
+ .pdr           0x0000000000002440       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isinf.o)
+ .pdr           0x0000000000002460       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(s_isnan.o)
+ .pdr           0x0000000000002480       0x80 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(stdio.o)
+ .pdr           0x0000000000002500       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(strcmp.o)
+ .pdr           0x0000000000002520       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(callocr.o)
+ .pdr           0x0000000000002540       0x20 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a(errno.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_addsub_df.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_muldf3.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_divdf3.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz64.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatsidf.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_floatunsidf.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fixdfsi.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_fpcmp_parts_df.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a(_clz32.o)
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtend.o
+ .pdr           0x0000000000002560        0x0 c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel/crtn.o
+
+.debug_ranges   0x0000000000000000      0x1a0
+ .debug_ranges  0x0000000000000000       0x18 Debug\main.o
+ .debug_ranges  0x0000000000000018      0x188 Debug\ff.o
