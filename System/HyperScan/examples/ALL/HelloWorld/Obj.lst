@@ -1,0 +1,19 @@
+/*	Created by S+core IDE	*/
+
+
+INPUT("Debug\hyperscan_startup.o")
+INPUT("Debug\main.o")
+INPUT("Debug\libgloss.o")
+INPUT("Debug\UART.o")
+INPUT("Debug\NorFlash.o")
+INPUT("Debug\User_IRQ.o")
+INPUT("Debug\Sys_isr.o")
+INPUT("Debug\Sys_IRQ.o")
+INPUT("Debug\I2C.o")
+INPUT("Debug\TV.o")
+
+SECTIONS
+{
+
+}
+
