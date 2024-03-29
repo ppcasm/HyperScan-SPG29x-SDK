@@ -1,0 +1,322 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD Obj.lst
+LOAD Debug\hyperscan_startup.o
+LOAD Debug\main.o
+LOAD Lib.lst
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libm.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a
+START GROUP
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libc.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/../../../../score-elf/lib/mel\libm.a
+LOAD c:/sunplus/s_core~1.1/gnu/bin/../lib/gcc/score-elf/4.2.1/mel\libgcc.a
+END GROUP
+
+.exception
+ *(.exception_vec)
+
+.stack          0x00000000a0fffff0        0x0
+                0x00000000a0fffff0                _stack = .
+ *(.stack)
+                0x000000009f000740                . = 0x9f000740
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.dyn
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.hardware_init  0x000000009f000740        0x8
+ *(.hardware_init)
+ .hardware_init
+                0x000000009f000740        0x8 Debug\hyperscan_startup.o
+                0x000000009f000740                _hardware_init
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x000000009f000748      0x4c8
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x000000009f000748        0x0 Debug\hyperscan_startup.o
+ .text          0x000000009f000748      0x4c8 Debug\main.o
+                0x000000009f00085c                USB_Boot
+                0x000000009f00093c                main
+ *(.gnu.warning)
+ *(.glue_7t)
+ *(.glue_7)
+
+.fini
+ *(.fini)
+                0x000000009f000c10                PROVIDE (__etext, .)
+                0x000000009f000c10                PROVIDE (_etext, .)
+                0x000000009f000c10                PROVIDE (etext, .)
+
+.rodata         0x000000009f000c10       0x40
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000000009f000c10       0x40 Debug\main.o
+
+.rodata1
+ *(.rodata1)
+
+.sdata2
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+                0x000000009f000d50                . = (ALIGN (0x100) + (. & 0xff))
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                PROVIDE (__preinit_array_start, .)
+
+.preinit_array
+ *(.preinit_array)
+                0x000000009f000d50                PROVIDE (__preinit_array_end, .)
+                0x000000009f000d50                PROVIDE (__init_array_start, .)
+
+.init_array
+ *(.init_array)
+                0x000000009f000d50                PROVIDE (__init_array_end, .)
+                0x000000009f000d50                PROVIDE (__fini_array_start, .)
+
+.fini_array
+ *(.fini_array)
+                0x000000009f000d50                PROVIDE (__fini_array_end, .)
+
+.data           0x000000009f000d50        0x0
+                0x000000009f000d50                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000009f000d50        0x0 Debug\hyperscan_startup.o
+ .data          0x000000009f000d50        0x0 Debug\main.o
+
+.data1
+ *(.data1)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.dynamic
+ *(.dynamic)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.got
+ *(.got.plt)
+ *(.got)
+                0x000000009f004d50                _gp = (. + 0x4000)
+
+.sdata          0x000000009f000d50        0x0
+                0x000000009f000d50                _sdata_start = .
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+                0x000000009f000d50                _edata = .
+                0x000000009f000d50                PROVIDE (edata, .)
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                __bss_start = .
+                0x000000009f000d50                __bss_start__ = .
+
+.sbss           0x000000009f000d50        0x0
+                0x000000009f000d50                PROVIDE (__sbss_start, .)
+                0x000000009f000d50                PROVIDE (___sbss_start, .)
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+                0x000000009f000d50                PROVIDE (__sbss_end, .)
+                0x000000009f000d50                PROVIDE (___sbss_end, .)
+                0x000000009f004d50                _gp = (_sdata_start + 0x4000)
+
+.bss            0x000000009f000d50        0x0
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000009f000d50        0x0 Debug\hyperscan_startup.o
+ .bss           0x000000009f000d50        0x0 Debug\main.o
+ *(COMMON)
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                . = ALIGN (0x4)
+                0x000000009f000d50                _end = .
+                0x000000009f000d50                _bss_end__ = .
+                0x000000009f000d50                __bss_end__ = .
+                0x000000009f000d50                __end__ = .
+                0x000000009f000d50                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x12
+ *(.comment)
+ .comment       0x0000000000000000       0x12 Debug\main.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 Debug\hyperscan_startup.o
+ .debug_aranges
+                0x0000000000000020       0x20 Debug\main.o
+
+.debug_pubnames
+                0x0000000000000000       0x28
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x0000000000000000       0x28 Debug\main.o
+
+.debug_info     0x0000000000000000      0x46b
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x111 Debug\hyperscan_startup.o
+ .debug_info    0x0000000000000111      0x35a Debug\main.o
+
+.debug_abbrev   0x0000000000000000      0x112
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x14 Debug\hyperscan_startup.o
+ .debug_abbrev  0x0000000000000014       0xfe Debug\main.o
+
+.debug_line     0x0000000000000000      0x1f5
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0xb7 Debug\hyperscan_startup.o
+ .debug_line    0x00000000000000b7      0x13e Debug\main.o
+
+.debug_frame    0x0000000000000000       0xe4
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0xe4 Debug\main.o
+
+.debug_str      0x0000000000000000        0xc
+ *(.debug_str)
+ .debug_str     0x0000000000000000        0xc Debug\main.o
+
+.debug_loc      0x0000000000000000      0x1a5
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x1a5 Debug\main.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+OUTPUT(Debug\hyperscan.elf elf32-littlescore)
+
+.pdr            0x0000000000000000       0xe0
+ .pdr           0x0000000000000000        0x0 Debug\hyperscan_startup.o
+ .pdr           0x0000000000000000       0xe0 Debug\main.o
