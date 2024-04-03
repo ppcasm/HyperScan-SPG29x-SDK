@@ -156,15 +156,15 @@ void V_DrawPatch(int x, int y, patch_t *patch)
             return;
     }
 
-#ifdef RANGECHECK
-    if (x < 0
-     || x + SHORT(patch->width) > SCREENWIDTH
-     || y < 0
-     || y + SHORT(patch->height) > SCREENHEIGHT)
-    {
-        I_Error("Bad V_DrawPatch x=%i y=%i patch.width=%i patch.height=%i topoffset=%i leftoffset=%i", x, y, patch->width, patch->height, patch->topoffset, patch->leftoffset);
-    }
-#endif
+//#ifdef RANGECHECK
+//    if (x < 0
+//     || x + SHORT(patch->width) > SCREENWIDTH
+//     || y < 0
+//     || y + SHORT(patch->height) > SCREENHEIGHT)
+//    {
+//        I_Error("Bad V_DrawPatch x=%i y=%i patch.width=%i patch.height=%i topoffset=%i leftoffset=%i", x, y, patch->width, patch->height, patch->topoffset, patch->leftoffset);
+//    }
+//#endif
 
     V_MarkRect(x, y, SHORT(patch->width), SHORT(patch->height));
 

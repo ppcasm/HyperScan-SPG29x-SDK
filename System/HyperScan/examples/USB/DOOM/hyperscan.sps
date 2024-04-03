@@ -441,12 +441,6 @@ PARAM=
 # End Source File
 
 # Begin Source File
-SOURCE=.\icon.c
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
 SOURCE=.\info.c
 USEPARAM=FALSE
 PARAM=

@@ -1,6 +1,6 @@
 ####################################################################################################
 #
-#	Created by S+core IDE V2.6.1		02:14:45	04/03/24
+#	Created by S+core IDE V2.6.1		05:00:28	04/03/24
 #
 ####################################################################################################
 
@@ -93,7 +93,6 @@ OBJFILES	=\
 	"$(OUTDIR)\m_bbox.o"\
 	"$(OUTDIR)\m_argv.o"\
 	"$(OUTDIR)\info.o"\
-	"$(OUTDIR)\icon.o"\
 	"$(OUTDIR)\i_video.o"\
 	"$(OUTDIR)\i_timer.o"\
 	"$(OUTDIR)\i_system.o"\
@@ -294,10 +293,6 @@ OBJFILES	=\
 "$(OUTDIR)\i_video.o" "$(OUTDIR)\i_video.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\System\HyperScan\examples\USB\DOOM\i_video.c"
 	@echo i_video.c
 	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\i_video.d" -MT"$(OUTDIR)\i_video.d" -o "$(OUTDIR)\i_video.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\System\HyperScan\examples\USB\DOOM\i_video.c" 
-
-"$(OUTDIR)\icon.o" "$(OUTDIR)\icon.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\System\HyperScan\examples\USB\DOOM\icon.c"
-	@echo icon.c
-	@$(CC) -c $(CCDEFFLAG) $(CCADDFLAG) -B $(TOOLDIR) $(INCLUDES) -MMD -MP -MF"$(OUTDIR)\icon.d" -MT"$(OUTDIR)\icon.d" -o "$(OUTDIR)\icon.o" "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\System\HyperScan\examples\USB\DOOM\icon.c" 
 
 "$(OUTDIR)\info.o" "$(OUTDIR)\info.d": "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\System\HyperScan\examples\USB\DOOM\info.c"
 	@echo info.c
@@ -592,7 +587,6 @@ DEPFILES	=\
 	"$(OUTDIR)\m_bbox.d"\
 	"$(OUTDIR)\m_argv.d"\
 	"$(OUTDIR)\info.d"\
-	"$(OUTDIR)\icon.d"\
 	"$(OUTDIR)\i_video.d"\
 	"$(OUTDIR)\i_timer.d"\
 	"$(OUTDIR)\i_system.d"\

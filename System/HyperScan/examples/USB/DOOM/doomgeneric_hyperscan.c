@@ -15,9 +15,6 @@
 #include "../../../hslibs/include/HS_Controller/HS_Controller.h"
 #include "../../../hslibs/include/FatFS/ff.h"
 
-static int FrameBufferFd = -1;
-static int* FrameBuffer = 0;
-
 static int KeyboardFd = -1;
 
 #define KEYQUEUE_SIZE 16
@@ -177,12 +174,6 @@ static void handleKeyInput()
     }
 }
 
-void DG_DrawFrame()
-{
-	TV_Buffer_Set(&DG_ScreenBuffer, &DG_ScreenBuffer, &DG_ScreenBuffer);
-    //handleKeyInput();
-}
-
 void DG_SleepMs(uint32_t ms)
 {
 }
@@ -225,7 +216,7 @@ int main(int argc, char **argv)
 	FATFS fs0;
 	f_mount(&fs0, "0:", 1);
 	
-	char *fake_argv[] = {"HYPER.EXE", "-iwad", "doom1.wad", "-nosound", "-scaling", "1", NULL};
+	char *fake_argv[] = {"HYPER.EXE", "-iwad", "doom1.wad", "-nosound", "-turbo", "400", NULL};
 	
 	int fake_argc = sizeof(fake_argv) / sizeof(fake_argv[0]) - 1;
 	
