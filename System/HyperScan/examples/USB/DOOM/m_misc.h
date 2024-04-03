@@ -24,7 +24,6 @@
 #include <stdarg.h>
 
 #include "doomtype.h"
-
 #include "../../../hslibs/include/FatFS/ff.h"
 
 boolean M_WriteFile(char *name, void *source, int length);

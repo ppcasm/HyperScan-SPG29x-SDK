@@ -9,11 +9,11 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "../../../hslibs/include/FatFS/ff.h"
 #include "../../../../../SPG290/include/TV/TV.h"
 #include "../../../../../SPG290/include/SPG290_Registers.h"
 #include "../../../../../SPG290/include/SPG290_Constants.h"
 #include "../../../hslibs/include/HS_Controller/HS_Controller.h"
+#include "../../../hslibs/include/FatFS/ff.h"
 
 static int FrameBufferFd = -1;
 static int* FrameBuffer = 0;
@@ -180,7 +180,7 @@ static void handleKeyInput()
 void DG_DrawFrame()
 {
 	TV_Buffer_Set(&DG_ScreenBuffer, &DG_ScreenBuffer, &DG_ScreenBuffer);
-    handleKeyInput();
+    //handleKeyInput();
 }
 
 void DG_SleepMs(uint32_t ms)

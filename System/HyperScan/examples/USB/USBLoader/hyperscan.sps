@@ -12,7 +12,7 @@ OutPut Dir = Debug
 Inc Path = 
 Lib Path = 
 Compiler = ..\S_CORE~1.1\GNU\bin\gcc
-Compiler DefFlag = -mscore7 -mel -g -Wall -O2 -D MP3Drv
+Compiler DefFlag = -mscore7 -mel -g -Wall -O2 -D NEW_HEAPSIZE=3*(512*1024) -D MP3Drv
 Compiler AddFlag = 
 Assembler = ..\S_CORE~1.1\GNU\bin\as
 Assembler DefFlag = -Wa,-gdwarf-2  -x assembler-with-cpp

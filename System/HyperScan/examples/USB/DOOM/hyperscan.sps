@@ -12,7 +12,7 @@ OutPut Dir = Debug
 Inc Path = 
 Lib Path = 
 Compiler = ..\S_CORE~1.1\GNU\bin\gcc
-Compiler DefFlag = -mscore7 -mel -g -Wall -D NEW_HEAPSIZE=8*(1024*1024)
+Compiler DefFlag = -mscore7 -mel -g -Wall -O2 -D NEW_HEAPSIZE=8*(1024*1024)
 Compiler AddFlag = 
 Assembler = ..\S_CORE~1.1\GNU\bin\as
 Assembler DefFlag = -Wa,-gdwarf-2  -x assembler-with-cpp
@@ -774,42 +774,6 @@ PARAM=
 # Begin Group "Header Files"
 #PROP Default_Filter = h;inc;
 
-# Begin Group "hslibs"
-#PROP Default_Filter = *.h
-
-# Begin Group "FatFS"
-#PROP Default_Filter = 
-
-# Begin Source File
-SOURCE=..\..\..\hslibs\include\FatFS\diskio.h
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
-SOURCE=..\..\..\hslibs\include\FatFS\ff.h
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
-SOURCE=..\..\..\hslibs\include\FatFS\ffconf.h
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# End Group
-# Begin Group "HS_Controller"
-#PROP Default_Filter = 
-
-# Begin Source File
-SOURCE=..\..\..\hslibs\include\HS_Controller\HS_Controller.h
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# End Group
-# End Group
 # Begin Group "scorelibs"
 #PROP Default_Filter = *.h
 
@@ -864,6 +828,54 @@ PARAM=
 
 # Begin Source File
 SOURCE=..\..\..\..\..\SPG290\include\UART\UART.h
+USEPARAM=FALSE
+PARAM=
+# End Source File
+
+# End Group
+# Begin Source File
+SOURCE=..\..\..\..\..\SPG290\include\SPG290_Constants.h
+USEPARAM=FALSE
+PARAM=
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\..\..\SPG290\include\SPG290_Registers.h
+USEPARAM=FALSE
+PARAM=
+# End Source File
+
+# End Group
+# Begin Group "hslibs"
+#PROP Default_Filter = *.h
+
+# Begin Group "FatFS"
+#PROP Default_Filter = 
+
+# Begin Source File
+SOURCE=..\..\..\hslibs\include\FatFS\diskio.h
+USEPARAM=FALSE
+PARAM=
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\hslibs\include\FatFS\ff.h
+USEPARAM=FALSE
+PARAM=
+# End Source File
+
+# Begin Source File
+SOURCE=..\..\..\hslibs\include\FatFS\ffconf.h
+USEPARAM=FALSE
+PARAM=
+# End Source File
+
+# End Group
+# Begin Group "HS_Controller"
+#PROP Default_Filter = 
+
+# Begin Source File
+SOURCE=..\..\..\hslibs\include\HS_Controller\HS_Controller.h
 USEPARAM=FALSE
 PARAM=
 # End Source File
@@ -1382,18 +1394,6 @@ PARAM=
 
 # Begin Source File
 SOURCE=.\sounds.h
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
-SOURCE=..\..\..\..\..\SPG290\include\SPG290_Constants.h
-USEPARAM=FALSE
-PARAM=
-# End Source File
-
-# Begin Source File
-SOURCE=..\..\..\..\..\SPG290\include\SPG290_Registers.h
 USEPARAM=FALSE
 PARAM=
 # End Source File
