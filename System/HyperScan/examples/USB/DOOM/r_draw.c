@@ -910,7 +910,6 @@ void R_FillBackScreen (void)
 
     V_RestoreBuffer();
 } 
- 
 
 //
 // Copy a screen buffer.
@@ -925,10 +924,10 @@ R_VideoErase
   //  is not optiomal, e.g. byte by byte on
   //  a 32bit CPU, as GNU GCC/Linux libc did
   //  at one point.
-
+  	    
     if (background_buffer != NULL)
     {
-        memcpy(I_VideoBuffer + ofs, background_buffer + ofs, count); 
+    	I_VideoBuffer = (unsigned int *)background_buffer;
     }
 } 
 
