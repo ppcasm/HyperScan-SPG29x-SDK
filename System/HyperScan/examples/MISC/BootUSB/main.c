@@ -22,8 +22,8 @@ DO NOT TRY TO RUN THIS AS A HYPER.EXE APP; IT WILL NOT WORK...
 #include "../../../hslibs/include/FatFS/ff.h"
 #include "../../../hslibs/include/FatFS/diskio.h"
 
-#include "../../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 
 #define MAX_LINE_LENGTH 64
 #define MAX_KEY_LENGTH 24

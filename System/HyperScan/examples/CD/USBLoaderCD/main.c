@@ -11,8 +11,8 @@ Just a testing space for personal use.
 #include <string.h>
 
 #include "Resource.h"
-#include "../../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 
 #define LOAD_ADDRESS 0xA0C001FC
 #define ENTRY_ADDRESS 0xA0C01000

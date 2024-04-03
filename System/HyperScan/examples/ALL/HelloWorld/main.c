@@ -8,7 +8,7 @@ This is the basic Hello World! example. It contains the very barebones code nece
 
 */
 
-#include "../../../../../SPG290/include/TV/TV.h"
+#include "../../../../../SPG290/scorelibs/include/TV/TV.h"
 
 // Stupid framebuffer for now
 unsigned short *fb = (unsigned short *) 0xA0400000;

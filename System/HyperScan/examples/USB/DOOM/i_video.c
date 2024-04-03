@@ -195,26 +195,13 @@ void I_SetPalette (byte* palette)
 
     /* performance boost:
      * map to the right pixel format over here! */
-/*
+
     for (i=0; i<256; ++i ) {
         colors[i].r = gammatable[usegamma][*palette++];
         colors[i].g = gammatable[usegamma][*palette++];
         colors[i].b = gammatable[usegamma][*palette++];
     }
-    */
-    for (i = 0; i < 256; ++i) {
-    uint8_t palette_r = *palette++;
-    uint8_t palette_g = *palette++;
-    uint8_t palette_b = *palette++;
 
-    uint8_t gamma_r = gammatable[usegamma][palette_r];
-    uint8_t gamma_g = gammatable[usegamma][palette_g];
-    uint8_t gamma_b = gammatable[usegamma][palette_b];
-
-    colors[i].r = gamma_r;
-    colors[i].g = gamma_g;
-    colors[i].b = gamma_b;
-	}
 }
 
 // Given an RGB value, find the closest matching palette index.

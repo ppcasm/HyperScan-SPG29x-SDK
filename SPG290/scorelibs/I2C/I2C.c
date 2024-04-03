@@ -1,6 +1,6 @@
-#include "../../include/SPG290_Registers.h"
-#include "../../include/SPG290_Constants.h"
-#include "../../include/I2C/I2C.h"
+#include "../../scorelibs/include/SPG290_Registers.h"
+#include "../../scorelibs/include/SPG290_Constants.h"
+#include "../../scorelibs/include/I2C/I2C.h"
 
 //=============================================================
 // void I2C_Init(void)

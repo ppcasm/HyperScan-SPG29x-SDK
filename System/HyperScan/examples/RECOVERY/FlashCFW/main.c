@@ -13,10 +13,10 @@ UART cable are found in the documentation section of this repo.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../../../../../SPG290/include/TV/TV.h"
-#include "../../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../../SPG290/include/SPG290_Constants.h"
-#include "../../../../../SPG290/include/NorFlash/NorFlash.h"
+#include "../../../../../SPG290/scorelibs/include/TV/TV.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
+#include "../../../../../SPG290/scorelibs/include/NorFlash/NorFlash.h"
 #include "../../../hslibs/include/HS_Controller/HS_Controller.h"
 
 #define UPLOAD_ADDRESS 0x80600000

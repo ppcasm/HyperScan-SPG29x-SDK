@@ -1,5 +1,5 @@
-#include "../../include/SPG290_Registers.h"
-#include "../../include/SPG290_Constants.h"
+#include "../../scorelibs/include/SPG290_Registers.h"
+#include "../../scorelibs/include/SPG290_Constants.h"
 
 #ifdef MP3Drv
 extern void MP3_Service_Loop_ISR(); 
