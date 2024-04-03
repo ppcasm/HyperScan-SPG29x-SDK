@@ -305,11 +305,11 @@ void execute_binary(char *dir_buf){
 
 int main(){
 
+	// Initialize DAC interrupt handling
+	DAC_Init();
+	    
 	// Stupid Framebuffer
 	unsigned short *fb = (unsigned short *)FRAMEBUFFER_ADDRESS;
-	
-	
-//	int index = 0;
 	
 	int dir_count = 0;
 	int nExitCode = 0;
@@ -323,9 +323,6 @@ int main(){
 	/************************************************************************/
 	/*   TODO: add your code here                                           */
 	/************************************************************************/
-
-	// Initialize DAC interrupt handling
-	DAC_Init();
 	
 	/* Initalize Mattel HyperScan controller interface */
 	HS_Controller_Init();

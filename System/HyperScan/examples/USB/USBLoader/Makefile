@@ -1,6 +1,6 @@
 ####################################################################################################
 #
-#	Created by S+core IDE V2.6.1		04:38:57	03/29/24
+#	Created by S+core IDE V2.6.1		00:02:02	04/03/24
 #
 ####################################################################################################
 
@@ -23,7 +23,7 @@ OBJCOPY	= "$(TOOLDIR)\score-elf-objcopy"
 OBJDUMP	= "$(TOOLDIR)\score-elf-objdump"
 LDSCRIPT	= "C:\Users\ppcas\OneDrive\Documents\GitHub\HyperScan-SPG29x-SDK\System\HyperScan\examples\USB\USBLoader\hyperscan_Prog.ld"
 
-CCDEFFLAG	= -mscore7 -mel -g -Wall -O2 -D MP3Drv
+CCDEFFLAG	= -mscore7 -mel -g -Wall -O2 -D NEW_HEAPSIZE=3*(512*1024) -D MP3Drv
 CCADDFLAG	= 
 ASDEFFLAG	= -Wa,-gdwarf-2  -x assembler-with-cpp
 ASADDFLAG	= 

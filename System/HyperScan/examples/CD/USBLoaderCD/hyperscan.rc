@@ -1,0 +1,12 @@
+# Begin Project
+# Begin SubItem "hyperscan resources"
+
+# Begin Source File
+SOURCE=.\cdusbldr.bin
+ID=RES_CDUSBLDR_BIN
+SPECIFY_ADDRESS=FALSE
+START_ADDRESS=0x00000000
+ELF_SECTION_NAME=
+# End Source File
+# End SubItem
+# End Project
