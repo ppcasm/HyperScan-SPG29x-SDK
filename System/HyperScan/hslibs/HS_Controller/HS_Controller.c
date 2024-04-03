@@ -1,6 +1,6 @@
-#include "../../../../SPG290/include/I2C/I2C.h"
-#include "../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../SPG290/scorelibs/include/I2C/I2C.h"
+#include "../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 #include "../include/HS_Controller/HS_Controller.h"
 
 /*

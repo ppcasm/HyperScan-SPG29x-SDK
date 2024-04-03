@@ -7,8 +7,8 @@
 /* storage control modules to the FatFs module with a defined API.       */
 /*-----------------------------------------------------------------------*/
 
-#include "../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 
 #include "../include/FatFS/ff.h"		/* Obtains integer types */
 #include "../include/FatFS/diskio.h"		/* Declarations of disk functions */

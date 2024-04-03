@@ -1,7 +1,7 @@
-#include "../../include/SPG290_Constants.h"
-#include "../../include/SPG290_Registers.h"
-#include "../../include/TV/TV.h"
-#include "../../include/TV/Font_8x16.h"
+#include "../../scorelibs/include/SPG290_Constants.h"
+#include "../../scorelibs/include/SPG290_Registers.h"
+#include "../../scorelibs/include/TV/TV.h"
+#include "../../scorelibs/include/TV/Font_8x16.h"
 
 // =============================================================
 //	void TV_ClearScreen(unsigned short *fb)

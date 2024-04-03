@@ -9,9 +9,9 @@ This is a basic canvas to start your HyperScan project. Check around for documen
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../../../../SPG290/include/TV/TV.h"
-#include "../../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../../SPG290/scorelibs/include/TV/TV.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 #include "../../../hslibs/include/HS_Controller/HS_Controller.h"
 
 

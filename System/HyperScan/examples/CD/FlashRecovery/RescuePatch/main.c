@@ -7,8 +7,8 @@ better understand what this is.
  
 */
 
-#include "../../../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 
 // HyperScan firmware callback functions
 #define DrvUSBH_Initial() ((int (*)(void))0xA0001460)()

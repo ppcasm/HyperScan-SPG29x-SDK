@@ -1,6 +1,6 @@
-#include "../../include/SPG290_Registers.h"
-#include "../../include/SPG290_Constants.h"
-#include "../../include/NorFlash/NorFlash.h"
+#include "../../scorelibs/include/SPG290_Registers.h"
+#include "../../scorelibs/include/SPG290_Constants.h"
+#include "../../scorelibs/include/NorFlash/NorFlash.h"
 
 //========================================================================
 //	void NorFlash_Init(void)

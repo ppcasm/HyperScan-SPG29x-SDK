@@ -9,9 +9,9 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "../../../../../SPG290/include/TV/TV.h"
-#include "../../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../../SPG290/scorelibs/include/TV/TV.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 #include "../../../hslibs/include/HS_Controller/HS_Controller.h"
 #include "../../../hslibs/include/FatFS/ff.h"
 

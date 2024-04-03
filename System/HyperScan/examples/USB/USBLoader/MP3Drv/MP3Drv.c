@@ -1,5 +1,5 @@
-#include "../../../../../../SPG290/include/SPG290_Registers.h"
-#include "../../../../../../SPG290/include/SPG290_Constants.h"
+#include "../../../../../../SPG290/scorelibs/include/SPG290_Registers.h"
+#include "../../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 #include "../MP3Drv/MP3.h"
 
 #define	 D_VolSel_0				  0									//single channel will be 1/32 of max volume

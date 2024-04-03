@@ -1,6 +1,6 @@
-#include "../../include/SPG290_Registers.h"
-#include "../../include/SPG290_Constants.h"
-#include "../../include/UART/UART.h"
+#include "../../scorelibs/include/SPG290_Registers.h"
+#include "../../scorelibs/include/SPG290_Constants.h"
+#include "../../scorelibs/include/UART/UART.h"
 
 //=============================================================
 //	void UART_Init(int BaudRate)
