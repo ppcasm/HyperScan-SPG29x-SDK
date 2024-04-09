@@ -87,7 +87,7 @@ When you remove the 4 rubber plugs and 4 screws on the CD side of the Mattel Hyp
 - Step 1: 
 
 ## Loading Homebrew from USB
-We now have the ability to load homebrew through a FAT32 formatted USB drive. The only pre-requisite is that you have to provide power to the USB device externally. This is usually acheived through a USB Y-Splitter with one side having the USB drive and the other size having only power going through an adapter. Once this is done you can then do the following steps:
+We now have the ability to load homebrew through a FAT32 formatted USB drive. The only prerequisite is that you have to provide power to the USB device externally. This is usually acheived through a USB Y-Splitter with one side having the USB drive and the other size having only power going through an adapter. Once this is done you can then do the following steps:
 - Step 1:
 
 # Thanks to
