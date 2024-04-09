@@ -4,8 +4,8 @@
 ## This is all still very much a work in progress, so it's possibly dangerous.
 ## I assume no risk for things that you decide to do with the tools and information provided here.  
 
-# Table of Contents
-- [Installation](#installation)
+# Table of Contents (For the Mattel HyperScan)
+- [SDK Installation](#sdk-installation)
 - [Loading Homebrew](#loading-homebrew)
 
 # Support
@@ -35,7 +35,7 @@ the code should be documented. Some examples are as listed:
 - [PONG] - A very terrible PONG game, I wouldn't use it for production of any kind
 - [FlashCFW] - This allows flashing a CFW/OFW permanently from recovery mode on HyperScan
 
-# Installation
+# SDKInstallation
 I've included the S+Core IDE in the tools directory. This only works for Windows, but could be installed in WINE under Linux, which was the reason I chose to develop with this method since the S+Core Binutils/GCC hasn't been supported in years it makes trying to track down and build the toolchain from source unneccessary, and a lot more accessible, plus we can ensure that anyone who uses the IDE from this repo will be on the same versions since the back-end of the IDE uses a fixed version Bintuils/GCC.
 
 #### Installing the S+Core IDE
@@ -70,7 +70,15 @@ It is possible, albeit not as straightforward, to start a completely new project
 
 # Loading Homebrew
 ## Loading Homebrew from CD
-blah blah
+#### It's best to use a program like Nero Burning ROM to burn CDs for the Mattel HyperScan.
+1. Step 1: Go to File->New
+2. Step 2: Choose CD-ROM(ISO) and No Multisession
+3. Step 3: Go to the ISO tab and under "File name length" select either ISO Level1 or ISO Level2
+4. Step 4: Now go to the Format section while still in the ISO tab and select "Mode 1"
+5. Step 5: Now go to the Character set section while still in the ISO tab and select "ISO9660"
+6. Step 6: Make sure Joilet is NOT selected and now go to the "Burn" tab and select Finalize CD
+7. Step 7: Change the "Write method" to "Disc-at-once"
+8. Step 8: Now you should be able to start a new compilation and you can navigate to your "Hyper.Exe" file and burn it. 
 
 ## Loading Homebrew from UART
 blah blah
