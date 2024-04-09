@@ -71,14 +71,14 @@ It is possible, albeit not as straightforward, to start a completely new project
 # Loading Homebrew
 ## Loading Homebrew from CD
 #### It's best to use a program like Nero Burning ROM to burn CDs for the Mattel HyperScan.
-1. Step 1: Go to File->New
-2. Step 2: Choose CD-ROM(ISO) and No Multisession
-3. Step 3: Go to the ISO tab and under "File name length" select either ISO Level1 or ISO Level2
-4. Step 4: Now go to the Format section while still in the ISO tab and select "Mode 1"
-5. Step 5: Now go to the Character set section while still in the ISO tab and select "ISO9660"
-6. Step 6: Make sure Joilet is NOT selected and now go to the "Burn" tab and select Finalize CD
-7. Step 7: Change the "Write method" to "Disc-at-once"
-8. Step 8: Now you should be able to start a new compilation and you can navigate to your "Hyper.Exe" file and burn it. 
+Step 1: Go to File->New
+Step 2: Choose CD-ROM(ISO) and No Multisession
+Step 3: Go to the ISO tab and under "File name length" select either ISO Level1 or ISO Level2
+Step 4: Now go to the Format section while still in the ISO tab and select "Mode 1"
+Step 5: Now go to the Character set section while still in the ISO tab and select "ISO9660"
+Step 6: Make sure Joilet is NOT selected and now go to the "Burn" tab and select Finalize CD
+Step 7: Change the "Write method" to "Disc-at-once"
+Step 8: Now you should be able to start a new compilation and you can navigate to your "Hyper.Exe" file and burn it. 
 
 ## Loading Homebrew from UART
 blah blah
