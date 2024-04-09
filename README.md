@@ -8,7 +8,7 @@
 - [Installation](#installation)
 - [Loading Homebrew](#loading-homebrew)
 
-## Support
+# Support
 
 HyperScan specific:
 - HyperScan controller support
@@ -25,7 +25,7 @@ SPG29x specific:
 
 More will hopefully be added in the future..
 
-## Features
+# Features
 
 This SDK includes multiple examples for how to interface with the hardware, and most of
 the code should be documented. Some examples are as listed:
@@ -35,7 +35,7 @@ the code should be documented. Some examples are as listed:
 - [PONG] - A very terrible PONG game, I wouldn't use it for production of any kind
 - [FlashCFW] - This allows flashing a CFW/OFW permanently from recovery mode on HyperScan
 
-## Installation
+# Installation
 I've included the S+Core IDE in the tools directory. This only works for Windows, but could be installed in WINE under Linux, which was the reason I chose to develop with this method since the S+Core Binutils/GCC hasn't been supported in years it makes trying to track down and build the toolchain from source unneccessary, and a lot more accessible, plus we can ensure that anyone who uses the IDE from this repo will be on the same versions since the back-end of the IDE uses a fixed version Bintuils/GCC.
 
 #### Installing the S+Core IDE
@@ -68,14 +68,14 @@ The examples all link to singular library code source in the repo, under the hyp
 
 It is possible, albeit not as straightforward, to start a completely new project and import the libraries and headers into the IDE. I won't go over how to do this here as this will be very dependent on where exactly in the filepath you pull your libraries, sources, and includes from, as well as there would need to be changes to your startup.s and linkerscripts and various build environment settings to get this working, but just know that it IS possible, just not recommended unless you know what you're doing, because otherwise you will not get the results you're looking for. 
 
-## Loading Homebrew
-# Loading Homebrew from CD
+# Loading Homebrew
+## Loading Homebrew from CD
 blah blah
 
-# Loading Homebrew from UART
+## Loading Homebrew from UART
 blah blah
 
-# Loading Homebrew from USB
+## Loading Homebrew from USB
 blah blah
 
 ## Thanks to
