@@ -81,7 +81,9 @@ It is possible, albeit not as straightforward, to start a completely new project
 - Step 8: Now you should be able to start a new compilation and you can navigate to your "Hyper.Exe" file and burn it. 
 
 ## Loading Homebrew from UART
-blah blah
+#### There now exists a way for us to not only debug our apps via UART, but also to load code through it as well, though this requires some
+very simple soldering skills. When you remove the 4 rubber plugs and 4 screws on the CD side of the Mattel HyperScan, you can then take the bottom of the system apart and you'll notice a label on the board that says "RX" and "TX" as well as a few others. What you'll need to do is get a UART cable and solder the "RX" line from your UART cable to the "TX" solder pad on the Mattel HyperScan, and then solder the "TX" line from your UART cable to the "RX" solder pad on the Mattel HyperScan. Once this is done you can do the following steps:
+- Step 1: 
 
 ## Loading Homebrew from USB
 blah blah
