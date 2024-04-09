@@ -38,7 +38,7 @@ the code should be documented. Some examples are as listed:
 # SDKInstallation
 I've included the S+Core IDE in the tools directory. This only works for Windows, but could be installed in WINE under Linux, which was the reason I chose to develop with this method since the S+Core Binutils/GCC hasn't been supported in years it makes trying to track down and build the toolchain from source unneccessary, and a lot more accessible, plus we can ensure that anyone who uses the IDE from this repo will be on the same versions since the back-end of the IDE uses a fixed version Bintuils/GCC.
 
-#### Installing the S+Core IDE
+## Installing the S+Core IDE
 
 Get this repo and navigate to "HyperScan-SPG29x-SDK\tools\S+core IDE-V2.6.1.exe" and then double click to install.
 
