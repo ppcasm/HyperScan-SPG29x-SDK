@@ -4,9 +4,9 @@
 ## This is all still very much a work in progress, so it's possibly dangerous.
 ## I assume no risk for things that you decide to do with the tools and information provided here.  
 
-Sections:
-[Installation](#installation)
-[UART Loader]
+# Table of Contents
+- [Installation](#installation)
+- [UART Loader](#uart-loader)
 
 ## Support
 
@@ -67,6 +67,9 @@ Which tells you that this is built for running in recovery mode, or as a firmwar
 The examples all link to singular library code source in the repo, under the hyperscan folder. The reason for this is that if there's any updates to the libraries, you can just update from the repo and because everything is pulling from the singular location the changes are reflected when you open any existing example, so then you just recompile and the new code gets applied to the binary. Because of this reason, when starting a new project, the easiest way to do so is to simply copy an example from the example folder, paste it in the example folder, give it a new name, and start the new project there as all of the include and source paths should remain the same and create a uniform structure to the code, and this has the added benefit of making your project be in the examples folder just in case someone wants to send a pull request. :p
 
 It is possible, albeit not as straightforward, to start a completely new project and import the libraries and headers into the IDE. I won't go over how to do this here as this will be very dependent on where exactly in the filepath you pull your libraries, sources, and includes from, as well as there would need to be changes to your startup.s and linkerscripts and various build environment settings to get this working, but just know that it IS possible, just not recommended unless you know what you're doing, because otherwise you will not get the results you're looking for. 
+
+## Uart Loader
+Blah
 
 ## Thanks to
 - Bushing - RIP :( He was responsible for the hyperscan.bin firmware file being dumped originally, and a good source of valid information

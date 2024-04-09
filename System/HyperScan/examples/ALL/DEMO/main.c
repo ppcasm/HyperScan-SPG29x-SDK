@@ -14,7 +14,6 @@ This is a basic canvas to start your HyperScan project. Check around for documen
 #include "../../../../../SPG290/scorelibs/include/SPG290_Constants.h"
 #include "../../../hslibs/include/HS_Controller/HS_Controller.h"
 
-
 int main(){
 	
 	// Stupid framebuffer for now
