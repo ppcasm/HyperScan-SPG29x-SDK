@@ -72,10 +72,10 @@ It is possible, albeit not as straightforward, to start a completely new project
 # Loading Homebrew from CD
 blah blah
 
-#Loading Homebrew from UART
+# Loading Homebrew from UART
 blah blah
 
-#Loading Homebrew from USB
+# Loading Homebrew from USB
 blah blah
 
 ## Thanks to
