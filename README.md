@@ -6,7 +6,7 @@
 
 # Table of Contents
 - [Installation](#installation)
-- [UART Loader](#uart-loader)
+- [Loading Homebrew](#loading-homebrew)
 
 ## Support
 
@@ -68,8 +68,15 @@ The examples all link to singular library code source in the repo, under the hyp
 
 It is possible, albeit not as straightforward, to start a completely new project and import the libraries and headers into the IDE. I won't go over how to do this here as this will be very dependent on where exactly in the filepath you pull your libraries, sources, and includes from, as well as there would need to be changes to your startup.s and linkerscripts and various build environment settings to get this working, but just know that it IS possible, just not recommended unless you know what you're doing, because otherwise you will not get the results you're looking for. 
 
-## Uart Loader
-Blah
+## Loading Homebrew
+# Loading Homebrew from CD
+blah blah
+
+#Loading Homebrew from UART
+blah blah
+
+#Loading Homebrew from USB
+blah blah
 
 ## Thanks to
 - Bushing - RIP :( He was responsible for the hyperscan.bin firmware file being dumped originally, and a good source of valid information
