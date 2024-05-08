@@ -1,3 +1,10 @@
+#ifndef __UART_H__
+#define __UART_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**************************************************************************
  *                           C O N S T A N T S                            *
  **************************************************************************/
@@ -20,3 +27,8 @@ void UART_Initial(int BaudRate);
 void UART_SendChar(char Data);
 char UART_GetChar();
 
+#ifdef __cplusplus
+}
+#endif
+
+#endif
