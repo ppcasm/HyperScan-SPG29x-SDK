@@ -1,3 +1,6 @@
+#ifndef __INTENABLE_H__
+#define __INTENABLE_H__
+
 #include "../../include/SPG290_Registers.h"
 #include "../../include/SPG290_Constants.h"
 
@@ -33,3 +36,4 @@
 #define INT_UNMASK_SETUP1(INT_DIS)	(*P_INT_MASK_CTRL1 &= ~INT_DIS)		
 #define INT_UNMASK_SETUP2(INT_DIS)	(*P_INT_MASK_CTRL2 &= ~INT_DIS)
 
+#endif

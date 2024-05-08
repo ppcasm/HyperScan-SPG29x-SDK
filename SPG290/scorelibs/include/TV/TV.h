@@ -1,6 +1,10 @@
 #ifndef __TV_H__
 #define __TV_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**************************************************************************
  *                           C O N S T A N T S                            *
  **************************************************************************/
@@ -22,5 +26,9 @@ void TV_FadeOut(void);
 void TV_Print(unsigned short *fb, unsigned int x, unsigned int y, char *text);
 void TV_PrintColor(unsigned short *fb, unsigned int x, unsigned int y, char *text, unsigned short color);
 void TV_PrintHex(unsigned short *fb, unsigned intx,  unsigned int y, unsigned long value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

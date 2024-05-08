@@ -1,3 +1,10 @@
+#ifndef __HS_CONTROLLER_H__
+#define __HS_CONTROLLER_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdbool.h>
 
 /**************************************************************************
@@ -34,3 +41,9 @@ ControllerUnion controller[1];
  **************************************************************************/
 void HS_Controller_Init(void);
 void HS_Controller_Read(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

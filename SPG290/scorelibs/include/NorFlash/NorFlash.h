@@ -1,3 +1,10 @@
+#ifndef __NORFLASH_H__
+#define __NORFLASH_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define C_Flash_BaseAddr	0x9e000000
 
 #define C_CMD1_Addr			(volatile unsigned int *)0x9e055550
@@ -40,3 +47,8 @@ extern void NorFlash_BlockErase(unsigned int addr);
 extern void NorFlash_SectorErase(unsigned int addr);
 extern void NorFlash_Write32(unsigned int addr, unsigned int data);
 
+#ifdef __cplusplus
+}
+#endif
+
+#endif
