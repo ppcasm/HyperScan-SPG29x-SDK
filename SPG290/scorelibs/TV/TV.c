@@ -128,7 +128,7 @@ void TV_Fade(unsigned int fade){
 // 
 //	void return
 // =============================================================
-void TV_Print(unsigned short *fb, unsigned int x, unsigned int y, char *text){
+void TV_Print(unsigned short *fb, unsigned int x, unsigned int y, const char *text){
 	
     short xx, yy;
     unsigned short colorz;
@@ -156,7 +156,7 @@ void TV_Print(unsigned short *fb, unsigned int x, unsigned int y, char *text){
 // 
 //	void return
 // =============================================================
-void TV_PrintColor(unsigned short *fb, unsigned int x, unsigned int y, char *text, unsigned short color){
+void TV_PrintColor(unsigned short *fb, unsigned int x, unsigned int y, const char *text, unsigned short color){
 	
     short xx, yy;
     while (*text) 
