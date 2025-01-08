@@ -423,7 +423,9 @@ typedef volatile unsigned int UV32;
 #define P_TX3_Y_POSITION					(UV32*)0x8801005C
 #define P_TX3_ATTRIBUTE						(UV32*)0x88010060
 #define P_TX3_CONTROL						(UV32*)0x88010064
+#define P_SPRITE_X_BASE             		(UV32*)0x88014002
 #define P_SPRITE_ATTRIBUTE_BASE             (UV32*)0x88014004
+#define P_SPRITE_Y_BASE             		(UV32*)0x88014006
 //**************************************************************//
 //                               LDM                            //
 //**************************************************************//
