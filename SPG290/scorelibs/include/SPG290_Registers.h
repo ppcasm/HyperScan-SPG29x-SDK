@@ -4,6 +4,7 @@
 #define HS_LEDS(value) (*P_CSI_GPIO_SETUP = (0x1FFE0000+(value<<5)))
 
 typedef volatile unsigned int UV32;
+typedef volatile signed int SV32;
 
 //**************************************************************//
 //                        CKG & PLL                             //
