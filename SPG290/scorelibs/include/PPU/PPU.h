@@ -23,6 +23,7 @@ extern "C" {
  **************************************************************************/
 volatile UV32* getSpritePaletteAddr(unsigned int bank);
 volatile int getSpriteXPos(unsigned int id);
+volatile SV32* getSpriteYPos(unsigned int id);
 
 #ifdef __cplusplus
 }

@@ -10,3 +10,8 @@ volatile int getSpriteXPos(unsigned int id)
 {
 	return P_SPRITE_X_BASE + (8 * id);
 }
+
+volatile SV32* getSpriteYPos(unsigned int id)
+{
+    return (volatile SV32*)(P_SPRITE_Y_BASE + (8 * id));
+}
