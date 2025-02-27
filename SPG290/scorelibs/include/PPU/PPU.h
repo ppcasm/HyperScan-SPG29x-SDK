@@ -22,7 +22,7 @@ extern "C" {
  *               F U N C T I O N    D E C L A R A T I O N S               *
  **************************************************************************/
 volatile UV32* getSpritePaletteAddr(unsigned int bank);
-volatile int getSpriteXPos(unsigned int id);
+volatile SV32* getSpriteXPos(unsigned int id);
 volatile SV32* getSpriteYPos(unsigned int id);
 
 #ifdef __cplusplus
