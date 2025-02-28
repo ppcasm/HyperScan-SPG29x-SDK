@@ -412,6 +412,7 @@ typedef volatile signed int SV32;
 //**************************************************************//
 //                              SPRITES                         //
 //**************************************************************//
+#define P_PPU_CONTROL						(UV32*)0x88010000
 #define P_TX1_X_POSITION					(UV32*)0x88010020
 #define P_TX1_Y_POSITION					(UV32*)0x88010024
 #define P_TX1_ATTRIBUTE						(UV32*)0x88010028
