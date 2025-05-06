@@ -415,6 +415,7 @@ typedef volatile signed int SV32;
 #define P_PPU_CONTROL						(UV32*)0x88010000
 #define P_SP_CONTROL						(UV32*)0x88010004
 #define P_SP_MAX							(UV32*)0x88010008
+#define P_BLEND_SUB							(UV32*)0x8801000C
 #define P_TX1_X_POSITION					(UV32*)0x88010020
 #define P_TX1_Y_POSITION					(UV32*)0x88010024
 #define P_TX1_ATTRIBUTE						(UV32*)0x88010028
