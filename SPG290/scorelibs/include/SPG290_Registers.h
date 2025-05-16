@@ -4,6 +4,7 @@
 #define HS_LEDS(value) (*P_CSI_GPIO_SETUP = (0x1FFE0000+(value<<5)))
 
 typedef volatile unsigned int UV32;
+typedef volatile signed int SV32;
 
 //**************************************************************//
 //                        CKG & PLL                             //
@@ -408,6 +409,29 @@ typedef volatile unsigned int UV32;
 #define P_TV_BUFFER_SA3                     (UV32*)0x88070008
 #define P_TV_BUFFER_SEL                     (UV32*)0x88090020
 #define P_TV_FRAME_COUNT                    (UV32*)0x88090034
+//**************************************************************//
+//                              SPRITES                         //
+//**************************************************************//
+#define P_PPU_CONTROL						(UV32*)0x88010000
+#define P_SP_CONTROL						(UV32*)0x88010004
+#define P_SP_MAX							(UV32*)0x88010008
+#define P_BLEND_SUB							(UV32*)0x8801000C
+#define P_TRANS_RGB							(UV32*)0x88010010
+#define P_TX1_X_POSITION					(UV32*)0x88010020
+#define P_TX1_Y_POSITION					(UV32*)0x88010024
+#define P_TX1_ATTRIBUTE						(UV32*)0x88010028
+#define P_TX1_CONTROL						(UV32*)0x8801002C
+#define P_TX2_X_POSITION					(UV32*)0x8801003C
+#define P_TX2_Y_POSITION					(UV32*)0x88010040
+#define P_TX2_ATTRIBUTE						(UV32*)0x88010044
+#define P_TX2_CONTROL						(UV32*)0x88010048
+#define P_TX3_X_POSITION					(UV32*)0x88010058
+#define P_TX3_Y_POSITION					(UV32*)0x8801005C
+#define P_TX3_ATTRIBUTE						(UV32*)0x88010060
+#define P_TX3_CONTROL						(UV32*)0x88010064
+#define P_SPRITE_X_BASE             		(UV32*)0x88014002
+#define P_SPRITE_ATTRIBUTE_BASE             (UV32*)0x88014004
+#define P_SPRITE_Y_BASE             		(UV32*)0x88014006
 //**************************************************************//
 //                               LDM                            //
 //**************************************************************//
